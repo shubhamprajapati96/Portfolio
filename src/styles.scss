@@ -1,0 +1,129 @@
+@use 'styles/variables' as *;
+@use 'styles/theme';
+@use 'styles/utilities';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-inline-size: 320px;
+  background-color: var(--bg-base);
+  background-image:
+    radial-gradient(circle at 15% 12%, var(--mesh-bg-1), transparent 30rem),
+    radial-gradient(circle at 85% 5%, var(--mesh-bg-2), transparent 26rem),
+    radial-gradient(circle at 50% 80%, var(--mesh-bg-3), transparent 35rem),
+    linear-gradient(180deg, var(--bg-base), var(--bg-surface) 50%, var(--bg-base));
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color $transition-slow, color $transition-slow;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $transition;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+:focus-visible {
+  outline: 3px solid var(--primary-glow);
+  outline-offset: 3px;
+  border-radius: $radius-xs;
+}
+
+::selection {
+  background: var(--primary-glow);
+  color: var(--text-primary);
+}
+
+// Modern Scrollbar
+::-webkit-scrollbar {
+  inline-size: 10px;
+  block-size: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-card-solid);
+  border: 2px solid var(--bg-base);
+  border-radius: 999px;
+
+  &:hover {
+    background: var(--border-hover);
+  }
+}
+
+.material-symbols-rounded,
+mat-icon {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'liga';
+}
+
+// Global Material Button Icon & Text Alignment
+.mat-mdc-button,
+.mat-mdc-outlined-button,
+.mat-mdc-unelevated-button,
+.mat-mdc-flat-button,
+.mat-mdc-raised-button {
+  .mdc-button__label {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+  }
+
+  mat-icon {
+    font-size: 1.15rem !important;
+    inline-size: 1.15rem !important;
+    block-size: 1.15rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+

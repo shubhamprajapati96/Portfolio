@@ -1,0 +1,244 @@
+@use '@angular/material' as mat;
+
+:root {
+  color-scheme: dark;
+  --bg-base: #070a13;
+  --bg-surface: #0e1526;
+  --bg-surface-elevated: #141d30;
+  --bg-card: linear-gradient(145deg, rgba(20, 29, 48, 0.78), rgba(13, 19, 34, 0.72));
+  --bg-card-hover: linear-gradient(145deg, rgba(28, 41, 68, 0.85), rgba(17, 25, 46, 0.8));
+  --bg-card-solid: #141d30;
+  --bg-glass: rgba(13, 19, 34, 0.78);
+  --bg-glass-strong: rgba(7, 10, 19, 0.88);
+  --bg-pill: rgba(56, 189, 248, 0.12);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(56, 189, 248, 0.45);
+  --border-accent: rgba(6, 182, 212, 0.55);
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --primary: #38bdf8;
+  --primary-glow: rgba(56, 189, 248, 0.35);
+  --secondary: #06b6d4;
+  --secondary-glow: rgba(6, 182, 212, 0.35);
+  --accent: #818cf8;
+  --accent-glow: rgba(129, 140, 248, 0.35);
+  --success: #10b981;
+  --success-bg: rgba(16, 185, 129, 0.12);
+  --warning: #f59e0b;
+  --danger: #f43f5e;
+  --gradient-primary: linear-gradient(135deg, #38bdf8, #06b6d4);
+  --gradient-accent: linear-gradient(135deg, #38bdf8, #818cf8);
+  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15), transparent 70%);
+  --shadow-card: 0 16px 36px -8px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 35px -5px rgba(56, 189, 248, 0.22);
+  --shadow-hover: 0 24px 50px -10px rgba(0, 0, 0, 0.6), 0 0 25px -2px rgba(6, 182, 212, 0.25);
+  --mesh-bg-1: rgba(56, 189, 248, 0.18);
+  --mesh-bg-2: rgba(6, 182, 212, 0.14);
+  --mesh-bg-3: rgba(129, 140, 248, 0.12);
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --bg-base: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f1f5f9;
+  --bg-card: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(241, 245, 249, 0.9));
+  --bg-card-hover: linear-gradient(145deg, rgba(255, 255, 255, 1), rgba(238, 242, 255, 0.95));
+  --bg-card-solid: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-glass-strong: rgba(248, 250, 252, 0.95);
+  --bg-pill: rgba(2, 132, 199, 0.08);
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-card: rgba(15, 23, 42, 0.12);
+  --border-hover: rgba(2, 132, 199, 0.4);
+  --border-accent: rgba(8, 145, 178, 0.48);
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-dim: #94a3b8;
+  --primary: #0284c7;
+  --primary-glow: rgba(2, 132, 199, 0.25);
+  --secondary: #0891b2;
+  --secondary-glow: rgba(8, 145, 178, 0.25);
+  --accent: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.25);
+  --success: #059669;
+  --success-bg: rgba(5, 150, 105, 0.1);
+  --warning: #d97706;
+  --danger: #e11d48;
+  --gradient-primary: linear-gradient(135deg, #0284c7, #0891b2);
+  --gradient-accent: linear-gradient(135deg, #0284c7, #6366f1);
+  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(2, 132, 199, 0.08), transparent 70%);
+  --shadow-card: 0 14px 32px -8px rgba(15, 23, 42, 0.08);
+  --shadow-glow: 0 0 30px -5px rgba(2, 132, 199, 0.15);
+  --shadow-hover: 0 20px 45px -8px rgba(15, 23, 42, 0.12), 0 0 20px -2px rgba(8, 145, 178, 0.15);
+  --mesh-bg-1: rgba(2, 132, 199, 0.12);
+  --mesh-bg-2: rgba(8, 145, 178, 0.08);
+  --mesh-bg-3: rgba(99, 102, 241, 0.08);
+}
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$azure-palette,
+        tertiary: mat.$cyan-palette
+      ),
+      typography: Poppins,
+      density: 0
+    )
+  );
+}
+
+// Angular Material Custom Theming Mappings
+.mat-mdc-card {
+  --mdc-elevated-card-container-color: var(--bg-surface);
+  --mdc-outlined-card-outline-color: var(--border-subtle);
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+}
+
+.mat-mdc-form-field {
+  --mat-form-field-container-text-color: var(--text-primary);
+  --mat-form-field-input-text-color: var(--text-primary);
+  --mat-form-field-label-text-color: var(--text-muted);
+  --mat-form-field-focus-label-text-color: var(--primary);
+  --mat-form-field-hover-label-text-color: var(--text-secondary);
+  --mat-form-field-error-text-color: var(--danger);
+  --mat-form-field-container-color: transparent;
+
+  --mdc-outlined-text-field-outline-color: var(--border-subtle);
+  --mdc-outlined-text-field-hover-outline-color: var(--secondary);
+  --mdc-outlined-text-field-focus-outline-color: var(--primary);
+  --mdc-outlined-text-field-input-text-color: var(--text-primary);
+  --mdc-outlined-text-field-input-text-placeholder-color: var(--text-muted);
+  --mdc-outlined-text-field-label-text-color: var(--text-muted);
+  --mdc-outlined-text-field-focus-label-text-color: var(--primary);
+  --mdc-outlined-text-field-hover-label-text-color: var(--text-secondary);
+  --mdc-outlined-text-field-error-outline-color: var(--danger);
+  --mdc-outlined-text-field-error-label-text-color: var(--danger);
+  --mdc-outlined-text-field-error-focus-outline-color: var(--danger);
+
+  background: transparent;
+
+  .mat-mdc-text-field-wrapper {
+    background: var(--bg-surface-elevated);
+    border-radius: 1rem;
+    transition: background-color 200ms ease;
+  }
+
+  .mat-mdc-form-field-focus-overlay {
+    background: transparent;
+  }
+
+  .mat-mdc-form-field-icon-prefix,
+  .mat-mdc-form-field-icon-suffix {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    padding: 0 0.25rem 0 0.75rem;
+  }
+}
+
+// Ensure input and textarea text is ALWAYS crisp and visible in both dark and light modes
+.mat-mdc-input-element,
+input.mat-mdc-input-element,
+textarea.mat-mdc-input-element {
+  color: var(--text-primary) !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  caret-color: var(--primary) !important;
+  font-family: inherit !important;
+  font-size: 0.95rem !important;
+}
+
+.mat-mdc-input-element::placeholder {
+  color: var(--text-muted) !important;
+  -webkit-text-fill-color: var(--text-muted) !important;
+  opacity: 0.8 !important;
+}
+
+// Chrome/Safari Autofill fix
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-primary) !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--bg-surface-elevated) inset !important;
+  box-shadow: 0 0 0px 1000px var(--bg-surface-elevated) inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.mat-mdc-form-field-error {
+  color: var(--danger) !important;
+  font-size: 0.82rem !important;
+  font-weight: 500 !important;
+}
+
+.mat-mdc-form-field-hint {
+  color: var(--text-muted) !important;
+  font-size: 0.78rem !important;
+}
+
+.mat-mdc-standard-chip {
+  --mdc-chip-elevated-container-color: var(--bg-pill) !important;
+  --mdc-chip-label-text-color: var(--primary) !important;
+  border: 1px solid var(--border-subtle) !important;
+}
+
+.mat-mdc-tab-header {
+  --mdc-tab-indicator-active-indicator-color: var(--primary);
+  --mat-tab-header-active-label-text-color: var(--primary);
+  --mat-tab-header-inactive-label-text-color: var(--text-muted);
+  --mat-tab-header-active-hover-label-text-color: var(--text-primary);
+}
+
+.mat-mdc-button.mat-unthemed,
+.mat-mdc-outlined-button.mat-unthemed {
+  color: var(--text-secondary);
+}
+
+.mat-mdc-unelevated-button.mat-primary,
+.mat-mdc-raised-button.mat-primary,
+.mat-mdc-flat-button.mat-primary {
+  --mdc-filled-button-container-color: #0284c7;
+  --mdc-filled-button-label-text-color: #ffffff;
+  background: var(--gradient-primary) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 20px -4px var(--primary-glow);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px -4px var(--primary-glow);
+  }
+}
+
+// Global Snackbar Styles
+.cdk-overlay-container {
+  z-index: 10000;
+}
+
+.snackbar-success {
+  --mdc-snackbar-container-color: #065f46;
+  --mdc-snackbar-supporting-text-color: #ffffff;
+  --mat-snack-bar-button-color: #a7f3d0;
+  border-radius: 0.75rem !important;
+  font-weight: 600;
+}
+
+.snackbar-error {
+  --mdc-snackbar-container-color: #991b1b;
+  --mdc-snackbar-supporting-text-color: #ffffff;
+  --mat-snack-bar-button-color: #fecaca;
+  border-radius: 0.75rem !important;
+  font-weight: 600;
+}
+
+

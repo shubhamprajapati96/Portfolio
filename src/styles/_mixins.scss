@@ -1,0 +1,81 @@
+@use 'variables' as *;
+
+@mixin container {
+  inline-size: min(100% - clamp(1.5rem, 5vw, 3.5rem), $container);
+  margin-inline: auto;
+}
+
+@mixin glass-panel {
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+@mixin glass-glow {
+  border: 1px solid var(--border-hover);
+  background: var(--bg-card-hover);
+  box-shadow: var(--shadow-glow), var(--shadow-card);
+}
+
+@mixin focus-ring {
+  outline: 3px solid var(--primary-glow);
+  outline-offset: 3px;
+}
+
+@mixin text-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile-sm {
+    @media (max-width: 26.25rem) { // 420px
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media (max-width: 47.9375rem) { // 767px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (min-width: 48rem) { // 768px
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media (min-width: 64rem) { // 1024px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media (min-width: 80rem) { // 1280px
+      @content;
+    }
+  }
+
+  @if $breakpoint == wide {
+    @media (min-width: 90rem) { // 1440px
+      @content;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+// Global SASS variables
+$color-bg: #070a13;
+$color-bg-secondary: #0e1526;
+$color-card: #131c31;
+$color-hover: #1e2b48;
+$color-text: #f8fafc;
+$color-text-secondary: #94a3b8;
+$color-muted: #64748b;
+$color-primary: #38bdf8;
+$color-secondary: #06b6d4;
+$color-accent: #818cf8;
+$color-success: #10b981;
+$color-warning: #f59e0b;
+$color-danger: #f43f5e;
+
+// Shadows
+$shadow-sm: 0 2px 8px -1px rgb(0 0 0 / 12%), 0 1px 4px -1px rgb(0 0 0 / 8%);
+$shadow-md: 0 12px 28px -4px rgb(0 0 0 / 25%), 0 6px 12px -4px rgb(0 0 0 / 15%);
+$shadow-lg: 0 24px 48px -8px rgb(0 0 0 / 35%), 0 12px 24px -6px rgb(0 0 0 / 20%);
+$shadow-card: 0 16px 36px -8px rgb(0 0 0 / 35%);
+$shadow-soft: 0 30px 70px -12px rgb(0 0 0 / 45%);
+$shadow-glow: 0 0 30px -5px rgb(56 189 248 / 25%);
+
+// Radius
+$radius-xs: 0.375rem;
+$radius-sm: 0.625rem;
+$radius-md: 1rem;
+$radius-lg: 1.375rem;
+$radius-xl: 1.875rem;
+$radius-full: 9999px;
+
+// Layout
+$container: 1200px;
+$transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// Breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-laptop: 1024px;
+$bp-desktop: 1280px;
+$bp-wide: 1440px;

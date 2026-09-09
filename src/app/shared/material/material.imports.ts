@@ -1,0 +1,17 @@
+export { MatButtonModule } from '@angular/material/button';
+export { MatCardModule } from '@angular/material/card';
+export { MatChipsModule } from '@angular/material/chips';
+export { MatDialogModule } from '@angular/material/dialog';
+export { MatDividerModule } from '@angular/material/divider';
+export { MatFormFieldModule } from '@angular/material/form-field';
+export { MatGridListModule } from '@angular/material/grid-list';
+export { MatIconModule } from '@angular/material/icon';
+export { MatInputModule } from '@angular/material/input';
+export { MatMenuModule } from '@angular/material/menu';
+export { MatProgressBarModule } from '@angular/material/progress-bar';
+export { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+export { MatSidenavModule } from '@angular/material/sidenav';
+export { MatSnackBarModule } from '@angular/material/snack-bar';
+export { MatTabsModule } from '@angular/material/tabs';
+export { MatToolbarModule } from '@angular/material/toolbar';
+export { MatTooltipModule } from '@angular/material/tooltip';

@@ -1,0 +1,199 @@
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  inject,
+  input
+} from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+
+const TECH_SVGS: Record<string, string> = {
+  // 1. React
+  react: `<svg viewBox="-11.5 -10.23 23 20.46" xmlns="http://www.w3.org/2000/svg"><circle cx="0" cy="0" r="2.05" fill="#61DAFB"/><g stroke="#61DAFB" stroke-width="1" fill="none"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>`,
+
+  // 2. Angular
+  angular: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#DD0031" d="M12 2L2 5.5l1.5 12.5L12 22l8.5-4L22 5.5z"/><path fill="#C3002F" d="M12 2v20l8.5-4L22 5.5z"/><path fill="#FFFFFF" d="M12 4.5l5.5 12.5h-2.2l-1.1-2.8h-4.4L8.7 17H6.5zM10.6 12.4h2.8L12 8.8z"/></svg>`,
+
+  // 3. Next.js
+  nextjs: `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.82 17.585L9.67 6.942H7.728v10.116h1.564V8.986l7.302 9.47c-.244.184-.495.356-.774.513zm-2.096-3.837h1.564V6.942h-1.564z"/></svg>`,
+
+  // 4. PHP
+  php: `<svg viewBox="0 0 24 24" fill="#777BB4" xmlns="http://www.w3.org/2000/svg"><path d="M7.766 6.305c-1.34 0-2.525.447-3.414 1.282-.888.835-1.424 1.996-1.547 3.344-.122 1.348.169 2.51.836 3.345.667.835 1.636 1.283 2.776 1.283.473 0 .918-.083 1.332-.248.413-.165.782-.413 1.107-.743l-.413 1.916H11.5l2.483-11.45H10.93l-.413 1.917c-.325-.33-.694-.578-1.107-.743a3.52 3.52 0 0 0-1.644-.423zm-.037 2.052c.677 0 1.253.275 1.66.793.407.518.57 1.246.469 2.107-.1 1.056-.475 1.837-1.082 2.253-.608.415-1.332.593-2.09.508-.677 0-1.253-.275-1.66-.793-.408-.518-.57-1.246-.47-2.107.1-1.056.476-1.837 1.083-2.253.608-.415 1.332-.593 2.09-.508zm11.393-2.052c-1.34 0-2.525.447-3.414 1.282-.888.835-1.424 1.996-1.547 3.344-.122 1.348.169 2.51.836 3.345.667.835 1.636 1.283 2.776 1.283.473 0 .918-.083 1.332-.248.414-.165.783-.413 1.107-.743l-.413 1.916H22.5l2.483-11.45H21.93l-.414 1.917c-.324-.33-.693-.578-1.106-.743a3.52 3.52 0 0 0-1.644-.423zm-.037 2.052c.677 0 1.253.275 1.66.793.407.518.57 1.246.47 2.107-.101 1.056-.476 1.837-1.083 2.253-.608.415-1.332.593-2.09.508-.677 0-1.253-.275-1.66-.793-.408-.518-.57-1.246-.47-2.107.1-1.056.476-1.837 1.083-2.253.608-.415 1.332-.593 2.09-.508zM14.28 6.55H11.5l-2.483 11.45h2.78z"/></svg>`,
+
+  // 5. Laravel
+  laravel: `<svg viewBox="0 0 24 24" fill="#FF2D20" xmlns="http://www.w3.org/2000/svg"><path d="M23.654 6.079a1.037 1.037 0 0 0-.39-.425l-7.78-4.485a1.085 1.085 0 0 0-1.077 0L6.626 5.654a1.07 1.07 0 0 0-.538.932v8.97c0 .38.204.73.538.932l7.781 4.485c.167.096.353.144.538.144.186 0 .372-.048.539-.144l7.78-4.485a1.07 1.07 0 0 0 .539-.932V6.586a1.07 1.07 0 0 0-.149-.507zm-8.857-3.26l6.34 3.655-2.733 1.576-6.34-3.655 2.733-1.576zm-1.077 1.854l6.34 3.656v3.153l-6.34-3.656V4.673zm-6.07 2.22l6.34-3.655 2.732 1.576-6.34 3.655-2.732-1.576zm7.417 14.254l-6.34-3.656v-7.31l6.34 3.655v7.311zm1.077-1.853V12.14l6.34-3.656v7.31l-6.34 3.656z"/></svg>`,
+
+  // 6. Node.js
+  nodejs: `<svg viewBox="0 0 24 24" fill="#5FA04E" xmlns="http://www.w3.org/2000/svg"><path d="M11.998.002a2.38 2.38 0 0 0-1.196.326L2.4 5.166a2.388 2.388 0 0 0-1.198 2.072v9.524a2.388 2.388 0 0 0 1.198 2.072l8.402 4.838a2.385 2.385 0 0 0 2.392 0l8.404-4.838a2.388 2.388 0 0 0 1.198-2.072V7.238a2.388 2.388 0 0 0-1.198-2.072L13.196.328A2.38 2.38 0 0 0 11.998.002zm-.006 2.404l7.632 4.394-7.632 4.41-7.632-4.41zM2.87 8.358l7.625 4.404v8.788L2.87 17.158zm18.252 0v8.8l-7.625 4.392v-8.788z"/></svg>`,
+
+  // 7. TypeScript
+  typescript: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#3178C6" d="M1.5 1.5h21v21h-21z"/><path fill="#FFFFFF" d="M13.8 19.3v-1.8c.6.4 1.2.7 1.9.8.7.2 1.4.3 2.1.3.8 0 1.4-.2 1.8-.5.4-.3.6-.8.6-1.4 0-.4-.1-.7-.4-.9-.3-.3-.7-.5-1.2-.7l-1.6-.7c-.9-.4-1.6-.9-2.1-1.5-.5-.6-.7-1.4-.7-2.3 0-1.2.4-2.1 1.3-2.8.9-.7 2.1-1 3.5-1 .8 0 1.5.1 2.2.3.7.2 1.3.5 1.8.9l-.8 1.8c-.5-.3-1-.6-1.6-.7-.6-.2-1.2-.2-1.8-.2-.7 0-1.2.2-1.6.5-.4.3-.6.7-.6 1.3 0 .4.1.7.4 1 .3.2.7.5 1.3.7l1.6.7c1 .4 1.7.9 2.2 1.5.5.6.7 1.4.7 2.4 0 1.2-.4 2.1-1.3 2.8-.9.7-2.1 1-3.6 1-.9 0-1.8-.1-2.6-.4-.8-.3-1.6-.7-2.2-1.3zM8.3 8.3h-4.3v-1.8h11v1.8h-4.3v13H8.3z"/></svg>`,
+
+  // 8. JavaScript
+  javascript: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#F7DF1E" d="M0 0h24v24H0z"/><path fill="#000000" d="M6.8 19.8c-.9 0-1.7-.2-2.3-.5l.4-1.8c.6.3 1.2.5 1.8.5.8 0 1.2-.4 1.2-1.1V10H10v6.8c0 1-.3 1.8-1 2.3-.6.5-1.4.7-2.2.7zm9.6 0c-1.3 0-2.3-.4-3.1-1.1-.8-.7-1.2-1.7-1.2-3 0-1.2.4-2.2 1.1-2.9.8-.7 1.8-1.1 3-1.1.7 0 1.4.1 2 .4l-.5 1.8c-.5-.2-1-.4-1.5-.4-.7 0-1.3.2-1.7.7-.4.5-.6 1.1-.6 1.9 0 .8.2 1.4.6 1.8.4.4 1 .6 1.7.6.6 0 1.1-.1 1.6-.4l.4 1.7c-.5.3-1.2.5-1.8.5z"/></svg>`,
+
+  // 9. Python
+  python: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#3776AB" d="M11.9 1.5c-3.1 0-5.2.5-5.2 2.6v2h5.3v.8H3.8C1.7 6.9 0 8.7 0 11.2s1.5 4.3 3.6 4.3h1.8v-2.5c0-1.9 1.6-3.4 3.5-3.4h5.3c1.6 0 2.8-1.2 2.8-2.8V3.8c0-2-2-2.3-5.1-2.3zm-2.8 1.7c.6 0 1.1.5 1.1 1.1s-.5 1.1-1.1 1.1-1.1-.5-1.1-1.1.5-1.1 1.1-1.1z"/><path fill="#FFD43B" d="M12.1 22.5c3.1 0 5.2-.5 5.2-2.6v-2H12v-.8h8.2c2.1 0 3.8-1.8 3.8-4.3s-1.5-4.3-3.6-4.3h-1.8v2.5c0 1.9-1.6 3.4-3.5 3.4H9.8c-1.6 0-2.8 1.2-2.8 2.8v3c0 2 2 2.4 5.1 2.4zm2.8-1.7c-.6 0-1.1-.5-1.1-1.1s.5-1.1 1.1-1.1 1.1.5 1.1 1.1-.5 1.1-1.1 1.1z"/></svg>`,
+
+  // 10. MySQL
+  mysql: `<svg viewBox="0 0 24 24" fill="#4479A1" xmlns="http://www.w3.org/2000/svg"><path d="M18.8 4.2C17.5 3 15.3 2.5 13 2.5c-4.4 0-8.2 2.1-9.9 5.3-.6 1.1-.9 2.2-.9 3.4 0 2.8 1.7 5.3 4.2 6.5.6.3 1.2.5 1.9.7-1-.9-1.6-2.1-1.6-3.4 0-1.4.7-2.7 1.8-3.6 1.4-1.1 3.3-1.7 5.2-1.7 1.8 0 3.5.5 4.8 1.5 1.3 1 2.1 2.4 2.1 4 0 1.8-1 3.4-2.5 4.4-.7.4-1.4.7-2.2.9 2.2-.3 4.2-1.4 5.6-3 1.3-1.6 2-3.6 2-5.7 0-3.1-1.7-5.9-4.7-7.2zM9.4 13.9c-.8.6-1.3 1.5-1.3 2.5 0 .9.4 1.7 1.1 2.3-.4-.2-.7-.4-1-.7-.6-.6-1-1.4-1-2.3 0-.8.3-1.6.8-2.2.6-.7 1.5-1.1 2.4-1.3-.4.5-.8 1.1-1 1.7z"/></svg>`,
+
+  // 11. PostgreSQL
+  postgresql: `<svg viewBox="0 0 24 24" fill="#4169E1" xmlns="http://www.w3.org/2000/svg"><path d="M12.002 0c-2.88 0-5.59 1.17-7.55 3.19C2.49 5.21 1.41 7.95 1.41 10.94c0 3.99 2.05 7.4 5.09 9.38.16.1.33.2.5.3l-.33 1.41 1.8-.84c1.1.48 2.3.74 3.53.74 1.25 0 2.47-.27 3.59-.77l1.8.84-.33-1.41c.17-.1.34-.2.5-.3 3.04-1.98 5.09-5.39 5.09-9.38 0-2.99-1.08-5.73-3.04-7.75C17.59 1.17 14.88 0 12.002 0zm.01 2.22c4.8 0 8.69 3.91 8.69 8.72 0 3.32-1.85 6.22-4.57 7.71l-1.07-1.34c.79-.8 1.29-1.89 1.29-3.09 0-2.42-1.96-4.38-4.38-4.38s-4.38 1.96-4.38 4.38c0 1.2.5 2.29 1.29 3.09l-1.07 1.34c-2.72-1.49-4.57-4.39-4.57-7.71 0-4.81 3.89-8.72 8.69-8.72z"/></svg>`,
+
+  // 12. MongoDB
+  mongodb: `<svg viewBox="0 0 24 24" fill="#47A248" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C11.6 0 11.2.2 10.9.5c-2.2 2-7.4 7.6-7.4 13.5 0 5.4 4 9.8 9.3 10 5.3-.2 9.3-4.6 9.3-10 0-5.9-5.2-11.5-7.4-13.5C12.4.2 12.2 0 12 0zm.8 1.8c.8.9 6.2 7 6.2 12.2 0 4.5-3.3 8.2-7.8 8.4V1.8h.8v.004zM11.2 2.7v19.7C6.7 22.2 3.4 18.5 3.4 14c0-5.2 5.4-11.3 6.2-12.2l1.6.9z"/></svg>`,
+
+  // 13. OpenAI
+  openai: `<svg viewBox="0 0 24 24" fill="#10A37F" xmlns="http://www.w3.org/2000/svg"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 8.487a4.485 4.485 0 0 1 2.366-1.973V12.1a.766.766 0 0 0 .388.677l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 8.487zm16.597 3.855l-5.833-3.387L15.12 7.79a.076.076 0 0 1 .071 0l4.83 2.79a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.408-.665zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.797V7.465a.066.066 0 0 1 .033-.061L14.282 4.6a4.5 4.5 0 0 1 6.668 4.719zM8.847 13.064l2.29-1.32 2.29 1.32v2.64l-2.29 1.32-2.29-1.32z"/></svg>`,
+
+  // 14. LiveKit
+  livekit: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#002CF2" d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.3l7.5 3.75L12 11.8 4.5 8.05 12 4.3zM4 9.9l7 3.5v7.3l-7-3.5V9.9zm16 0v7.3l-7 3.5v-7.3l7-3.5z"/><circle cx="12" cy="12" r="2.4" fill="#22C55E"/></svg>`,
+
+  // 15. ElevenLabs
+  elevenlabs: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="4" width="3.5" height="16" rx="1.75" fill="#38BDF8"/><rect x="13.5" y="4" width="3.5" height="16" rx="1.75" fill="#06B6D4"/></svg>`,
+
+  // 16. Twilio
+  twilio: `<svg viewBox="0 0 24 24" fill="#F22F46" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.2c4.308 0 7.8 3.492 7.8 7.8s-3.492 7.8-7.8 7.8S4.2 16.308 4.2 12 7.692 4.2 12 4.2zm-2.4 4.2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zm4.8 0a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zm-4.8 4.8a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zm4.8 0a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6z"/></svg>`,
+
+  // 17. Stripe
+  stripe: `<svg viewBox="0 0 24 24" fill="#635BFF" xmlns="http://www.w3.org/2000/svg"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697.5 12.518.5 7.158.5 3.473 3.328 3.473 8.04c0 6.643 9.141 5.568 9.141 8.441 0 .984-.867 1.488-2.32 1.488-2.617 0-5.337-1.127-7.234-2.225l-.946 5.541c2.197 1.077 5.438 1.715 8.18 1.715 5.578 0 9.479-2.732 9.479-7.587 0-7.07-9.797-5.717-9.797-8.473z"/></svg>`,
+
+  // 18. Google Maps
+  googlemaps: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M12 2C7.58 2 4 5.58 4 10c0 5.25 8 12 8 12s8-6.75 8-12c0-4.42-3.58-8-8-8z"/><circle cx="12" cy="10" r="3.5" fill="#FFFFFF"/><circle cx="12" cy="10" r="2" fill="#EA4335"/></svg>`,
+
+  // 19. Git
+  git: `<svg viewBox="0 0 24 24" fill="#F05032" xmlns="http://www.w3.org/2000/svg"><path d="M23.546 10.93L13.067.452a1.5 1.5 0 0 0-2.124 0L8.835 2.56l3.199 3.199a1.782 1.782 0 0 1 2.26 2.26l3.082 3.082a1.782 1.782 0 1 1-1.066 1.066l-2.87-2.87v4.646a1.783 1.783 0 1 1-1.5 0V9.176a1.784 1.784 0 0 1-.958-.958L7.78 5.018.454 12.344a1.5 1.5 0 0 0 0 2.124l10.479 10.479a1.5 1.5 0 0 0 2.124 0l10.489-10.49a1.5 1.5 0 0 0 0-2.527z"/></svg>`,
+
+  // 20. GitHub
+  github: `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>`,
+
+  // 21. Tailwind CSS
+  tailwind: `<svg viewBox="0 0 24 24" fill="#06B6D4" xmlns="http://www.w3.org/2000/svg"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.975 12 6.001 12z"/></svg>`,
+
+  // 22. Sass / SCSS
+  sass: `<svg viewBox="0 0 24 24" fill="#CC6699" xmlns="http://www.w3.org/2000/svg"><path d="M12.002 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.275 14.786c-.534 1.76-2.072 2.705-3.87 2.705-2.267 0-3.92-1.503-3.92-3.79 0-2.316 1.733-3.818 4.093-3.818 1.884 0 3.245.98 3.738 2.502h-1.688c-.378-.857-1.085-1.282-2.05-1.282-1.398 0-2.348.964-2.348 2.598 0 1.603.95 2.569 2.31 2.569.965 0 1.67-.442 2.05-1.282h1.685v-.202z"/></svg>`,
+
+  // 23. Auth0
+  auth0: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#EB5424" d="M21.98 7.348L19.26 15.7a4.92 4.92 0 0 1-3.13 3.14l-4.13 1.34-4.13-1.34a4.92 4.92 0 0 1-3.13-3.14L2.02 7.348l6.68-4.9a5.55 5.55 0 0 1 6.6 0l6.68 4.9z"/><path fill="#FFFFFF" d="M12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 2.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>`,
+
+  // 24. Microservices
+  microservices: `<svg viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="5" r="3" fill="rgba(56,189,248,0.25)"/><circle cx="6" cy="12" r="3" fill="rgba(6,182,212,0.25)"/><circle cx="18" cy="19" r="3" fill="rgba(129,140,248,0.25)"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/><line x1="18" y1="8" x2="18" y2="16"/></svg>`,
+
+  // 25. REST APIs
+  api: `<svg viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="20" height="7" rx="2" fill="rgba(6,182,212,0.18)"/><rect x="2" y="14" width="20" height="7" rx="2" fill="rgba(6,182,212,0.18)"/><line x1="6" y1="6.5" x2="6.01" y2="6.5"/><line x1="6" y1="17.5" x2="6.01" y2="17.5"/></svg>`,
+
+  // 26. CP-SAT Optimization
+  optimization: `<svg viewBox="0 0 24 24" fill="none" stroke="#818CF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><circle cx="4" cy="12" r="2" fill="#818CF8"/><circle cx="12" cy="10" r="2" fill="#818CF8"/><circle cx="20" cy="14" r="2" fill="#818CF8"/></svg>`,
+
+  // 27. Zoho & Dropbox Sign
+  sign: `<svg viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15c1.5-1 3.5 1 5 0s1.5-1 2 0"/></svg>`,
+
+  // 28. SQL Database
+  sql: `<svg viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="9" ry="3" fill="rgba(56,189,248,0.2)"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>`
+};
+
+@Component({
+  selector: 'app-tech-icon',
+  imports: [MatIconModule],
+  template: `
+    @if (svgIcon(); as svg) {
+      <span
+        class="tech-svg-wrap"
+        [innerHTML]="svg"
+        [style.width.px]="size()"
+        [style.height.px]="size()"
+      ></span>
+    } @else {
+      <mat-icon
+        class="tech-fallback-icon"
+        [style.font-size.px]="size()"
+        [style.width.px]="size()"
+        [style.height.px]="size()"
+        aria-hidden="true"
+      >{{ fallbackIcon() }}</mat-icon>
+    }
+  `,
+  styles: `
+    :host {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .tech-svg-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+
+      ::ng-deep svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    .tech-fallback-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      color: var(--primary);
+    }
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class TechIconComponent {
+  private readonly sanitizer = inject(DomSanitizer);
+
+  readonly name = input.required<string>();
+  readonly fallbackIcon = input<string>('code');
+  readonly size = input<number>(20);
+
+  readonly svgIcon = computed<SafeHtml | null>(() => {
+    const rawName = this.name().toLowerCase().trim();
+
+    // Map common aliases to canonical keys
+    let key = '';
+    if (rawName.includes('react')) key = 'react';
+    else if (rawName.includes('angular')) key = 'angular';
+    else if (rawName.includes('next')) key = 'nextjs';
+    else if (rawName.includes('laravel')) key = 'laravel';
+    else if (rawName.includes('php')) key = 'php';
+    else if (rawName.includes('node')) key = 'nodejs';
+    else if (rawName.includes('express')) key = 'nodejs';
+    else if (rawName.includes('typescript')) key = 'typescript';
+    else if (rawName.includes('javascript') || rawName === 'js') key = 'javascript';
+    else if (rawName.includes('python')) key = 'python';
+    else if (rawName.includes('postgres')) key = 'postgresql';
+    else if (rawName.includes('mysql')) key = 'mysql';
+    else if (rawName.includes('mongo')) key = 'mongodb';
+    else if (rawName.includes('openai')) key = 'openai';
+    else if (rawName.includes('livekit')) key = 'livekit';
+    else if (rawName.includes('elevenlabs')) key = 'elevenlabs';
+    else if (rawName.includes('twilio') || rawName.includes('vobiz')) key = 'twilio';
+    else if (rawName.includes('stripe')) key = 'stripe';
+    else if (rawName.includes('maps') || rawName.includes('google')) key = 'googlemaps';
+    else if (rawName.includes('tailwind')) key = 'tailwind';
+    else if (rawName.includes('sass') || rawName.includes('scss')) key = 'sass';
+    else if (rawName.includes('auth0')) key = 'auth0';
+    else if (rawName.includes('github')) key = 'github';
+    else if (rawName.includes('git')) key = 'git';
+    else if (rawName.includes('microservice')) key = 'microservices';
+    else if (rawName.includes('api') || rawName.includes('rest')) key = 'api';
+    else if (rawName.includes('cp-sat') || rawName.includes('optimization')) key = 'optimization';
+    else if (rawName.includes('sign') || rawName.includes('zoho') || rawName.includes('dropbox')) key = 'sign';
+    else if (rawName.includes('sql') || rawName.includes('database')) key = 'sql';
+
+    if (key && TECH_SVGS[key]) {
+      return this.sanitizer.bypassSecurityTrustHtml(TECH_SVGS[key]);
+    }
+
+    return null;
+  });
+}
+
