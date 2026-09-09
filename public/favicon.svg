@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="sp-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="subtle-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#06b6d4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Background Squircle with Cyan Gradient -->
+  <rect x="6" y="6" width="116" height="116" rx="32" ry="32" fill="url(#sp-grad)" filter="url(#subtle-shadow)"/>
+  <!-- Inner Highlight Border -->
+  <rect x="6" y="6" width="116" height="116" rx="32" ry="32" fill="none" stroke="rgba(255, 255, 255, 0.25)" stroke-width="2"/>
+  <!-- SP Monogram Text -->
+  <text x="64" y="70"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Poppins', sans-serif"
+        font-size="56"
+        font-weight="900"
+        letter-spacing="-2.5"
+        fill="#ffffff"
+        text-anchor="middle"
+        dominant-baseline="middle">SP</text>
+</svg>
