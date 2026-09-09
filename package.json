@@ -52,6 +52,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.9.5",
-    "typescript": "~6.0.0"
+    "typescript": "~6.0.0",
+    "vercel": "^41.0.0"
   }
 }
