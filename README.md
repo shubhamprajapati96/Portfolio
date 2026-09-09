@@ -29,12 +29,15 @@ This repository houses the modern, high-performance personal portfolio web appli
 
 | Project | Live Platform URL | Tech Stack | Overview |
 | :--- | :--- | :--- | :--- |
-| **Dealer AI Solutions** | [dealeraisolutions.com](https://dealeraisolutions.com) | Laravel, Node.js, MySQL, LiveKit, ElevenLabs | Enterprise conversational voice AI platform for automotive dealerships with automated outbound calling and payment processing. |
+| **RevBridge AI** | [revbridgeai.in](https://revbridgeai.in/) | Next.js, Nest.js, Python, PostgreSQL | Enterprise SaaS conversational AI platform automating voice conversations with intelligent AI agents for outbound/inbound calling, appointment scheduling, payment processing, real-time intent detection, and seamless CRM integrations. |
+| **Dealer AI Solutions** | [dealeraisolutions.com](https://dealeraisolutions.com) | Laravel, Node.js, MySQL, LiveKit, ElevenLabs | Enterprise conversational voice AI platform for automotive dealerships with automated outbound calling, payment negotiation, and IDMS integration. |
 | **ShiftHarmony AI** | [shiftharmony.ai](https://shiftharmony.ai) | Next.js, Python, PostgreSQL, OpenAI, CP-SAT | Multi-tenant SaaS hospital scheduling platform automating physician shifts using CP-SAT optimization and natural language preferences. |
 | **Draydex Logistics** | [draydex.com](https://draydex.com) | Next.js, Laravel, PostgreSQL, Google Maps API | End-to-end freight transportation & logistics management platform with real-time route tracking, spot market index, and payments. |
 | **IVR Microservice** | [ivr.pavillio.com](https://ivr.pavillio.com) | Angular, Node.js, PostgreSQL, Twilio API | High-availability AI-powered telephony IVR communication system built for automated caregiver workflows and call telemetry. |
 | **Air-Sign Engine** | [manageairconcierge.net](https://manageairconcierge.net) | Laravel, PHP, MySQL, Zoho & Dropbox Sign APIs | Automated contract signing and digital document execution system with legally compliant audit trail workflows. |
 | **Ozparty Events** | [ozpartyevents.com](https://ozpartyevents.com) | React.js, Node.js, MySQL, Rezdy & Moonstride | Scalable event & hospitality booking engine with real-time availability synchronization and dynamic itinerary builders. |
+| **Rankup LLM Portal** | [dealeraisolutions.com](https://dealeraisolutions.com) | Next.js, Node.js, PostgreSQL, Stripe & OpenAI APIs | AI SaaS administration portal powering generative LLM features with enterprise multi-tier Stripe subscription management. |
+| **Brainymate** | [shiftharmony.ai](https://shiftharmony.ai) | Next.js, Python API, KaTeX, WebSockets | Collaborative educational platform featuring real-time mathematical KaTeX formula rendering and interactive whiteboard canvases. |
 
 ---
 
@@ -96,7 +99,7 @@ myProtfolio/
 │   │   │   ├── services/
 │   │   │   ├── skills/
 │   │   │   └── testimonials/
-│   │   ├── shared/         # Reusable components, pipes, directives
+│   │   ├── shared/         # Reusable UI components, animations, and validators
 │   │   ├── app.config.ts   # Application configuration & providers
 │   │   ├── app.routes.ts   # Route definitions
 │   │   └── app.ts          # Root component
