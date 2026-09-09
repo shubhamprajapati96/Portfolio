@@ -3,7 +3,6 @@ import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from '@shared/components/footer/footer.component';
 import { NavbarComponent } from '@shared/components/navbar/navbar.component';
 import { ScrollTopButtonComponent } from '@shared/components/scroll-top-button/scroll-top-button.component';
-import { routeTransition } from '@shared/animations/page.animations';
 import { ScrollService } from '../../services/scroll.service';
 
 @Component({
@@ -13,8 +12,8 @@ import { ScrollService } from '../../services/scroll.service';
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="layout-wrapper">
       <app-navbar />
-      <main id="main-content" [@routeTransition]="outlet.activatedRouteData" tabindex="-1">
-        <router-outlet #outlet="outlet" />
+      <main id="main-content" tabindex="-1">
+        <router-outlet />
       </main>
       <app-footer />
       <app-scroll-top-button />
@@ -58,7 +57,6 @@ import { ScrollService } from '../../services/scroll.service';
       outline: none;
     }
   `,
-  animations: [routeTransition],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainLayoutComponent {

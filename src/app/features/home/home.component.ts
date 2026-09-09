@@ -17,7 +17,6 @@ import { PortfolioService } from '@core/services/portfolio.service';
 import { ScrollService } from '@core/services/scroll.service';
 import { SeoService } from '@core/services/seo.service';
 import { SnackbarService } from '@core/services/snackbar.service';
-import { fadeIn, staggerCards } from '@shared/animations/page.animations';
 import { ContactFormComponent } from '@shared/components/contact-form/contact-form.component';
 import { ProjectCardComponent } from '@shared/components/project-card/project-card.component';
 import { SkillCardComponent } from '@shared/components/skill-card/skill-card.component';
@@ -50,7 +49,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
     </div>
 
     <!-- 1. HERO SECTION (Introduction & Photo Split) -->
-    <section id="home" class="hero" @fadeIn>
+    <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
           <div class="status-pill">
@@ -122,7 +121,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
     </section>
 
     <!-- 2. ABOUT & METRICS (4 Hand-Drawn Circles) -->
-    <section id="about" class="section about-section" @staggerCards>
+    <section id="about" class="section about-section">
       <div class="container">
         <div class="about-header-wrap">
           <div class="eyebrow-badge">
@@ -268,7 +267,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
     </section>
 
     <!-- 4. ACADEMIC QUALIFICATIONS -->
-    <section id="qualifications" class="section qualifications-section" @staggerCards>
+    <section id="qualifications" class="section qualifications-section">
       <div class="container">
         <div class="qualifications-header-wrap">
           <div class="eyebrow-badge">
@@ -320,7 +319,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
     </section>
 
     <!-- 4. CORE SKILLS & CAPABILITIES -->
-    <section id="skills" class="section skills-section" @staggerCards>
+    <section id="skills" class="section skills-section">
       <div class="container">
         <div class="skills-header-wrap">
           <div class="eyebrow-badge">
@@ -1989,7 +1988,6 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       }
     }
   `,
-  animations: [fadeIn, staggerCards],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements AfterViewInit {

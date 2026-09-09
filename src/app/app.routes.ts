@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { ROUTE_PATHS } from './core/constants/route.constants';
 import { MainLayoutComponent } from './core/layouts/main-layout/main-layout.component';
+import { HomeComponent } from './features/home/home.component';
 
 export const routes: Routes = [
   {
@@ -10,7 +11,7 @@ export const routes: Routes = [
       {
         path: ROUTE_PATHS.home,
         title: 'Shubham Prajapati | Software Developer',
-        loadComponent: () => import('./features/home/home.component').then((m) => m.HomeComponent)
+        component: HomeComponent
       },
       {
         path: ROUTE_PATHS.about,
