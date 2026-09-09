@@ -1,15 +1,10 @@
 # Shubham Prajapati — Software Developer Portfolio
 
 <p align="center">
-  <img src="src/assets/images/profile/shubham_prajapati.jpg" alt="Shubham Prajapati" width="140" style="border-radius: 50%;" onerror="this.style.display='none'" />
-</p>
-
-<p align="center">
   <strong>Software Developer | Microservices Architecture | Cloud & SaaS Specialist</strong>
 </p>
 
 <p align="center">
-  <a href="mailto:prajapatishubham644@gmail.com"><img src="https://img.shields.io/badge/Email-prajapatishubham644%40gmail.com-red?style=for-the-badge&logo=gmail" alt="Email" /></a>
   <a href="https://github.com/shubhamprajapati96"><img src="https://img.shields.io/badge/GitHub-shubhamprajapati96-181717?style=for-the-badge&logo=github" alt="GitHub" /></a>
   <a href="https://www.linkedin.com/in/shubham-prajapati-3a51a9160"><img src="https://img.shields.io/badge/LinkedIn-Shubham%20Prajapati-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn" /></a>
 </p>
@@ -199,7 +194,6 @@ The compiled `dist/` output can be deployed easily to:
 
 **Shubham Prajapati**
 - **Title**: Software Developer
-- **Email**: [prajapatishubham644@gmail.com](mailto:prajapatishubham644@gmail.com)
 - **Location**: Lucknow, India
 - **GitHub**: [@shubhamprajapati96](https://github.com/shubhamprajapati96)
 - **LinkedIn**: [shubham-prajapati-3a51a9160](https://www.linkedin.com/in/shubham-prajapati-3a51a9160)
