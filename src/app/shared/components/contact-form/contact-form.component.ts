@@ -89,11 +89,11 @@ import { CustomValidators } from '@shared/validators/custom.validators';
         @if (isSubmitting()) {
           <span class="btn-content">
             <mat-spinner diameter="20" class="submit-spinner" />
-            <span>Sending Message...</span>
+            <span class="btn-text">Sending Message...</span>
           </span>
         } @else {
           <span class="btn-content">
-            <span>Send Message</span>
+            <span class="btn-text">Send Message</span>
             <mat-icon aria-hidden="true" class="send-icon">send</mat-icon>
           </span>
         }
@@ -173,34 +173,54 @@ import { CustomValidators } from '@shared/validators/custom.validators';
         font-weight: 700 !important;
         margin-block-start: 0.5rem;
         width: 100% !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
 
         .mdc-button__label {
           display: inline-flex !important;
           align-items: center !important;
           justify-content: center !important;
-          gap: 0.65rem !important;
+          width: 100% !important;
+          line-height: 1 !important;
         }
 
         .btn-content {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.65rem;
-        }
-
-        .send-icon {
-          font-size: 1.2rem !important;
-          inline-size: 1.2rem !important;
-          block-size: 1.2rem !important;
           display: inline-flex !important;
           align-items: center !important;
           justify-content: center !important;
+          gap: 0.65rem !important;
+          line-height: 1 !important;
+        }
+
+        .btn-text {
+          display: inline-flex !important;
+          align-items: center !important;
+          line-height: 1 !important;
+        }
+
+        .send-icon {
+          font-size: 1.25rem !important;
+          inline-size: 1.25rem !important;
+          block-size: 1.25rem !important;
+          width: 1.25rem !important;
+          height: 1.25rem !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          vertical-align: middle !important;
+          align-self: center !important;
+          line-height: 1 !important;
           margin: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          margin-inline: 0 !important;
+          transform: translateY(2.5px);
           transition: transform 200ms ease;
         }
 
         &:hover:not([disabled]) .send-icon {
-          transform: translateX(4px);
+          transform: translate(4px, 2.5px);
         }
       }
     }

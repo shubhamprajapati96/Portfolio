@@ -203,6 +203,27 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
       font-weight: 600 !important;
       padding-inline: 1.15rem !important;
       min-block-size: 2.6rem !important;
+
+      ::ng-deep .mdc-button__label {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.45rem !important;
+        line-height: 1 !important;
+      }
+
+      .mat-icon {
+        font-size: 1.15rem !important;
+        inline-size: 1.15rem !important;
+        block-size: 1.15rem !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        vertical-align: middle !important;
+        align-self: center !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+      }
     }
 
     .menu-button {
