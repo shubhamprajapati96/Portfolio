@@ -5,10 +5,11 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { ProjectService } from '@core/services/project.service';
 import { SeoService } from '@core/services/seo.service';
+import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.component';
 
 @Component({
   selector: 'app-project-detail',
-  imports: [MatButtonModule, MatChipsModule, MatIconModule, RouterLink],
+  imports: [MatButtonModule, MatChipsModule, MatIconModule, RouterLink, TechIconComponent],
   template: `
     @if (project()) {
       <section class="section project-detail-page">
@@ -54,7 +55,10 @@ import { SeoService } from '@core/services/seo.service';
                 <h3 class="section-label">Architecture & Stack</h3>
                 <div class="tech-chips">
                   @for (technology of project()!.technologies; track technology) {
-                    <span class="tech-chip">{{ technology }}</span>
+                    <span class="tech-chip">
+                      <app-tech-icon [name]="technology" [size]="16" />
+                      <span>{{ technology }}</span>
+                    </span>
                   }
                 </div>
               </div>
@@ -63,10 +67,6 @@ import { SeoService } from '@core/services/seo.service';
                 <a mat-flat-button color="primary" [href]="project()!.liveUrl" target="_blank" rel="noreferrer" class="primary-action">
                   <mat-icon aria-hidden="true">open_in_new</mat-icon>
                   <span>Launch Live Demo</span>
-                </a>
-                <a mat-stroked-button [href]="project()!.githubUrl" target="_blank" rel="noreferrer" class="secondary-action">
-                  <mat-icon aria-hidden="true">code</mat-icon>
-                  <span>View Repository</span>
                 </a>
               </div>
             </div>
@@ -240,13 +240,24 @@ import { SeoService } from '@core/services/seo.service';
     }
 
     .tech-chip {
-      padding: 0.35rem 0.85rem;
-      border-radius: 0.65rem;
-      background: var(--bg-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.4rem 0.95rem;
+      border-radius: 9999px;
+      background: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
       color: var(--text-primary);
-      font-size: 0.84rem;
+      font-size: 0.86rem;
       font-weight: 600;
+      transition: all 180ms ease;
+
+      &:hover {
+        background: var(--bg-pill);
+        border-color: var(--border-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px var(--primary-glow);
+      }
     }
 
     .project-actions {

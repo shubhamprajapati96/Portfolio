@@ -152,7 +152,7 @@ export class ServicesComponent {
   constructor() {
     this.seo.update({
       title: 'Services | Shubham Prajapati',
-      description: 'Full-Stack SaaS development, microservices architecture, API integrations, and modern UI/UX engineering services.'
+      description: 'SaaS development, microservices architecture, API integrations, and modern UI/UX engineering services.'
     });
   }
 }

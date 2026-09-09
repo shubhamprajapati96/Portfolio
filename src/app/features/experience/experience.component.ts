@@ -16,7 +16,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
         <app-section-header
           eyebrow="Career Journey"
           title="Working Experience"
-          description="Over 7 years of full-stack engineering leadership across conversational AI, hospital optimization, microservices architecture, and scalable SaaS platforms."
+          description="Over 7 years of software engineering leadership across conversational AI, microservices architecture, and scalable SaaS platforms."
         />
 
         <div class="timeline-container">
@@ -466,7 +466,7 @@ export class ExperienceComponent {
   constructor() {
     this.seo.update({
       title: 'Experience | Shubham Prajapati',
-      description: 'Professional Full Stack & Microservices engineering timeline for Shubham Prajapati.'
+      description: 'Professional Software Engineering & Microservices timeline for Shubham Prajapati.'
     });
   }
 }

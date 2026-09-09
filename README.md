@@ -1,11 +1,11 @@
-# Shubham Prajapati — Full Stack Developer Portfolio
+# Shubham Prajapati — Software Developer Portfolio
 
 <p align="center">
   <img src="src/assets/images/profile/shubham_prajapati.jpg" alt="Shubham Prajapati" width="140" style="border-radius: 50%;" onerror="this.style.display='none'" />
 </p>
 
 <p align="center">
-  <strong>Full Stack Software Developer | Microservices Architecture | Cloud & SaaS Specialist</strong>
+  <strong>Software Developer | Microservices Architecture | Cloud & SaaS Specialist</strong>
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@ This repository houses the modern, high-performance personal portfolio web appli
 | **Draydex Logistics** | [draydex.com](https://draydex.com) | Next.js, Laravel, PostgreSQL, Google Maps API | End-to-end freight transportation & logistics management platform with real-time route tracking, spot market index, and payments. |
 | **IVR Microservice** | [ivr.pavillio.com](https://ivr.pavillio.com) | Angular, Node.js, PostgreSQL, Twilio API | High-availability AI-powered telephony IVR communication system built for automated caregiver workflows and call telemetry. |
 | **Air-Sign Engine** | [manageairconcierge.net](https://manageairconcierge.net) | Laravel, PHP, MySQL, Zoho & Dropbox Sign APIs | Automated contract signing and digital document execution system with legally compliant audit trail workflows. |
-| **Ozparty Events** | [ozpartyevents.com](https://ozpartyevents.com) | React.js, Node.js, MySQL, Rezdy & Moonstride | Full-stack event & hospitality booking engine with real-time availability synchronization and dynamic itinerary builders. |
+| **Ozparty Events** | [ozpartyevents.com](https://ozpartyevents.com) | React.js, Node.js, MySQL, Rezdy & Moonstride | Scalable event & hospitality booking engine with real-time availability synchronization and dynamic itinerary builders. |
 
 ---
 
@@ -55,7 +55,7 @@ This repository houses the modern, high-performance personal portfolio web appli
   - `Experience`: Interactive career timeline detailing DEVtrust (2021–2026) and Tarkash Technology milestones.
   - `Projects`: Filterable project catalog with live website screenshots and dedicated dynamic detail pages (`/projects/:id`).
   - `Certifications & Achievements`: Verified credentials, summer trainings, internships, and career milestones.
-  - `Services`: Enterprise consulting, Voice AI, microservices, and full-stack development service offerings.
+  - `Services`: Enterprise consulting, Voice AI, microservices, and software engineering service offerings.
   - `Testimonials`: Real recommendations and reviews from engineering leaders and clients.
   - `Contact`: Validated interactive contact form with direct mail and phone triggers.
   - `404 Not Found`: User-friendly fallback route with direct navigation back to home.
@@ -198,7 +198,7 @@ The compiled `dist/` output can be deployed easily to:
 ## 👤 Author
 
 **Shubham Prajapati**
-- **Title**: Full Stack Software Developer
+- **Title**: Software Developer
 - **Email**: [prajapatishubham644@gmail.com](mailto:prajapatishubham644@gmail.com)
 - **Location**: Lucknow, India
 - **GitHub**: [@shubhamprajapati96](https://github.com/shubhamprajapati96)

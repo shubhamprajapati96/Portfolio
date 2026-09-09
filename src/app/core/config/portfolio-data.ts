@@ -3,7 +3,7 @@ import { PortfolioData } from '../interfaces/portfolio.interfaces';
 export const PORTFOLIO_DATA: PortfolioData = {
   profile: {
     name: 'Shubham Prajapati',
-    title: 'Full Stack Software Developer',
+    title: 'Software Developer',
     intro:
       'Software Developer with 7 years of experience building scalable SaaS applications and enterprise systems using React, Angular, Next.js, PHP, Laravel, and Node.js.',
     summary:
@@ -11,7 +11,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
     email: 'prajapatishubham644@gmail.com',
     phone: '',
     location: 'Lucknow, India',
-    availability: 'Open to Senior Full Stack, AI SaaS & Microservices Opportunities',
+    availability: 'Open to Senior Software Developer, AI SaaS & Microservices Opportunities',
     resumeUrl: 'assets/data/shubham_resume_2026.pdf',
     imageUrl:
       'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80'
@@ -78,7 +78,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
       skills: [
         { name: 'Git & GitHub', icon: 'commit', level: 96 },
         { name: 'Auth0 Security', icon: 'security', level: 92 },
-        { name: 'CP-SAT Optimization', icon: 'tune', level: 90 },
         { name: 'System Optimization', icon: 'speed', level: 95 }
       ]
     },
@@ -99,7 +98,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
       skills: [
         { name: 'Laravel', icon: 'developer_mode', level: 98 },
         { name: 'Next.js', icon: 'view_in_ar', level: 96 },
-        { name: 'Angular Material', icon: 'widgets', level: 94 },
         { name: 'Tailwind CSS & SCSS', icon: 'palette', level: 94 }
       ]
     },
@@ -109,7 +107,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
       skills: [
         { name: 'Microservices Architecture', icon: 'schema', level: 96 },
         { name: 'Conversational Voice AI', icon: 'record_voice_over', level: 94 },
-        { name: 'Hospital Shift Optimization', icon: 'calendar_month', level: 92 },
         { name: 'Legacy System Migration', icon: 'sync_alt', level: 95 }
       ]
     },
@@ -126,7 +123,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
   experiences: [
     {
       company: 'DEVtrust (Dev Tech Enterprises Pvt. Ltd)',
-      position: 'Software Developer (Full Stack)',
+      position: 'Software Developer',
       duration: 'June 2021 – August 2026',
       location: 'Lucknow, India',
       responsibilities: [
@@ -136,7 +133,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
         'IVR Microservice: Developed microservices-based IVR system using Angular, Node.js, PostgreSQL, and Twilio API.',
         'Rankup: Lead LLM SaaS Admin Portal with Stripe integration and transaction tracking system.',
         'Air-Sign: Integrated Zoho Sign API and Dropbox Sign API for automated document workflows.',
-        'Ozparty: Delivered full-stack event management platform integrating Rezdy and Moonstride APIs.',
+        'Ozparty: Delivered event management platform integrating Rezdy and Moonstride APIs.',
         'Brainymate: Implemented LaTeX/KaTeX rendering and whiteboard API integration using Next.js and Python API.',
         'Offerland: Integrated OpenAI API with Auth0 authentication system using Next.js and Python API.',
         'MLC: Migrated legacy system ensuring seamless compatibility and performance optimization.',
@@ -166,7 +163,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       location: 'Lucknow, India',
       responsibilities: [
         'Election Management System (EMC): Developed microservices-based data filtering and management system.',
-        'SVCHE.IN: Built full-stack web application handling database schema and workflow optimization.',
+        'SVCHE.IN: Built web application handling database schema and workflow optimization.',
         'Engineered high-performance RESTful API endpoints with optimized database indexing and transactional integrity.'
       ],
       technologies: ['PHP', 'Laravel', 'MySQL', 'JavaScript', 'REST APIs', 'Microservices', 'Database Schema Design']
@@ -291,7 +288,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       credentialUrl: 'https://github.com/shubhamprajapati96'
     },
     {
-      title: 'Full Stack Engineering (React, Angular, Next.js & Laravel)',
+      title: 'Software Engineering (React, Angular, Next.js & Laravel)',
       issuer: 'Professional Portfolio Credential',
       date: '7 Years Production Verified',
       credentialUrl: 'https://www.linkedin.com/in/shubham-prajapati-3a51a9160'
@@ -325,7 +322,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
   ],
   services: [
     {
-      title: 'Full-Stack SaaS & AI Development',
+      title: 'SaaS & AI Systems Development',
       icon: 'smart_toy',
       description:
         'Building scalable web and conversational AI applications using Next.js, React, Angular, Laravel, and Node.js with high maintainability.'
@@ -360,7 +357,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       name: 'Engineering Director',
       role: 'DEV Tech Enterprises (DEVtrust)',
       quote:
-        'Shubham is a versatile full-stack engineer who consistently delivers complex integrations—from conversational voice AI and Stripe billing to Twilio IVR and logistics mapping—with incredible speed and technical precision.',
+        'Shubham is a versatile software engineer who consistently delivers complex integrations—from conversational voice AI and Stripe billing to Twilio IVR and logistics mapping—with incredible speed and technical precision.',
       avatarUrl:
         'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80'
     },

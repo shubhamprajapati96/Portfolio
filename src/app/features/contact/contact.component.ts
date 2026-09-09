@@ -281,7 +281,7 @@ export class ContactComponent {
   constructor() {
     this.seo.update({
       title: 'Contact | Shubham Prajapati',
-      description: 'Contact Shubham Prajapati for Full-Stack SaaS development, microservices architecture, and API integration inquiries.'
+      description: 'Contact Shubham Prajapati for SaaS development, microservices architecture, and API integration inquiries.'
     });
   }
 

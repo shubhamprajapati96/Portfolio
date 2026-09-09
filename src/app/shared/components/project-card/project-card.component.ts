@@ -32,20 +32,18 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
 
         <p class="project-description">{{ project().description }}</p>
 
-        <div class="tech-stack" aria-label="Project technologies">
-          @for (technology of project().technologies; track technology) {
-            <span class="tech-tag">
-              <app-tech-icon [name]="technology" [size]="14" />
-              <span>{{ technology }}</span>
-            </span>
-          }
-        </div>
+        @if (showTechStack()) {
+          <div class="tech-stack" aria-label="Project technologies">
+            @for (technology of project().technologies; track technology) {
+              <span class="tech-tag">
+                <app-tech-icon [name]="technology" [size]="14" />
+                <span>{{ technology }}</span>
+              </span>
+            }
+          </div>
+        }
 
         <div class="actions">
-          <a mat-button [href]="project().githubUrl" target="_blank" rel="noreferrer" class="action-link">
-            <mat-icon aria-hidden="true">code</mat-icon>
-            <span>GitHub</span>
-          </a>
           <a mat-button [href]="project().liveUrl" target="_blank" rel="noreferrer" class="action-link">
             <mat-icon aria-hidden="true">open_in_new</mat-icon>
             <span>Live Demo</span>
@@ -262,6 +260,7 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
 })
 export class ProjectCardComponent {
   readonly project = input.required<Project>();
+  readonly showTechStack = input<boolean>(true);
 
   onImageError(event: Event, projectId: string): void {
     const target = event.target as HTMLImageElement;

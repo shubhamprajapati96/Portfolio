@@ -18,7 +18,7 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
           <span class="brand-mark">SP</span>
           <div class="brand-text">
             <span class="brand-name">Shubham Prajapati</span>
-            <span class="brand-badge">Full Stack</span>
+            <span class="brand-badge">Software Dev</span>
           </div>
         </a>
 

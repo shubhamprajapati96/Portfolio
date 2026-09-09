@@ -24,21 +24,36 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       <div class="container">
         <app-section-header
           eyebrow="Core Competencies"
-          title="Full Stack Architecture & Engineering Tooling"
+          title="Software Architecture & Engineering Tooling"
           description="A 7-year production engineering toolkit spanning reactive web frameworks, distributed microservices, conversational AI systems, and cloud databases."
         />
 
-        <!-- Featured Core Tech Stack Spotlight Ribbon -->
-        <div class="tech-spotlight-bar" aria-label="Core Technology Pillars">
-          <div class="spotlight-title">
-            <mat-icon aria-hidden="true">stars</mat-icon>
-            <span>Production Core:</span>
+        <!-- Elevated Production Core Showcase -->
+        <div class="production-core-showcase" aria-label="Core Technology Pillars">
+          <div class="core-showcase-header">
+            <div class="core-header-left">
+              <span class="core-live-badge">
+                <span class="pulse-beacon"></span>
+                <span>PRODUCTION CORE</span>
+              </span>
+              <h3 class="core-headline">14 Core Technologies & Frameworks</h3>
+            </div>
+            <span class="core-tagline">Battle-tested in high-throughput enterprise SaaS & conversational AI systems</span>
           </div>
-          <div class="spotlight-tags">
+
+          <div class="core-tech-grid">
             @for (tech of coreTechnologies; track tech.name) {
-              <div class="spotlight-chip">
-                <app-tech-icon [name]="tech.name" [fallbackIcon]="tech.icon" [size]="16" />
-                <span class="chip-name">{{ tech.name }}</span>
+              <div class="core-tech-card">
+                <div class="tech-icon-disc">
+                  <app-tech-icon [name]="tech.name" [fallbackIcon]="tech.icon" [size]="20" />
+                </div>
+                <div class="tech-meta-box">
+                  <span class="tech-card-name">{{ tech.name }}</span>
+                  <span class="tech-sub-status">
+                    <span class="status-dot"></span>
+                    Production Verified
+                  </span>
+                </div>
               </div>
             }
           </div>
@@ -83,32 +98,141 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       position: relative;
     }
 
-    /* Core Tech Spotlight Ribbon */
-    .tech-spotlight-bar {
+    /* ==========================================================================
+       PRODUCTION CORE SHOWCASE
+       ========================================================================== */
+    .production-core-showcase {
+      padding: clamp(1.25rem, 2.5vw, 1.75rem);
+      border-radius: 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 10px 30px -10px var(--primary-glow);
+      margin-block-end: 2rem;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: border-color 250ms ease, box-shadow 250ms ease;
+
+      &:hover {
+        border-color: var(--border-hover);
+      }
+    }
+
+    .core-showcase-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-block-end: 1.25rem;
+      margin-block-end: 1.25rem;
+      border-block-end: 1px solid var(--border-subtle);
+    }
+
+    .core-header-left {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 0.85rem;
-      padding: 0.85rem 1.25rem;
-      border-radius: 1.15rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border-hover);
-      box-shadow: 0 4px 20px -4px var(--primary-glow);
-      margin-block-end: 1.5rem;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
     }
 
-    .spotlight-title {
+    .core-live-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      background: var(--bg-pill);
+      border: 1px solid var(--border-hover);
       color: var(--primary);
-      font-size: 0.84rem;
+      font-size: 0.72rem;
       font-weight: 700;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+
+      .pulse-beacon {
+        inline-size: 0.5rem;
+        block-size: 0.5rem;
+        border-radius: 50%;
+        background: var(--primary);
+        box-shadow: 0 0 8px var(--primary);
+        animation: pulseBeacon 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+      }
+    }
+
+    @keyframes pulseBeacon {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.4;
+        transform: scale(1.3);
+      }
+    }
+
+    .core-headline {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .core-tagline {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .core-tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 10.5rem), 1fr));
+      gap: 0.75rem;
+    }
+
+    .core-tech-card {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.65rem 0.85rem;
+      border-radius: 1rem;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                  border-color 200ms ease,
+                  background-color 200ms ease,
+                  box-shadow 200ms ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        border-color: var(--border-hover);
+        background: var(--bg-pill);
+        box-shadow: 0 6px 18px -4px var(--primary-glow);
+
+        .tech-icon-disc {
+          transform: scale(1.12);
+          box-shadow: 0 0 16px var(--primary-glow);
+        }
+
+        .status-dot {
+          background: var(--primary);
+          box-shadow: 0 0 6px var(--primary);
+        }
+      }
+    }
+
+    .tech-icon-disc {
+      display: grid;
+      place-items: center;
+      inline-size: 2.25rem;
+      block-size: 2.25rem;
+      border-radius: 0.7rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--primary);
       flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      transition: transform 200ms ease, box-shadow 200ms ease;
 
       mat-icon {
         font-size: 1.15rem;
@@ -117,39 +241,37 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       }
     }
 
-    .spotlight-tags {
+    .tech-meta-box {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.45rem;
-      flex: 1;
+      flex-direction: column;
+      gap: 0.15rem;
+      min-inline-size: 0;
     }
 
-    .spotlight-chip {
+    .tech-card-name {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.2;
+    }
+
+    .tech-sub-status {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      padding: 0.3rem 0.65rem;
-      border-radius: 9999px;
-      background: var(--bg-surface-elevated);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-primary);
-      font-size: 0.8rem;
-      font-weight: 600;
-      transition: all 180ms ease;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--text-muted);
 
-      .chip-icon {
-        font-size: 0.95rem;
-        inline-size: 0.95rem;
-        block-size: 0.95rem;
-        color: var(--primary);
-      }
-
-      &:hover {
-        border-color: var(--border-hover);
-        background: var(--bg-pill);
-        transform: translateY(-2px);
-        box-shadow: 0 2px 10px var(--primary-glow);
+      .status-dot {
+        inline-size: 0.35rem;
+        block-size: 0.35rem;
+        border-radius: 50%;
+        background: var(--success);
+        transition: all 200ms ease;
       }
     }
 
@@ -236,12 +358,8 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
     .skills-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: clamp(1.25rem, 3vw, 2rem);
+      gap: clamp(1.25rem, 3vw, 1.75rem);
       align-items: stretch;
-
-      @media (min-width: 48rem) {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
     }
   `,
   animations: [staggerCards],
@@ -260,6 +378,7 @@ export class SkillsComponent {
     { name: 'Next.js', icon: 'view_in_ar' },
     { name: 'PHP / Laravel', icon: 'developer_mode' },
     { name: 'Node.js', icon: 'api' },
+    { name: 'Git', icon: 'commit' },
     { name: 'Microservices', icon: 'account_tree' },
     { name: 'LiveKit Voice AI', icon: 'graphic_eq' },
     { name: 'ElevenLabs', icon: 'record_voice_over' },

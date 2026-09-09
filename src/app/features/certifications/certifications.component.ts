@@ -14,7 +14,7 @@ import { SectionHeaderComponent } from '@shared/components/section-header/sectio
         <app-section-header
           eyebrow="Verified Credentials"
           title="Credentials that support practical engineering excellence."
-          description="Full-stack engineering, microservices architecture, and enterprise application development credentials."
+          description="Software engineering, microservices architecture, and enterprise application development credentials."
         />
         <div class="grid-auto certifications-grid" @staggerCards>
           @for (certification of certifications(); track certification.title) {
@@ -44,7 +44,7 @@ export class CertificationsComponent {
   constructor() {
     this.seo.update({
       title: 'Certifications | Shubham Prajapati',
-      description: 'PHP, Laravel, Microservices, and Full Stack Engineering certifications.'
+      description: 'PHP, Laravel, Microservices, and Software Engineering certifications.'
     });
   }
 }

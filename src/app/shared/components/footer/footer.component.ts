@@ -24,7 +24,7 @@ import { DateHelper } from '@core/helper/date.helper';
           </p>
           <div class="status-pill">
             <span class="dot"></span>
-            <span>Available for Full Stack & Microservices Opportunities</span>
+            <span>Available for Software Engineering & Microservices Opportunities</span>
           </div>
         </section>
 

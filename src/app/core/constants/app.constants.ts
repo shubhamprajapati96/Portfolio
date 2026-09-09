@@ -3,7 +3,7 @@ import { ROUTE_PATHS } from './route.constants';
 
 export const APP_CONFIG = {
   name: 'Shubham Prajapati',
-  title: 'Full Stack Software Developer',
+  title: 'Software Developer',
   email: 'prajapatishubham644@gmail.com',
   phone: '',
   location: 'Lucknow, India',

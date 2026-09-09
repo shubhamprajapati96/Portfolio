@@ -146,7 +146,7 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
     /* Skills Grid (replacing progress bars with clean interactive tiles) */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
       gap: 0.75rem;
       flex: 1;
       align-content: start;

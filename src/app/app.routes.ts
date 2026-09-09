@@ -9,7 +9,7 @@ export const routes: Routes = [
     children: [
       {
         path: ROUTE_PATHS.home,
-        title: 'Shubham Prajapati | Full Stack Software Developer',
+        title: 'Shubham Prajapati | Software Developer',
         loadComponent: () => import('./features/home/home.component').then((m) => m.HomeComponent)
       },
       {

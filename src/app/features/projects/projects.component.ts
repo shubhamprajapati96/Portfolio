@@ -161,7 +161,7 @@ export class ProjectsComponent {
   constructor() {
     this.seo.update({
       title: 'Projects | Shubham Prajapati',
-      description: 'Full Stack and SaaS engineering projects with GitHub links, live demos, technologies, and details.'
+      description: 'SaaS and software engineering projects with live demos, technologies, and architecture details.'
     });
   }
 
