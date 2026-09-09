@@ -98,7 +98,6 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
       display: block;
       transform: translateZ(0);
       -webkit-transform: translateZ(0);
-      overscroll-behavior: none;
     }
 
     .navbar-wrapper {
