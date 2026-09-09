@@ -115,7 +115,9 @@ export const PORTFOLIO_DATA: PortfolioData = {
       skills: [
         { name: 'Technical Problem Solving', icon: 'emoji_objects', level: 98 },
         { name: 'Team Collaboration & Leadership', icon: 'school', level: 95 },
-        { name: 'Product Engineering', icon: 'tips_and_updates', level: 94 }
+        { name: 'Product Engineering', icon: 'tips_and_updates', level: 94 },
+        { name: 'AWS & S3 (Basics)', icon: 'cloud', level: 75 },
+        { name: 'Docker (Basics)', icon: 'deployed_code', level: 75 }
       ]
     }
   ],
