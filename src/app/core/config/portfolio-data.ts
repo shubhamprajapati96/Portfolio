@@ -184,7 +184,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       title: 'RevBridge AI',
       description:
         'Enterprise SaaS conversational AI platform automating voice conversations with intelligent AI agents for outbound/inbound calling, appointment scheduling, payment processing, real-time intent detection, and seamless CRM integrations.',
-      imageUrl: 'https://image.thum.io/get/width/1200/crop/800/https://revbridgeai.in/',
+      imageUrl: 'assets/images/projects/revbridge.png',
       technologies: ['Next.js', 'Nest.js', 'Python', 'PostgreSQL'],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
       liveUrl: 'https://revbridgeai.in/',
