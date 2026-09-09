@@ -411,7 +411,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
 
         <div class="projects-grid">
           @for (project of projects(); track project.id) {
-            <app-project-card [project]="project" [showTechStack]="false" />
+            <app-project-card [project]="project" [showTechStack]="false" [priority]="$index < 2" />
           }
         </div>
       </div>

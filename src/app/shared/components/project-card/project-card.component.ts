@@ -13,7 +13,14 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
     <article class="project-card">
       <div class="image-wrapper">
         <a [routerLink]="project().detailsUrl" class="image-link" [attr.aria-label]="project().title + ' details'">
-          <img [src]="project().imageUrl" [alt]="project().title" loading="lazy" (error)="onImageError($event, project().id)" />
+          <img
+            [src]="project().imageUrl"
+            [alt]="project().title"
+            [loading]="priority() ? 'eager' : 'lazy'"
+            [attr.fetchpriority]="priority() ? 'high' : 'auto'"
+            decoding="async"
+            (error)="onImageError($event, project().id)"
+          />
           <div class="image-overlay">
             <span class="preview-badge">
               <mat-icon aria-hidden="true">visibility</mat-icon>
@@ -261,6 +268,7 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
 export class ProjectCardComponent {
   readonly project = input.required<Project>();
   readonly showTechStack = input<boolean>(true);
+  readonly priority = input<boolean>(false);
 
   onImageError(event: Event, projectId: string): void {
     const target = event.target as HTMLImageElement;

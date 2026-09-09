@@ -36,7 +36,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
                   </div>
                 </div>
                 <div class="browser-body">
-                  <img [src]="project()!.imageUrl" [alt]="project()!.title" fetchpriority="high" (error)="onImageError($event, project()!.id)" />
+                  <img [src]="project()!.imageUrl" [alt]="project()!.title" loading="eager" fetchpriority="high" decoding="async" (error)="onImageError($event, project()!.id)" />
                 </div>
               </div>
             </div>
