@@ -113,9 +113,9 @@ html {
 .mat-mdc-form-field {
   --mat-form-field-container-text-color: var(--text-primary);
   --mat-form-field-input-text-color: var(--text-primary);
-  --mat-form-field-label-text-color: var(--text-muted);
+  --mat-form-field-label-text-color: var(--text-secondary);
   --mat-form-field-focus-label-text-color: var(--primary);
-  --mat-form-field-hover-label-text-color: var(--text-secondary);
+  --mat-form-field-hover-label-text-color: var(--text-primary);
   --mat-form-field-error-text-color: var(--danger);
   --mat-form-field-container-color: transparent;
 
@@ -124,9 +124,9 @@ html {
   --mdc-outlined-text-field-focus-outline-color: var(--primary);
   --mdc-outlined-text-field-input-text-color: var(--text-primary);
   --mdc-outlined-text-field-input-text-placeholder-color: var(--text-muted);
-  --mdc-outlined-text-field-label-text-color: var(--text-muted);
+  --mdc-outlined-text-field-label-text-color: var(--text-secondary);
   --mdc-outlined-text-field-focus-label-text-color: var(--primary);
-  --mdc-outlined-text-field-hover-label-text-color: var(--text-secondary);
+  --mdc-outlined-text-field-hover-label-text-color: var(--text-primary);
   --mdc-outlined-text-field-error-outline-color: var(--danger);
   --mdc-outlined-text-field-error-label-text-color: var(--danger);
   --mdc-outlined-text-field-error-focus-outline-color: var(--danger);
@@ -150,6 +150,43 @@ html {
     justify-content: center;
     color: var(--secondary);
     padding: 0 0.25rem 0 0.75rem;
+  }
+
+  .mdc-floating-label,
+  mat-label,
+  label {
+    color: var(--text-secondary) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em;
+  }
+
+  &.mat-focused {
+    .mdc-floating-label,
+    mat-label {
+      color: var(--primary) !important;
+    }
+  }
+}
+
+[data-theme='light'] .mat-mdc-form-field {
+  --mat-form-field-label-text-color: #0f172a;
+  --mdc-outlined-text-field-label-text-color: #0f172a;
+  --mdc-outlined-text-field-outline-color: rgba(15, 23, 42, 0.22);
+  --mdc-outlined-text-field-hover-outline-color: var(--primary);
+  --mdc-outlined-text-field-focus-outline-color: var(--primary);
+
+  .mdc-floating-label,
+  mat-label,
+  label {
+    color: #0f172a !important;
+    font-weight: 600 !important;
+  }
+
+  &.mat-focused {
+    .mdc-floating-label,
+    mat-label {
+      color: var(--primary) !important;
+    }
   }
 }
 

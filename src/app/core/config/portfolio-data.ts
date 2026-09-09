@@ -12,8 +12,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
     location: 'Lucknow, India',
     availability: 'Open to Senior Software Developer, AI SaaS & Microservices Opportunities',
     resumeUrl: 'assets/data/shubham_resume_2026.pdf',
-    imageUrl:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80'
+    imageUrl: 'assets/images/profile.png'
   },
   metrics: [
     { label: 'Years Experience', value: '7' },
@@ -127,6 +126,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       duration: 'June 2021 – August 2026',
       location: 'Lucknow, India',
       responsibilities: [
+        'RevBridge AI: Developed enterprise conversational AI SaaS platform for automated voice agents, call workflows, CRM integration, and payment processing using Next.js, Nest.js, Python, and PostgreSQL.',
         'Dealer AI Solutions: Developed an enterprise conversational AI platform for automotive dealerships, featuring AI-powered outbound calling, payment negotiation, automated collections, IDMS integration, call transcription, payment processing, and seamless human-agent escalation.',
         'ShiftHarmony AI: Developed a multi-tenant SaaS hospital scheduling platform using OpenAI, CP-SAT optimization, automated scheduling, and integrated payment systems to streamline physician shift management.',
         'Draydex: Built logistics Transportation platform using Next.js and Laravel with Google Maps API and payment gateway integration.',
@@ -179,6 +179,17 @@ export const PORTFOLIO_DATA: PortfolioData = {
     }
   ],
   projects: [
+    {
+      id: 'revbridge-ai',
+      title: 'RevBridge AI',
+      description:
+        'Enterprise SaaS conversational AI platform automating voice conversations with intelligent AI agents for outbound/inbound calling, appointment scheduling, payment processing, real-time intent detection, and seamless CRM integrations.',
+      imageUrl: 'https://image.thum.io/get/width/1200/crop/800/https://revbridgeai.in/',
+      technologies: ['Next.js', 'Nest.js', 'Python', 'PostgreSQL'],
+      githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
+      liveUrl: 'https://revbridgeai.in/',
+      detailsUrl: '/projects/revbridge-ai'
+    },
     {
       id: 'dealer-ai-solutions',
       title: 'Dealer AI Solutions',

@@ -42,7 +42,7 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
       display: flex;
       flex-direction: column;
       height: 100%;
-      padding: clamp(1.25rem, 3vw, 1.75rem);
+      padding: clamp(1rem, 3vw, 1.75rem);
       border: 1px solid var(--border-subtle);
       border-radius: 1.5rem;
       background: var(--bg-card);
@@ -69,10 +69,11 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 0.75rem;
       margin-block-end: 1.25rem;
       padding-block-end: 1.15rem;
       border-block-end: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
     }
 
     .header-left {
@@ -80,6 +81,7 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
       align-items: center;
       gap: 0.85rem;
       min-inline-size: 0;
+      flex: 1 1 auto;
     }
 
     .icon-box {
@@ -104,13 +106,14 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
 
     .category-name {
       margin: 0;
-      font-size: 1.18rem;
+      font-size: clamp(1.05rem, 3vw, 1.18rem);
       font-weight: 700;
       color: var(--text-primary);
       letter-spacing: -0.01em;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      line-height: 1.3;
+      white-space: normal;
+      overflow-wrap: break-word;
+      word-break: normal;
     }
 
     .count-pill {
@@ -127,8 +130,8 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
     /* Skills Grid - Modern Interactive Tiles with Only Icon & Title */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 14.5rem), 1fr));
-      gap: 0.85rem;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 11.5rem), 1fr));
+      gap: 0.75rem;
       flex: 1;
       align-content: start;
     }
@@ -137,12 +140,13 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      padding: 0.75rem 1rem;
+      padding: 0.65rem 0.85rem;
       border-radius: 1rem;
       background: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-      min-block-size: 3.75rem;
+      min-block-size: 3.5rem;
+      min-inline-size: 0;
       transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1),
                   border-color 200ms ease,
                   background-color 200ms ease,

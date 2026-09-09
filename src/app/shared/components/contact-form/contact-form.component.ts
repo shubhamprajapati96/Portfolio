@@ -127,6 +127,12 @@ import { CustomValidators } from '@shared/validators/custom.validators';
           }
         }
 
+        .mdc-floating-label,
+        mat-label {
+          color: var(--text-secondary) !important;
+          font-weight: 600 !important;
+        }
+
         .mat-mdc-form-field-icon-prefix {
           padding-inline: 0.75rem 0.4rem !important;
           color: var(--secondary) !important;

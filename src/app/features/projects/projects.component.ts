@@ -46,7 +46,7 @@ import { SectionHeaderComponent } from '@shared/components/section-header/sectio
 
         <div class="grid-auto projects-grid" @staggerCards>
           @for (project of filteredProjects(); track project.id) {
-            <app-project-card class="stagger-item" [project]="project" />
+            <app-project-card class="stagger-item" [project]="project" [showTechStack]="false" />
           }
         </div>
       </div>
