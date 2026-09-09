@@ -23,6 +23,8 @@ import { ScrollService } from '../../services/scroll.service';
     :host {
       display: block;
       min-block-size: 100vh;
+      overscroll-behavior: none;
+      overscroll-behavior-y: none;
     }
 
     .skip-link {
@@ -49,6 +51,8 @@ import { ScrollService } from '../../services/scroll.service';
       display: flex;
       flex-direction: column;
       min-block-size: 100vh;
+      overscroll-behavior: none;
+      overscroll-behavior-y: none;
     }
 
     main {

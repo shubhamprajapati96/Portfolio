@@ -193,6 +193,50 @@ The compiled `dist/` output can be deployed easily to:
 
 ---
 
+## 📱 Mobile App & Android APK Generation
+
+This application is fully aligned and optimized for mobile devices and native Android app wrappers:
+- **PWA Web App Manifest**: Pre-configured [`public/manifest.webmanifest`](public/manifest.webmanifest) with standalone display mode and responsive icon sizes (16px, 32px, 180px, 192px, 512px).
+- **Mobile Safe Area Insets**: Native support for device notches, status bars (`env(safe-area-inset-top)`), and navigation home indicators (`env(safe-area-inset-bottom)`).
+- **Boundary Overscroll Protection**: Enforced `overscroll-behavior: none` eliminating browser rubber-banding and elastic stretch bounce across touch, trackpad, and Microsoft Edge.
+
+### Easiest Ways to Generate Android APK:
+
+#### 🌟 Option 1: PWABuilder (Easiest — 1-Click, Zero Local Setup)
+1. Visit **[PWABuilder.com](https://www.pwabuilder.com/)**.
+2. Enter your live portfolio URL: `https://portfolio-shubhtech96-3071.vercel.app/`
+3. Click **Package for Stores** → select **Android**.
+4. Click **Generate / Download APK**.
+5. Your ready-to-install `.apk` (and Google Play Store ready `.aab`) will download in seconds.
+
+#### ⚡ Option 2: Automated GitHub Actions CI (Cloud Build)
+A pre-configured GitHub Actions workflow is provided at [`.github/workflows/build-apk.yml`](.github/workflows/build-apk.yml):
+1. Go to the **Actions** tab on your GitHub repository.
+2. Select **Build Android APK** from the left sidebar.
+3. Click **Run workflow** (or simply push to `main`/`master`).
+4. Once completed, download the **`Shubham-Portfolio-APK`** artifact directly from the workflow summary page.
+
+#### 🛠️ Option 3: Capacitor Android (Local Build with Android Studio)
+```bash
+# 1. Install Capacitor dependencies
+npm install --save-dev @capacitor/cli @capacitor/core @capacitor/android
+
+# 2. Build the Angular web app
+npm run build
+
+# 3. Add Android platform & sync
+npx cap add android
+npx cap sync android
+
+# 4. Open in Android Studio or compile APK via Gradle CLI
+npx cap open android
+# Or compile debug APK via CLI:
+cd android && ./gradlew assembleDebug
+```
+The compiled APK will be located at `android/app/build/outputs/apk/debug/app-debug.apk`.
+
+---
+
 ## 👤 Author
 
 **Shubham Prajapati**

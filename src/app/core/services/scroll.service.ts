@@ -8,7 +8,8 @@ export class ScrollService {
   readonly activeSection = signal<string>('home');
 
   watch(): void {
-    const scrollTop = this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;
+    const rawScroll = this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;
+    const scrollTop = Math.max(0, rawScroll);
     this.showScrollTop.set(scrollTop > 480);
 
     // Track active section for scrollspy

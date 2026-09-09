@@ -96,6 +96,9 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
       inset-block-start: 0;
       z-index: 100;
       display: block;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      overscroll-behavior: none;
     }
 
     .navbar-wrapper {
@@ -104,6 +107,7 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
       border-block-end: 1px solid var(--border-subtle);
+      padding-block-start: env(safe-area-inset-top, 0px);
       transition: background-color 250ms ease, border-color 250ms ease;
     }
 
@@ -257,6 +261,7 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
       box-shadow: var(--shadow-card);
       max-block-size: calc(100svh - 6rem);
       overflow-y: auto;
+      overscroll-behavior: contain;
     }
 
     .mobile-nav-link {

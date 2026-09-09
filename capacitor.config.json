@@ -1,0 +1,9 @@
+{
+  "appId": "com.shubhamprajapati.portfolio",
+  "appName": "Shubham Prajapati",
+  "webDir": "dist/myProtfolio/browser",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

@@ -31,7 +31,8 @@ import { DateHelper } from '@core/helper/date.helper';
   `,
   styles: `
     .footer {
-      padding-block: 1.75rem;
+      padding-block-start: 1.75rem;
+      padding-block-end: calc(1.75rem + env(safe-area-inset-bottom, 0px));
       border-block-start: 1px solid var(--border-subtle);
       background: var(--bg-surface);
       color: var(--text-secondary);
