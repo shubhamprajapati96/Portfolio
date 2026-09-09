@@ -314,26 +314,6 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
                 </p>
               </blockquote>
             </div>
-
-            <!-- Core Engineering Focus Pillars -->
-            <div class="academic-pillars-row" aria-label="Core areas of academic study">
-              <span class="pillar-tag">
-                <mat-icon aria-hidden="true">code</mat-icon>
-                <span>Software Engineering</span>
-              </span>
-              <span class="pillar-tag">
-                <mat-icon aria-hidden="true">account_tree</mat-icon>
-                <span>Data Structures & Algorithms</span>
-              </span>
-              <span class="pillar-tag">
-                <mat-icon aria-hidden="true">storage</mat-icon>
-                <span>Relational Database Management</span>
-              </span>
-              <span class="pillar-tag">
-                <mat-icon aria-hidden="true">hub</mat-icon>
-                <span>Microservices Architecture</span>
-              </span>
-            </div>
           </article>
         </div>
       </div>
@@ -1332,11 +1312,13 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
     }
 
     .qualification-card-wrap {
-      max-inline-size: 920px;
+      inline-size: 100%;
+      max-inline-size: 100%;
     }
 
     .qualification-card {
       position: relative;
+      inline-size: 100%;
       border-radius: 1.75rem;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
@@ -1471,7 +1453,8 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
     .qualification-quote-container {
       position: relative;
       z-index: 1;
-      margin-block: 1.5rem;
+      margin-block-start: 1.5rem;
+      margin-block-end: 0;
       padding: 1.35rem 1.75rem;
       border-radius: 1.25rem;
       background: var(--bg-surface-elevated);
@@ -1507,44 +1490,6 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       font-weight: 500;
       color: var(--text-primary);
       line-height: 1.7;
-    }
-
-    /* Academic Pillars Row */
-    .academic-pillars-row {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-      align-items: center;
-    }
-
-    .pillar-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.45rem 0.95rem;
-      border-radius: 9999px;
-      background: var(--bg-pill);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-secondary);
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: all 180ms ease;
-
-      mat-icon {
-        font-size: 1.05rem;
-        inline-size: 1.05rem;
-        block-size: 1.05rem;
-        color: var(--primary);
-      }
-
-      &:hover {
-        background: var(--bg-surface-elevated);
-        border-color: var(--border-hover);
-        color: var(--text-primary);
-        transform: translateY(-2px);
-      }
     }
 
     /* ==========================================================================
