@@ -120,28 +120,74 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
               </div>
             </article>
           </div>
+        </div>
 
-          <!-- Timeline Node 3: Academic Foundation -->
-          <div class="timeline-item education-node">
-            <div class="node-anchor">
-              <div class="node-marker edu-marker">
-                <mat-icon aria-hidden="true">school</mat-icon>
-              </div>
+        <!-- ACADEMIC QUALIFICATIONS SECTION -->
+        <div class="qualifications-wrapper">
+          <div class="qualifications-header-wrap">
+            <div class="eyebrow-badge">
+              <span class="pulse-dot"></span>
+              <span>Academic Background</span>
             </div>
+            <h2 class="section-heading-title">Education & Qualifications</h2>
+            <p class="section-heading-desc">
+              Formal engineering credentials and computer science foundation graduated with First Class Distinction.
+            </p>
+          </div>
 
-            <article class="timeline-content-card edu-card">
-              <header class="timeline-card-header">
-                <div class="node-brand-banner edu-banner">
-                  <span class="arrow-indicator">→</span>
-                  <span class="brand-text">AKTU</span>
-                  <span class="tenure-badge">2014 – 2018 · Distinction (75.8%)</span>
-                </div>
-                <h3 class="role-heading">{{ education()[0].degree }}</h3>
-                <div class="company-subline">
-                  <strong class="full-company-name">{{ education()[0].school }}</strong>
+          <div class="qualification-card-wrap">
+            <article class="qualification-card">
+              <div class="card-ambient-glow" aria-hidden="true"></div>
+
+              <header class="qualification-header">
+                <div class="institution-brand">
+                  <div class="institution-icon-disc">
+                    <mat-icon aria-hidden="true">school</mat-icon>
+                  </div>
+                  <div class="institution-details">
+                    <div class="brand-badge-row">
+                      <span class="arrow-indicator">→</span>
+                      <span class="brand-tag">AKTU</span>
+                      <span class="distinction-badge">
+                        <mat-icon aria-hidden="true">verified</mat-icon>
+                        <span>2014 – 2018 · Distinction (75.8%)</span>
+                      </span>
+                    </div>
+                    <h3 class="degree-title">{{ education()[0].degree }}</h3>
+                    <p class="university-name">{{ education()[0].school }}</p>
+                  </div>
                 </div>
               </header>
-              <p class="edu-summary">{{ education()[0].summary }}</p>
+
+              <!-- Mentioned in Quotes with Elegant Styling -->
+              <div class="qualification-quote-container">
+                <div class="quote-symbol" aria-hidden="true">“</div>
+                <blockquote class="qualification-quote">
+                  <p class="quote-text">
+                    “Graduated with 75.8% First Class with Distinction. Strong foundation in Software Engineering, Data Structures, Relational Database Management Systems, and Microservices Architecture.”
+                  </p>
+                </blockquote>
+              </div>
+
+              <!-- Core Engineering Focus Pillars -->
+              <div class="academic-pillars-row" aria-label="Core areas of academic study">
+                <span class="pillar-tag">
+                  <mat-icon aria-hidden="true">code</mat-icon>
+                  <span>Software Engineering</span>
+                </span>
+                <span class="pillar-tag">
+                  <mat-icon aria-hidden="true">account_tree</mat-icon>
+                  <span>Data Structures & Algorithms</span>
+                </span>
+                <span class="pillar-tag">
+                  <mat-icon aria-hidden="true">storage</mat-icon>
+                  <span>Relational Database Management</span>
+                </span>
+                <span class="pillar-tag">
+                  <mat-icon aria-hidden="true">hub</mat-icon>
+                  <span>Microservices Architecture</span>
+                </span>
+              </div>
             </article>
           </div>
         </div>
@@ -443,15 +489,235 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       }
     }
 
-    .edu-card {
-      border-color: rgba(129, 140, 248, 0.25);
+    /* ==========================================================================
+       QUALIFICATIONS SECTION
+       ========================================================================== */
+    .qualifications-wrapper {
+      margin-block-start: clamp(3.5rem, 6vw, 5rem);
+      padding-block-start: clamp(2rem, 4vw, 3rem);
     }
 
-    .edu-summary {
+    .qualifications-header-wrap {
+      display: grid;
+      gap: 0.5rem;
+      max-inline-size: 800px;
+      margin-block-end: 2rem;
+    }
+
+    .qualification-card-wrap {
+      max-inline-size: 920px;
+    }
+
+    .qualification-card {
+      position: relative;
+      border-radius: 1.75rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 16px 40px -12px var(--primary-glow);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: clamp(1.5rem, 3.5vw, 2.5rem);
+      overflow: hidden;
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                  border-color 250ms ease,
+                  box-shadow 250ms ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        border-color: var(--border-hover);
+        box-shadow: 0 20px 48px -10px var(--primary-glow);
+
+        .institution-icon-disc {
+          transform: scale(1.08) rotate(3deg);
+          box-shadow: 0 0 24px var(--primary-glow);
+        }
+      }
+    }
+
+    .card-ambient-glow {
+      position: absolute;
+      top: -30%;
+      left: -20%;
+      width: 60%;
+      height: 70%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.12), transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .qualification-header {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1.25rem;
+      padding-block-end: 1.25rem;
+      border-block-end: 1px solid var(--border-subtle);
+    }
+
+    .institution-brand {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      min-inline-size: 0;
+    }
+
+    .institution-icon-disc {
+      display: grid;
+      place-items: center;
+      inline-size: 3.5rem;
+      block-size: 3.5rem;
+      border-radius: 1rem;
+      background: var(--bg-pill);
+      border: 1px solid var(--border-hover);
+      color: var(--primary);
+      box-shadow: 0 4px 16px -2px var(--primary-glow);
+      flex-shrink: 0;
+      transition: all 250ms ease;
+
+      mat-icon {
+        font-size: 1.85rem;
+        inline-size: 1.85rem;
+        block-size: 1.85rem;
+      }
+    }
+
+    .institution-details {
+      display: grid;
+      gap: 0.35rem;
+      min-inline-size: 0;
+    }
+
+    .brand-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-tag {
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+    .distinction-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 700;
+
+      mat-icon {
+        font-size: 1rem;
+        inline-size: 1rem;
+        block-size: 1rem;
+      }
+    }
+
+    .degree-title {
       margin: 0;
+      font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .university-name {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 500;
       color: var(--text-secondary);
-      font-size: 0.94rem;
-      line-height: 1.65;
+    }
+
+    /* Mentioned in Quotes */
+    .qualification-quote-container {
+      position: relative;
+      z-index: 1;
+      margin-block: 1.5rem;
+      padding: 1.35rem 1.75rem;
+      border-radius: 1.25rem;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-inline-start: 4px solid var(--primary);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    .quote-symbol {
+      position: absolute;
+      top: -0.25rem;
+      left: 1rem;
+      font-family: Georgia, serif;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--primary);
+      opacity: 0.15;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .qualification-quote {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .quote-text {
+      margin: 0;
+      font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+      font-style: italic;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.7;
+    }
+
+    /* Academic Pillars Row */
+    .academic-pillars-row {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      align-items: center;
+    }
+
+    .pillar-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.95rem;
+      border-radius: 9999px;
+      background: var(--bg-pill);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: all 180ms ease;
+
+      mat-icon {
+        font-size: 1.05rem;
+        inline-size: 1.05rem;
+        block-size: 1.05rem;
+        color: var(--primary);
+      }
+
+      &:hover {
+        background: var(--bg-surface-elevated);
+        border-color: var(--border-hover);
+        color: var(--text-primary);
+        transform: translateY(-2px);
+      }
     }
   `,
   animations: [staggerCards],

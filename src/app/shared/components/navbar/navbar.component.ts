@@ -16,10 +16,7 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
       <mat-toolbar class="navbar" role="navigation" aria-label="Primary navigation">
         <a class="brand" href="javascript:void(0)" (click)="onNavClick({ label: 'Home', path: '/', icon: 'home' }, $event)" aria-label="Shubham Prajapati home">
           <span class="brand-mark">SP</span>
-          <div class="brand-text">
-            <span class="brand-name">Shubham Prajapati</span>
-            <span class="brand-badge">Software Dev</span>
-          </div>
+          <span class="brand-name">Shubham Prajapati</span>
         </a>
 
         <nav class="desktop-nav" aria-label="Main menu">
@@ -30,7 +27,6 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
               [class.active]="scrollService.activeSection() === mapPathToSection(item.path)"
               (click)="onNavClick(item, $event)"
             >
-              <mat-icon class="nav-icon" aria-hidden="true">{{ item.icon }}</mat-icon>
               <span>{{ item.label }}</span>
             </a>
           }
@@ -74,11 +70,7 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
                 [class.active]="scrollService.activeSection() === mapPathToSection(item.path)"
                 (click)="onNavClick(item, $event)"
               >
-                <div class="mobile-icon-wrap">
-                  <mat-icon aria-hidden="true">{{ item.icon }}</mat-icon>
-                </div>
                 <span class="mobile-label">{{ item.label }}</span>
-                <mat-icon class="mobile-arrow" aria-hidden="true">chevron_right</mat-icon>
               </a>
             }
             <div class="mobile-cta-wrap">
@@ -89,8 +81,8 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
                 (click)="onNavClick({ label: 'Contact', path: '/contact', icon: 'mail' }, $event)"
                 class="mobile-cta"
               >
-                <mat-icon aria-hidden="true">mail</mat-icon>
-                <span>Get In Touch</span>
+                <span>Hire Me</span>
+                <mat-icon aria-hidden="true">arrow_forward</mat-icon>
               </a>
             </div>
           </div>
@@ -154,30 +146,10 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
       transform: scale(1.06) rotate(-3deg);
     }
 
-    .brand-text {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
     .brand-name {
       font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-primary);
-    }
-
-    .brand-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.15rem 0.55rem;
-      border-radius: 9999px;
-      background: var(--bg-pill);
-      border: 1px solid var(--border-hover);
-      color: var(--primary);
-      font-size: 0.68rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
     }
 
     .desktop-nav {
@@ -194,19 +166,13 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
     .nav-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.45rem 0.95rem;
+      justify-content: center;
+      padding: 0.45rem 1.05rem;
       border-radius: 9999px;
       font-size: 0.88rem;
       font-weight: 500;
       color: var(--text-secondary);
       transition: all 200ms ease;
-
-      .nav-icon {
-        font-size: 1.1rem;
-        inline-size: 1.1rem;
-        block-size: 1.1rem;
-      }
 
       &:hover {
         color: var(--text-primary);
@@ -218,10 +184,6 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
         background: var(--gradient-primary);
         font-weight: 600;
         box-shadow: 0 4px 14px -2px var(--primary-glow);
-
-        .nav-icon {
-          color: #ffffff;
-        }
       }
     }
 
@@ -279,68 +241,28 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
     .mobile-nav-link {
       display: flex;
       align-items: center;
-      gap: 0.85rem;
-      min-block-size: 3.25rem;
-      padding: 0.5rem 1rem;
+      min-block-size: 2.75rem;
+      padding: 0.6rem 1.1rem;
       border-radius: 0.875rem;
       color: var(--text-secondary);
       font-weight: 500;
       transition: all 180ms ease;
 
-      .mobile-icon-wrap {
-        display: grid;
-        place-items: center;
-        inline-size: 2.25rem;
-        block-size: 2.25rem;
-        border-radius: 0.6rem;
-        background: var(--bg-pill);
-        color: var(--primary);
-        transition: all 180ms ease;
-
-        mat-icon {
-          font-size: 1.2rem;
-          inline-size: 1.2rem;
-          block-size: 1.2rem;
-        }
-      }
-
       .mobile-label {
-        flex: 1;
         font-size: 0.95rem;
-      }
-
-      .mobile-arrow {
-        color: var(--text-dim);
-        font-size: 1.2rem;
-        inline-size: 1.2rem;
-        block-size: 1.2rem;
-        transition: transform 180ms ease;
       }
 
       &:hover,
       &:active {
         color: var(--text-primary);
         background: var(--bg-surface-elevated);
-
-        .mobile-arrow {
-          transform: translateX(3px);
-          color: var(--primary);
-        }
       }
 
       &.active {
-        color: var(--text-primary);
-        background: var(--bg-surface-elevated);
-        border: 1px solid var(--border-hover);
-
-        .mobile-icon-wrap {
-          background: var(--gradient-primary);
-          color: #ffffff;
-        }
-
-        .mobile-arrow {
-          color: var(--primary);
-        }
+        color: #ffffff;
+        background: var(--gradient-primary);
+        font-weight: 600;
+        box-shadow: 0 4px 14px -2px var(--primary-glow);
       }
     }
 

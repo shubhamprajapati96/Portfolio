@@ -20,10 +20,9 @@ body {
   min-inline-size: 320px;
   background-color: var(--bg-base);
   background-image:
-    radial-gradient(circle at 15% 12%, var(--mesh-bg-1), transparent 30rem),
-    radial-gradient(circle at 85% 5%, var(--mesh-bg-2), transparent 26rem),
-    radial-gradient(circle at 50% 80%, var(--mesh-bg-3), transparent 35rem),
-    linear-gradient(180deg, var(--bg-base), var(--bg-surface) 50%, var(--bg-base));
+    radial-gradient(circle at 15% 10%, var(--mesh-bg-1), transparent 32rem),
+    radial-gradient(circle at 85% 15%, var(--mesh-bg-2), transparent 28rem),
+    radial-gradient(circle at 50% 85%, var(--mesh-bg-3), transparent 36rem);
   background-attachment: fixed;
   color: var(--text-primary);
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

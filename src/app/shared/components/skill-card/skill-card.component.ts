@@ -8,34 +8,25 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
   imports: [MatIconModule, TechIconComponent],
   template: `
     <article class="skill-card">
-      <!-- Card Header with Icon Box, Title & Category Tagline -->
+      <!-- Card Header with Icon Box & Title (Subtitles Removed) -->
       <header class="skill-header">
-        <div class="icon-box">
-          <app-tech-icon [name]="category().name" [fallbackIcon]="category().icon" [size]="24" />
-        </div>
-        <div class="header-info">
-          <div class="title-row">
-            <h3 class="category-name">{{ category().name }}</h3>
-            <span class="count-pill">{{ category().skills.length }} Skills</span>
+        <div class="header-left">
+          <div class="icon-box">
+            <app-tech-icon [name]="category().name" [fallbackIcon]="category().icon" [size]="24" />
           </div>
-          <p class="category-tagline">{{ getCategorySubtitle(category().name) }}</p>
+          <h3 class="category-name">{{ category().name }}</h3>
         </div>
+        <span class="count-pill">{{ category().skills.length }} Skills</span>
       </header>
 
-      <!-- Advanced Skills Chip Grid (Real Tech Stack Logos) -->
+      <!-- Advanced Skills Grid - Pure Icon and Title Only -->
       <div class="skills-grid" aria-label="Capabilities in this domain">
         @for (skill of category().skills; track skill.name) {
           <div class="skill-badge-item">
             <div class="skill-icon-pill">
-              <app-tech-icon [name]="skill.name" [fallbackIcon]="skill.icon" [size]="18" />
+              <app-tech-icon [name]="skill.name" [fallbackIcon]="skill.icon" [size]="20" />
             </div>
-            <div class="skill-content">
-              <span class="skill-label">{{ skill.name }}</span>
-              <span class="skill-tier">
-                <span class="tier-dot"></span>
-                {{ getSkillTag(skill.level) }}
-              </span>
-            </div>
+            <span class="skill-label">{{ skill.name }}</span>
           </div>
         }
       </div>
@@ -76,11 +67,19 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
 
     .skill-header {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
+      justify-content: space-between;
       gap: 1rem;
       margin-block-end: 1.25rem;
       padding-block-end: 1.15rem;
       border-block-end: 1px solid var(--border-subtle);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      min-inline-size: 0;
     }
 
     .icon-box {
@@ -103,51 +102,33 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
       }
     }
 
-    .header-info {
-      display: grid;
-      gap: 0.25rem;
-      flex: 1;
-      min-inline-size: 0;
-    }
-
-    .title-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
-    }
-
     .category-name {
       margin: 0;
       font-size: 1.18rem;
       font-weight: 700;
       color: var(--text-primary);
       letter-spacing: -0.01em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .count-pill {
       font-size: 0.72rem;
       font-weight: 600;
-      padding: 0.2rem 0.55rem;
+      padding: 0.25rem 0.65rem;
       border-radius: 9999px;
       background: var(--bg-surface-elevated);
       color: var(--text-muted);
       border: 1px solid var(--border-subtle);
+      flex-shrink: 0;
     }
 
-    .category-tagline {
-      margin: 0;
-      font-size: 0.82rem;
-      color: var(--text-secondary);
-      line-height: 1.4;
-    }
-
-    /* Skills Grid (replacing progress bars with clean interactive tiles) */
+    /* Skills Grid - Modern Interactive Tiles with Only Icon & Title */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
-      gap: 0.75rem;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 14.5rem), 1fr));
+      gap: 0.85rem;
       flex: 1;
       align-content: start;
     }
@@ -156,27 +137,28 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      padding: 0.65rem 0.85rem;
-      border-radius: 0.95rem;
+      padding: 0.75rem 1rem;
+      border-radius: 1rem;
       background: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
-      transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      min-block-size: 3.75rem;
+      transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                  border-color 200ms ease,
+                  background-color 200ms ease,
+                  box-shadow 200ms ease;
 
       &:hover {
-        transform: translateY(-2px);
+        transform: translateY(-3px);
         border-color: var(--border-hover);
         background: var(--bg-pill);
-        box-shadow: 0 4px 14px -2px var(--primary-glow);
+        box-shadow: 0 6px 18px -4px var(--primary-glow);
 
         .skill-icon-pill {
           background: var(--gradient-primary);
           color: #ffffff;
-          transform: scale(1.08);
-        }
-
-        .tier-dot {
-          background: var(--primary);
-          box-shadow: 0 0 6px var(--primary);
+          transform: scale(1.1);
+          box-shadow: 0 0 12px var(--primary-glow);
         }
       }
     }
@@ -184,82 +166,33 @@ import { TechIconComponent } from '../tech-icon/tech-icon.component';
     .skill-icon-pill {
       display: grid;
       place-items: center;
-      inline-size: 2rem;
-      block-size: 2rem;
-      border-radius: 0.6rem;
+      inline-size: 2.25rem;
+      block-size: 2.25rem;
+      border-radius: 0.65rem;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       color: var(--primary);
       flex-shrink: 0;
-      transition: all 180ms ease;
+      transition: all 200ms ease;
 
       mat-icon {
-        font-size: 1.1rem;
-        inline-size: 1.1rem;
-        block-size: 1.1rem;
+        font-size: 1.15rem;
+        inline-size: 1.15rem;
+        block-size: 1.15rem;
       }
     }
 
-    .skill-content {
-      display: grid;
-      gap: 0.15rem;
-      min-inline-size: 0;
-    }
-
     .skill-label {
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--text-primary);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      line-height: 1.2;
-    }
-
-    .skill-tier {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .tier-dot {
-      inline-size: 0.4rem;
-      block-size: 0.4rem;
-      border-radius: 50%;
-      background: var(--success);
-      flex-shrink: 0;
-      transition: all 180ms ease;
+      line-height: 1.35;
+      word-break: normal;
+      overflow-wrap: break-word;
     }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SkillCardComponent {
   readonly category = input.required<SkillCategory>();
-
-  getSkillTag(level: number): string {
-    if (level >= 96) return 'Core Stack';
-    if (level >= 94) return 'Enterprise';
-    if (level >= 90) return 'Production';
-    return 'Specialized';
-  }
-
-  getCategorySubtitle(categoryName: string): string {
-    const subtitles: Record<string, string> = {
-      'Frontend': 'Reactive SPAs, SSR applications & component design systems',
-      'Backend': 'Distributed microservices, resilient APIs & core business logic',
-      'Database': 'High-concurrency relational schemas, indexing & transactional reliability',
-      'AI & Voice Integrations': 'Real-time conversational voice agents, STT/TTS & LLM pipelines',
-      'API Integrations & Payments': 'Multi-tier payment gateways, telephony IVR & third-party integrations',
-      'DevOps & Tools': 'CI/CD automation, security hardening & system optimization',
-      'Languages': 'Modern strongly typed and scripting languages for production',
-      'Frameworks': 'Full-featured enterprise frameworks & robust design token systems',
-      'Specializations': 'Domain expertise in voice AI, hospital logistics & legacy migrations',
-      'Soft Skills': 'Technical architecture leadership, mentoring & cross-functional delivery'
-    };
-
-    return subtitles[categoryName] || 'Enterprise capabilities & production toolsets';
-  }
 }

@@ -21,7 +21,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/shubham-prajapati-3a51a9160', icon: 'business_center' },
-  { label: 'GitHub', url: 'https://github.com/shubham-prajapati', icon: 'code' },
+  { label: 'GitHub', url: 'https://github.com/shubhamprajapati96', icon: 'code' },
   { label: 'Email', url: `mailto:${APP_CONFIG.email}`, icon: 'alternate_email' }
 ];
 

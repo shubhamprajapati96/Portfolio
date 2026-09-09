@@ -31,29 +31,19 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
         <!-- Elevated Production Core Showcase -->
         <div class="production-core-showcase" aria-label="Core Technology Pillars">
           <div class="core-showcase-header">
-            <div class="core-header-left">
-              <span class="core-live-badge">
-                <span class="pulse-beacon"></span>
-                <span>PRODUCTION CORE</span>
-              </span>
-              <h3 class="core-headline">14 Core Technologies & Frameworks</h3>
-            </div>
-            <span class="core-tagline">Battle-tested in high-throughput enterprise SaaS & conversational AI systems</span>
+            <span class="core-live-badge">
+              <span class="pulse-beacon"></span>
+              <span>PRODUCTION CORE</span>
+            </span>
           </div>
 
           <div class="core-tech-grid">
             @for (tech of coreTechnologies; track tech.name) {
               <div class="core-tech-card">
                 <div class="tech-icon-disc">
-                  <app-tech-icon [name]="tech.name" [fallbackIcon]="tech.icon" [size]="20" />
+                  <app-tech-icon [name]="tech.name" [fallbackIcon]="tech.icon" [size]="22" />
                 </div>
-                <div class="tech-meta-box">
-                  <span class="tech-card-name">{{ tech.name }}</span>
-                  <span class="tech-sub-status">
-                    <span class="status-dot"></span>
-                    Production Verified
-                  </span>
-                </div>
+                <span class="tech-card-name">{{ tech.name }}</span>
               </div>
             }
           </div>
@@ -119,20 +109,12 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
 
     .core-showcase-header {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 1rem;
-      padding-block-end: 1.25rem;
+      padding-block-end: 1rem;
       margin-block-end: 1.25rem;
       border-block-end: 1px solid var(--border-subtle);
-    }
-
-    .core-header-left {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.85rem;
     }
 
     .core-live-badge {
@@ -170,34 +152,22 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       }
     }
 
-    .core-headline {
-      margin: 0;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      letter-spacing: -0.01em;
-    }
-
-    .core-tagline {
-      font-size: 0.82rem;
-      color: var(--text-secondary);
-      font-weight: 500;
-    }
-
     .core-tech-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 10.5rem), 1fr));
-      gap: 0.75rem;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 11.5rem), 1fr));
+      gap: 0.85rem;
     }
 
     .core-tech-card {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      padding: 0.65rem 0.85rem;
+      gap: 0.85rem;
+      padding: 0.75rem 1rem;
       border-radius: 1rem;
       background: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      min-block-size: 3.75rem;
       transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1),
                   border-color 200ms ease,
                   background-color 200ms ease,
@@ -207,16 +177,11 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
         transform: translateY(-3px);
         border-color: var(--border-hover);
         background: var(--bg-pill);
-        box-shadow: 0 6px 18px -4px var(--primary-glow);
+        box-shadow: 0 8px 24px -4px var(--primary-glow);
 
         .tech-icon-disc {
           transform: scale(1.12);
           box-shadow: 0 0 16px var(--primary-glow);
-        }
-
-        .status-dot {
-          background: var(--primary);
-          box-shadow: 0 0 6px var(--primary);
         }
       }
     }
@@ -224,8 +189,8 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
     .tech-icon-disc {
       display: grid;
       place-items: center;
-      inline-size: 2.25rem;
-      block-size: 2.25rem;
+      inline-size: 2.35rem;
+      block-size: 2.35rem;
       border-radius: 0.7rem;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
@@ -241,38 +206,13 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       }
     }
 
-    .tech-meta-box {
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-      min-inline-size: 0;
-    }
-
     .tech-card-name {
-      font-size: 0.86rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: var(--text-primary);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      line-height: 1.2;
-    }
-
-    .tech-sub-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.68rem;
-      font-weight: 500;
-      color: var(--text-muted);
-
-      .status-dot {
-        inline-size: 0.35rem;
-        block-size: 0.35rem;
-        border-radius: 50%;
-        background: var(--success);
-        transition: all 200ms ease;
-      }
+      line-height: 1.35;
+      word-break: normal;
+      overflow-wrap: break-word;
     }
 
     .filter-bar {

@@ -12,7 +12,7 @@ export class ScrollService {
     this.showScrollTop.set(scrollTop > 480);
 
     // Track active section for scrollspy
-    const sections = ['contact', 'projects', 'skills', 'experience', 'about', 'home'];
+    const sections = ['contact', 'projects', 'skills', 'qualifications', 'experience', 'about', 'home'];
     const scrollPos = scrollTop + 160;
 
     for (const id of sections) {
