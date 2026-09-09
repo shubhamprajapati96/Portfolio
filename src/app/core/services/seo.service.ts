@@ -57,7 +57,6 @@ export class SeoService {
       name: APP_CONFIG.name,
       jobTitle: APP_CONFIG.title,
       email: APP_CONFIG.email,
-      telephone: APP_CONFIG.phone,
       address: APP_CONFIG.location,
       url: APP_CONFIG.canonicalUrl,
       description: config.description

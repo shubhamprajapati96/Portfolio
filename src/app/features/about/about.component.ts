@@ -47,10 +47,6 @@ import { SectionHeaderComponent } from '@shared/components/section-header/sectio
                 <dd>{{ profile().email }}</dd>
               </div>
               <div class="info-item">
-                <dt><mat-icon aria-hidden="true">call</mat-icon> Phone</dt>
-                <dd>{{ profile().phone }}</dd>
-              </div>
-              <div class="info-item">
                 <dt><mat-icon aria-hidden="true">location_on</mat-icon> Location</dt>
                 <dd>{{ profile().location }}</dd>
               </div>

@@ -5,7 +5,6 @@ export const APP_CONFIG = {
   name: 'Shubham Prajapati',
   title: 'Software Developer',
   email: 'prajapatishubham644@gmail.com',
-  phone: '',
   location: 'Lucknow, India',
   canonicalUrl: 'https://shubhamprajapati.dev'
 } as const;

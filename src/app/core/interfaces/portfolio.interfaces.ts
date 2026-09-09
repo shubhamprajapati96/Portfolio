@@ -16,7 +16,7 @@ export interface PersonProfile {
   readonly intro: string;
   readonly summary: string;
   readonly email: string;
-  readonly phone: string;
+  readonly phone?: string;
   readonly location: string;
   readonly availability: string;
   readonly resumeUrl: string;

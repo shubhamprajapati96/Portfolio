@@ -9,7 +9,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
     summary:
       'Expert in Microservices Architecture, high-throughput RESTful API development, third-party API integrations (LiveKit, ElevenLabs, OpenAI, Stripe, Twilio, Google Maps, Zoho/Dropbox Sign), and payment gateway systems. Passionate about clean code, scalable database design, and modern UI/UX execution.',
     email: 'prajapatishubham644@gmail.com',
-    phone: '',
     location: 'Lucknow, India',
     availability: 'Open to Senior Software Developer, AI SaaS & Microservices Opportunities',
     resumeUrl: 'assets/data/shubham_resume_2026.pdf',

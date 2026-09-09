@@ -47,17 +47,6 @@ import { SectionHeaderComponent } from '@shared/components/section-header/sectio
                 </a>
               </li>
               <li>
-                <a [href]="'tel:' + profile().phone" class="contact-row">
-                  <div class="icon-wrap">
-                    <mat-icon aria-hidden="true">call</mat-icon>
-                  </div>
-                  <div class="row-text">
-                    <span class="label">Phone</span>
-                    <strong class="value">{{ profile().phone }}</strong>
-                  </div>
-                </a>
-              </li>
-              <li>
                 <div class="contact-row static-row">
                   <div class="icon-wrap">
                     <mat-icon aria-hidden="true">location_on</mat-icon>
