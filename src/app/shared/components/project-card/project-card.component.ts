@@ -264,9 +264,14 @@ export class ProjectCardComponent {
 
   onImageError(event: Event, projectId: string): void {
     const target = event.target as HTMLImageElement;
-    if (target && !target.dataset['fallback']) {
-      target.dataset['fallback'] = 'true';
-      target.src = `assets/images/projects/${projectId}.jpg`;
+    if (target) {
+      if (!target.dataset['fallback']) {
+        target.dataset['fallback'] = '1';
+        target.src = `assets/images/projects/${projectId}.jpg`;
+      } else if (target.dataset['fallback'] === '1') {
+        target.dataset['fallback'] = '2';
+        target.src = 'assets/images/projects/default-project.svg';
+      }
     }
   }
 }

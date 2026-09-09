@@ -95,6 +95,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       name: 'Frameworks',
       icon: 'view_quilt',
       skills: [
+        { name: 'Angular', icon: 'change_history', level: 96 },
         { name: 'Laravel', icon: 'developer_mode', level: 98 },
         { name: 'Next.js', icon: 'view_in_ar', level: 96 },
         { name: 'Tailwind CSS & SCSS', icon: 'palette', level: 94 }
@@ -194,7 +195,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       title: 'ShiftHarmony AI',
       description:
         'Multi-tenant SaaS hospital scheduling platform with automated scheduling, shift management, natural language provider preferences, CP-SAT optimization, and integrated payment systems.',
-      imageUrl: 'https://shiftharmony.ai/opengraph.jpg',
+      imageUrl: 'assets/images/projects/shiftharmony.png',
       technologies: ['Next.js', 'Python', 'PostgreSQL', 'OpenAI API', 'CP-SAT Optimization'],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
       liveUrl: 'https://shiftharmony.ai',
@@ -249,7 +250,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       title: 'Rankup LLM SaaS Admin Portal',
       description:
         'AI SaaS administration portal powering generative LLM features with enterprise multi-tier Stripe subscription management and live transaction telemetry.',
-      imageUrl: 'https://image.thum.io/get/width/1200/crop/800/https://dealeraisolutions.com',
+      imageUrl: 'assets/images/projects/default-project.svg',
       technologies: ['Next.js', 'Node.js', 'Stripe API', 'OpenAI API', 'PostgreSQL'],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
       liveUrl: 'https://dealeraisolutions.com',
@@ -257,10 +258,10 @@ export const PORTFOLIO_DATA: PortfolioData = {
     },
     {
       id: 'brainymate',
-      title: 'Brainymate LaTeX Education Suite',
+      title: 'Brainymate',
       description:
         'Collaborative educational platform featuring real-time mathematical LaTeX/KaTeX formula rendering, dynamic whiteboard API integration, and interactive lesson canvases.',
-      imageUrl: 'https://shiftharmony.ai/opengraph.jpg',
+      imageUrl: 'assets/images/projects/default-project.svg',
       technologies: ['Next.js', 'Python API', 'KaTeX', 'Whiteboard APIs', 'WebSockets'],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
       liveUrl: 'https://shiftharmony.ai',

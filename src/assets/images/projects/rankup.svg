@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#090d1a" />
+    </linearGradient>
+
+    <!-- Ambient Glows -->
+    <radialGradient id="glow-cyan" cx="25%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-indigo" cx="75%" cy="65%" r="60%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Card / Frame Linear Gradients -->
+    <linearGradient id="frame-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.4" />
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="dot-pattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#38bdf8" fill-opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="750" fill="url(#bg-grad)" />
+
+  <!-- Ambient Light Fields -->
+  <rect width="1200" height="750" fill="url(#glow-cyan)" />
+  <rect width="1200" height="750" fill="url(#glow-indigo)" />
+
+  <!-- Micro-Dot Matrix -->
+  <rect width="1200" height="750" fill="url(#dot-pattern)" />
+
+  <!-- Outer Browser Mockup Frame -->
+  <g transform="translate(150, 95)">
+    <!-- Shadow & Glow -->
+    <rect x="0" y="0" width="900" height="560" rx="20" fill="none" stroke="url(#border-grad)" stroke-width="2" opacity="0.8" filter="drop-shadow(0 20px 40px rgba(6, 182, 212, 0.15))" />
+    <rect x="0" y="0" width="900" height="560" rx="20" fill="url(#frame-grad)" />
+
+    <!-- Browser Window Header Bar -->
+    <rect x="0" y="0" width="900" height="48" rx="20" fill="#0f172a" fill-opacity="0.95" />
+    <rect x="0" y="28" width="900" height="20" fill="#0f172a" fill-opacity="0.95" />
+    <line x1="0" y1="48" x2="900" y2="48" stroke="#334155" stroke-width="1" />
+
+    <!-- Window Control Dots -->
+    <circle cx="28" cy="24" r="6" fill="#ef4444" opacity="0.85" />
+    <circle cx="48" cy="24" r="6" fill="#f59e0b" opacity="0.85" />
+    <circle cx="68" cy="24" r="6" fill="#10b981" opacity="0.85" />
+
+    <!-- Address Bar Pill -->
+    <rect x="180" y="10" width="540" height="28" rx="14" fill="#1e293b" fill-opacity="0.7" stroke="#334155" stroke-width="1" />
+    <g transform="translate(200, 16)">
+      <!-- Lock Icon -->
+      <path d="M7 4V3a3 3 0 0 0-6 0v1H0v7h8V4H7zM3 3a1 1 0 0 1 2 0v1H3V3zm1 4a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1z" fill="#38bdf8" />
+      <text x="18" y="12" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500">https://case-study.production.dev</text>
+    </g>
+
+    <!-- Canvas Inner Graphic -->
+    <!-- Central Icon Disc -->
+    <circle cx="450" cy="230" r="54" fill="#0369a1" fill-opacity="0.25" stroke="#38bdf8" stroke-width="2" />
+    <!-- Code / Architecture Symbol -->
+    <path d="M432 216 L416 230 L432 244 M468 216 L484 230 L468 244 M454 210 L446 250" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Typography -->
+    <text x="450" y="335" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" letter-spacing="-0.5">Enterprise Project Case Study</text>
+    <text x="450" y="375" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="500">Scalable Microservices · Cloud Architecture · Full-Stack Systems</text>
+
+    <!-- Live Architecture Indicators / Pills -->
+    <g transform="translate(270, 420)">
+      <rect x="0" y="0" width="105" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="52" y="21" text-anchor="middle" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">PRODUCTION</text>
+
+      <rect x="125" y="0" width="105" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="177" y="21" text-anchor="middle" fill="#818cf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">FULL STACK</text>
+
+      <rect x="250" y="0" width="110" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="305" y="21" text-anchor="middle" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">REST APIS</text>
+    </g>
+  </g>
+</svg>
