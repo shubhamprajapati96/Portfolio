@@ -3078,6 +3078,176 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       }
     }
 
+    /* ==========================================================================
+       LIGHT THEME ADAPTATION
+       ========================================================================== */
+    :host-context([data-theme='light']) {
+      .mobile-app-card {
+        background: radial-gradient(circle at 85% 25%, rgba(2, 132, 199, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 15% 75%, rgba(99, 102, 241, 0.08) 0%, transparent 45%),
+                    linear-gradient(145deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+        border: 1px solid rgba(2, 132, 199, 0.22);
+        box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.08),
+                    0 0 45px rgba(2, 132, 199, 0.1),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+      }
+
+      .mobile-ambient-glow.glow-1 {
+        background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(168, 85, 247, 0.08) 50%, transparent 70%);
+      }
+
+      .mobile-ambient-glow.glow-2 {
+        background: radial-gradient(circle, rgba(2, 132, 199, 0.12) 0%, rgba(99, 102, 241, 0.06) 50%, transparent 70%);
+      }
+
+      .mobile-grid-pattern {
+        background-image: radial-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+        opacity: 0.8;
+      }
+
+      .app-badge {
+        background: rgba(2, 132, 199, 0.08);
+        border-color: rgba(2, 132, 199, 0.3);
+        color: #0284c7;
+        box-shadow: 0 0 15px rgba(2, 132, 199, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+        .app-pulse-dot {
+          background: #0284c7;
+          box-shadow: 0 0 8px #0284c7;
+        }
+      }
+
+      .mobile-headline {
+        color: #0f172a !important;
+        text-shadow: none;
+      }
+
+      .gradient-text-vibrant {
+        background: linear-gradient(135deg, #0284c7 0%, #6366f1 50%, #db2777 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 15px rgba(2, 132, 199, 0.25));
+      }
+
+      .mobile-desc {
+        color: #334155 !important;
+
+        strong {
+          color: #0f172a !important;
+        }
+      }
+
+      .mobile-features-grid .mobile-feature-item {
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(15, 23, 42, 0.09);
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04), inset 0 1px 0 rgba(255, 255, 255, 1);
+
+        &:hover {
+          border-color: rgba(2, 132, 199, 0.4);
+          box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08), 0 0 20px rgba(2, 132, 199, 0.12);
+        }
+
+        .feature-text {
+          strong {
+            color: #0f172a !important;
+          }
+
+          span {
+            color: #64748b !important;
+          }
+        }
+      }
+
+      .github-release-btn {
+        color: #0f172a !important;
+        background: rgba(255, 255, 255, 0.92) !important;
+        border-color: rgba(15, 23, 42, 0.16) !important;
+
+        &:hover {
+          background: #ffffff !important;
+          border-color: #0284c7 !important;
+          box-shadow: 0 0 20px rgba(2, 132, 199, 0.2) !important;
+        }
+      }
+
+      .apk-meta-specs {
+        border-top-color: rgba(15, 23, 42, 0.08);
+
+        .meta-tag {
+          color: #64748b;
+
+          mat-icon {
+            color: #0284c7;
+          }
+        }
+      }
+
+      .stage-corner-bracket {
+        border-color: rgba(2, 132, 199, 0.35);
+      }
+
+      .stage-crosshair {
+        color: rgba(99, 102, 241, 0.35);
+      }
+
+      .stage-grid-lines {
+        background-image: radial-gradient(rgba(2, 132, 199, 0.14) 1.5px, transparent 1.5px);
+      }
+
+      .stage-hud-ring-outer {
+        border-color: rgba(99, 102, 241, 0.12);
+      }
+
+      .stage-hud-ring-dashed {
+        border-color: rgba(2, 132, 199, 0.22);
+      }
+
+      .stage-hud-ring-inner {
+        border-color: rgba(236, 72, 153, 0.12);
+      }
+
+      .device-core-glow {
+        &.glow-cyan { background: rgba(2, 132, 199, 0.16); }
+        &.glow-indigo { background: rgba(99, 102, 241, 0.12); }
+        &.glow-pink { background: rgba(236, 72, 153, 0.08); }
+      }
+
+      .floating-badge {
+        background: rgba(255, 255, 255, 0.94);
+        border-color: rgba(15, 23, 42, 0.12);
+        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 1);
+
+        .floating-badge-body {
+          .fb-title { color: #64748b; }
+          .fb-value { color: #0f172a; }
+        }
+      }
+
+      .iphone-fixed-device {
+        background: linear-gradient(145deg, #f1f5f9 0%, #e2e8f0 50%, #cbd5e1 100%);
+        box-shadow:
+          0 0 0 1.5px rgba(15, 23, 42, 0.12),
+          0 0 0 4px #cbd5e1,
+          0 20px 50px -10px rgba(15, 23, 42, 0.2),
+          0 0 35px rgba(2, 132, 199, 0.15);
+
+        &:hover {
+          box-shadow:
+            0 0 0 1.5px rgba(15, 23, 42, 0.18),
+            0 0 0 4px #94a3b8,
+            0 28px 65px -10px rgba(15, 23, 42, 0.28),
+            0 0 50px rgba(2, 132, 199, 0.25);
+        }
+
+        .hw-action-button,
+        .hw-volume-up,
+        .hw-volume-down,
+        .hw-power-button {
+          background: #94a3b8;
+        }
+      }
+    }
+
     /* Fallback media query to hide section if running standalone PWA / APK webview */
     @media all and (display-mode: standalone) {
       .mobile-app-section {
