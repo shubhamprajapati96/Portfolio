@@ -519,21 +519,34 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
                 </div>
               </div>
 
-              <!-- Right Column: Inclined 3D iPhone with Live Animations -->
+              <!-- Right Column: Fixed Upright iPhone 16 Pro with Attractive Tech Patterns & Badges -->
               <div class="mobile-device-col">
                 <div class="device-stage">
-                  <!-- Concentric Pulsing Radar Rings -->
-                  <div class="device-radar-rings" aria-hidden="true">
-                    <div class="radar-ring ring-1"></div>
-                    <div class="radar-ring ring-2"></div>
-                    <div class="radar-ring ring-3"></div>
-                  </div>
+                  <!-- Decorative Tech Framing Accents & Corner Brackets -->
+                  <div class="stage-corner-bracket bracket-tl" aria-hidden="true"></div>
+                  <div class="stage-corner-bracket bracket-tr" aria-hidden="true"></div>
+                  <div class="stage-corner-bracket bracket-bl" aria-hidden="true"></div>
+                  <div class="stage-corner-bracket bracket-br" aria-hidden="true"></div>
 
-                  <!-- Ambient Core Glow behind tilted device -->
-                  <div class="device-backdrop-glow" aria-hidden="true"></div>
+                  <!-- Geometric Tech Grid & Dotted Coordinates -->
+                  <div class="stage-grid-lines" aria-hidden="true"></div>
+                  <div class="stage-crosshair crosshair-tl" aria-hidden="true">+</div>
+                  <div class="stage-crosshair crosshair-tr" aria-hidden="true">+</div>
+                  <div class="stage-crosshair crosshair-bl" aria-hidden="true">+</div>
+                  <div class="stage-crosshair crosshair-br" aria-hidden="true">+</div>
 
-                  <!-- 3D Suspended Micro-Badges -->
-                  <div class="floating-badge badge-top-right">
+                  <!-- Animated HUD Concentric Dial Rings & Orbital Waves -->
+                  <div class="stage-hud-ring-outer" aria-hidden="true"></div>
+                  <div class="stage-hud-ring-dashed" aria-hidden="true"></div>
+                  <div class="stage-hud-ring-inner" aria-hidden="true"></div>
+
+                  <!-- Ambient Multi-Color Core Glows behind the phone -->
+                  <div class="device-core-glow glow-cyan" aria-hidden="true"></div>
+                  <div class="device-core-glow glow-indigo" aria-hidden="true"></div>
+                  <div class="device-core-glow glow-pink" aria-hidden="true"></div>
+
+                  <!-- 3 Floating Frosted Glass Tech Badges around the Device -->
+                  <div class="floating-badge badge-top-left">
                     <div class="floating-badge-icon icon-speed">
                       <mat-icon>speed</mat-icon>
                     </div>
@@ -543,7 +556,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
                     </div>
                   </div>
 
-                  <div class="floating-badge badge-bottom-left">
+                  <div class="floating-badge badge-top-right">
                     <div class="floating-badge-icon icon-cap">
                       <mat-icon>offline_bolt</mat-icon>
                     </div>
@@ -553,52 +566,74 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
                     </div>
                   </div>
 
-                  <!-- Inclined 3D iPhone 16 Pro Frame with Live Floating Motion -->
-                  <div class="iphone-3d-chassis" role="img" aria-label="Live interactive 3D inclined mobile app preview">
-                    <!-- Physical Hardware Buttons (Extruded along left 3D edge) -->
+                  <div class="floating-badge badge-bottom-center">
+                    <div class="floating-badge-icon icon-offline">
+                      <mat-icon>wifi_off</mat-icon>
+                    </div>
+                    <div class="floating-badge-body">
+                      <span class="fb-title">Architecture</span>
+                      <span class="fb-value">Offline First</span>
+                    </div>
+                  </div>
+
+                  <!-- Fixed Upright iPhone 16 Pro Frame with Pixel-Perfect Alignment -->
+                  <div class="iphone-fixed-device" role="img" aria-label="Shubham Prajapati Mobile Application Preview">
+                    <!-- Physical Hardware Buttons -->
                     <div class="hw-action-button"></div>
                     <div class="hw-volume-up"></div>
                     <div class="hw-volume-down"></div>
                     <div class="hw-power-button"></div>
 
-                    <!-- Outer Titanium Bezel -->
+                    <!-- Outer Precision Titanium Bezel -->
                     <div class="iphone-bezel">
-                      <!-- Inner OLED Screen -->
+                      <!-- Inner OLED Screen Container -->
                       <div class="iphone-screen">
-                        <!-- Live Dynamic Island with Active Sound Wave -->
-                        <div class="dynamic-island">
-                          <div class="island-live-activity">
-                            <span class="live-dot"></span>
-                            <div class="live-eq">
-                              <span class="eq-bar eq-1"></span>
-                              <span class="eq-bar eq-2"></span>
-                              <span class="eq-bar eq-3"></span>
+                        <!-- Top Status Bar with Dedicated Dynamic Island (App Title Unobstructed Below!) -->
+                        <div class="screen-top-bar">
+                          <span class="status-time">9:41</span>
+                          <div class="dynamic-island">
+                            <div class="island-live-activity">
+                              <span class="live-dot"></span>
+                              <div class="live-eq">
+                                <span class="eq-bar eq-1"></span>
+                                <span class="eq-bar eq-2"></span>
+                                <span class="eq-bar eq-3"></span>
+                              </div>
+                            </div>
+                            <div class="island-camera-cluster">
+                              <div class="island-sensor"></div>
+                              <div class="island-camera"></div>
                             </div>
                           </div>
-                          <div class="island-camera-cluster">
-                            <div class="island-sensor"></div>
-                            <div class="island-camera"></div>
+                          <div class="status-indicators">
+                            <mat-icon class="status-ico">signal_cellular_alt</mat-icon>
+                            <mat-icon class="status-ico">wifi</mat-icon>
+                            <mat-icon class="status-ico">battery_full</mat-icon>
                           </div>
                         </div>
 
-                        <!-- Live Sweeping Glass Glare Beam -->
-                        <div class="screen-shine-beam" aria-hidden="true"></div>
-                        <div class="screen-glare-static" aria-hidden="true"></div>
+                        <!-- Screen Viewport: Unobstructed, Perfectly Aligned App Screenshot -->
+                        <div class="screen-viewport">
+                          <!-- Live Sweeping Glass Reflection Shimmer Beam -->
+                          <div class="screen-shine-beam" aria-hidden="true"></div>
+                          <div class="screen-glare-static" aria-hidden="true"></div>
 
-                        <!-- Real App Screen Image -->
-                        <picture class="screen-picture">
-                          <source srcset="assets/images/app-screen.webp" type="image/webp" />
-                          <img
-                            src="assets/images/app-screen.png"
-                            alt="Shubham Prajapati Portfolio Mobile App Interface"
-                            class="app-screenshot"
-                            loading="lazy"
-                            (error)="onScreenImgError($event)"
-                          />
-                        </picture>
+                          <picture class="screen-picture">
+                            <source srcset="assets/images/app-screen.webp" type="image/webp" />
+                            <img
+                              src="assets/images/app-screen.png"
+                              alt="Shubham Prajapati Portfolio Mobile App Interface"
+                              class="app-screenshot"
+                              loading="lazy"
+                              (error)="onScreenImgError($event)"
+                            />
+                          </picture>
+                        </div>
 
-                        <!-- iOS Home Indicator -->
-                        <div class="home-indicator"></div>
+                        <!-- Bottom Home Indicator Safe Area -->
+                        <div class="screen-bottom-bar">
+                          <div class="home-indicator"></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2490,7 +2525,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
         }
       }
 
-      /* Right Column: 3D Stage with Inclined iPhone */
+      /* Right Column: Fixed Upright iPhone Stage with Tech Patterns */
       .mobile-device-col {
         display: flex;
         align-items: center;
@@ -2502,52 +2537,175 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
         display: flex;
         align-items: center;
         justify-content: center;
-        perspective: 1400px;
-        perspective-origin: 50% 50%;
-        transform-style: preserve-3d;
-        padding: 3rem 1.5rem;
+        padding: 3.5rem 2rem 2.5rem;
         width: 100%;
-      }
+        overflow: visible;
 
-      /* Concentric Pulsing Radar Rings */
-      .device-radar-rings {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 440px;
-        height: 440px;
-        pointer-events: none;
-        z-index: 1;
-
-        .radar-ring {
-          position: absolute;
-          inset: 0;
-          border-radius: 50%;
-          border: 1px solid rgba(99, 102, 241, 0.25);
-          animation: radarPulse 6s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
-
-          &.ring-1 { animation-delay: 0s; }
-          &.ring-2 { animation-delay: 2s; }
-          &.ring-3 { animation-delay: 4s; }
+        @media (max-width: 48rem) {
+          padding: 2.5rem 0.5rem;
         }
       }
 
-      .device-backdrop-glow {
+      /* Tech Corner Brackets */
+      .stage-corner-bracket {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        border: 2px solid rgba(56, 189, 248, 0.45);
+        pointer-events: none;
+        z-index: 5;
+
+        &.bracket-tl {
+          top: 8px;
+          left: 8px;
+          border-right: none;
+          border-bottom: none;
+          border-top-left-radius: 8px;
+        }
+
+        &.bracket-tr {
+          top: 8px;
+          right: 8px;
+          border-left: none;
+          border-bottom: none;
+          border-top-right-radius: 8px;
+        }
+
+        &.bracket-bl {
+          bottom: 8px;
+          left: 8px;
+          border-right: none;
+          border-top: none;
+          border-bottom-left-radius: 8px;
+        }
+
+        &.bracket-br {
+          bottom: 8px;
+          right: 8px;
+          border-left: none;
+          border-top: none;
+          border-bottom-right-radius: 8px;
+        }
+      }
+
+      /* Tech Crosshair Coordinate Markers */
+      .stage-crosshair {
+        position: absolute;
+        font-family: monospace;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: rgba(99, 102, 241, 0.5);
+        pointer-events: none;
+        z-index: 5;
+        line-height: 1;
+
+        &.crosshair-tl { top: 28px; left: 28px; }
+        &.crosshair-tr { top: 28px; right: 28px; }
+        &.crosshair-bl { bottom: 28px; left: 28px; }
+        &.crosshair-br { bottom: 28px; right: 28px; }
+      }
+
+      /* Geometric Grid Lines */
+      .stage-grid-lines {
+        position: absolute;
+        inset: 15px;
+        background-image: radial-gradient(rgba(56, 189, 248, 0.14) 1.5px, transparent 1.5px);
+        background-size: 26px 26px;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.75;
+      }
+
+      /* Concentric HUD Dial Rings */
+      .stage-hud-ring-outer {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 320px;
-        height: 320px;
-        background: radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, rgba(168, 85, 247, 0.2) 45%, transparent 70%);
-        filter: blur(55px);
+        width: 460px;
+        height: 460px;
         border-radius: 50%;
+        border: 1px solid rgba(99, 102, 241, 0.2);
         pointer-events: none;
         z-index: 2;
+
+        @media (max-width: 48rem) {
+          width: 320px;
+          height: 320px;
+        }
       }
 
-      /* 3D Floating Micro-Badges */
+      .stage-hud-ring-dashed {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 380px;
+        height: 380px;
+        border-radius: 50%;
+        border: 2px dashed rgba(56, 189, 248, 0.25);
+        pointer-events: none;
+        z-index: 2;
+        animation: hudRotate 45s linear infinite;
+
+        @media (max-width: 48rem) {
+          width: 270px;
+          height: 270px;
+        }
+      }
+
+      .stage-hud-ring-inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 290px;
+        height: 290px;
+        border-radius: 50%;
+        border: 1px solid rgba(236, 72, 153, 0.2);
+        pointer-events: none;
+        z-index: 2;
+
+        @media (max-width: 48rem) {
+          width: 210px;
+          height: 210px;
+        }
+      }
+
+      /* Ambient Multi-Color Core Glows behind phone */
+      .device-core-glow {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(55px);
+        pointer-events: none;
+        z-index: 2;
+
+        &.glow-cyan {
+          top: 30%;
+          left: 20%;
+          width: 220px;
+          height: 220px;
+          background: rgba(56, 189, 248, 0.3);
+        }
+
+        &.glow-indigo {
+          top: 45%;
+          right: 18%;
+          width: 240px;
+          height: 240px;
+          background: rgba(99, 102, 241, 0.35);
+        }
+
+        &.glow-pink {
+          bottom: 15%;
+          left: 35%;
+          width: 180px;
+          height: 180px;
+          background: rgba(236, 72, 153, 0.18);
+        }
+      }
+
+      /* Floating Badges positioned safely around device */
       .floating-badge {
         position: absolute;
         z-index: 30;
@@ -2556,32 +2714,44 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
         gap: 0.75rem;
         padding: 0.7rem 1.15rem;
         border-radius: 1.15rem;
-        background: rgba(9, 14, 28, 0.88);
+        background: rgba(9, 14, 28, 0.9);
         border: 1px solid rgba(255, 255, 255, 0.16);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         pointer-events: none;
+        white-space: nowrap;
 
-        &.badge-top-right {
-          top: 6%;
-          right: -1rem;
+        &.badge-top-left {
+          top: 8%;
+          left: -1.75rem;
           animation: floatBadgeTop 5s ease-in-out infinite;
 
           @media (max-width: 48rem) {
-            right: 0;
-            top: 2%;
+            left: 0.25rem;
+            top: 1%;
           }
         }
 
-        &.badge-bottom-left {
-          bottom: 6%;
-          left: -1.25rem;
-          animation: floatBadgeBottom 5s ease-in-out infinite 1.5s;
+        &.badge-top-right {
+          top: 28%;
+          right: -1.75rem;
+          animation: floatBadgeBottom 5.5s ease-in-out infinite 1.2s;
 
           @media (max-width: 48rem) {
-            left: 0;
-            bottom: 2%;
+            right: 0.25rem;
+            top: 15%;
+          }
+        }
+
+        &.badge-bottom-center {
+          bottom: 5%;
+          left: -1.25rem;
+          animation: floatBadgeTop 6s ease-in-out infinite 2s;
+
+          @media (max-width: 48rem) {
+            left: 0.25rem;
+            bottom: 1%;
           }
         }
 
@@ -2601,6 +2771,11 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
           &.icon-cap {
             background: linear-gradient(135deg, rgba(56, 189, 248, 0.3), rgba(99, 102, 241, 0.3));
             color: #38bdf8;
+          }
+
+          &.icon-offline {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.3), rgba(16, 185, 129, 0.3));
+            color: #4ade80;
           }
 
           mat-icon {
@@ -2630,62 +2805,45 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
         }
       }
 
-      /* 3D INCLINED IPHONE 16 PRO CHASSIS */
-      .iphone-3d-chassis {
+      /* FIXED UPRIGHT IPHONE 16 PRO FRAME */
+      .iphone-fixed-device {
         position: relative;
         z-index: 10;
-        width: 275px;
-        max-width: 78vw;
+        width: 290px;
+        max-width: 82vw;
         aspect-ratio: 9 / 19.5;
-        border-radius: 46px;
-        background: #1c1f26;
-        transform-style: preserve-3d;
-        transform-origin: center center;
-
-        /* Live 3D Inclined Floating Levitation Motion */
-        animation: deviceInclineFloat 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-
-        padding: 9px;
+        border-radius: 50px;
+        background: linear-gradient(145deg, #2b2f3a 0%, #151821 50%, #222631 100%);
+        padding: 10px;
         display: flex;
         flex-direction: column;
         cursor: pointer;
-        transition: box-shadow 0.4s ease;
+        /* Fixed upright with smooth subtle breathing levitation */
+        animation: fixedDeviceFloat 6s ease-in-out infinite;
+        transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s ease;
 
-        /* Realistic Multi-Layer 3D Extrusion Shadows for physical thickness */
         box-shadow:
-          -1px 1px 0 #4a5568,
-          -2px 2px 0 #3b4252,
-          -3px 3px 0 #2d3748,
-          -4px 4px 0 #1e2532,
-          -5px 5px 0 #151a24,
-          -6px 6px 0 #0d1017,
-          -8px 8px 1px #080a0f,
-          -15px 22px 35px rgba(0, 0, 0, 0.8),
-          -28px 45px 75px rgba(0, 0, 0, 0.65),
-          0 0 50px rgba(99, 102, 241, 0.35);
+          0 0 0 1.5px rgba(255, 255, 255, 0.18),
+          0 0 0 4px #12141a,
+          0 25px 65px -10px rgba(0, 0, 0, 0.85),
+          0 0 50px rgba(99, 102, 241, 0.25);
 
         &:hover {
-          animation-play-state: paused;
-          transform: rotateY(-18deg) rotateX(12deg) rotateZ(-3deg) translateY(-8px) scale(1.02);
+          transform: translateY(-4px) scale(1.015);
           box-shadow:
-            -1px 1px 0 #4a5568,
-            -2px 2px 0 #3b4252,
-            -3px 3px 0 #2d3748,
-            -4px 4px 0 #1e2532,
-            -5px 5px 0 #151a24,
-            -6px 6px 0 #0d1017,
-            -18px 28px 42px rgba(0, 0, 0, 0.9),
-            -35px 55px 90px rgba(0, 0, 0, 0.75),
-            0 0 65px rgba(56, 189, 248, 0.45);
+            0 0 0 1.5px rgba(255, 255, 255, 0.25),
+            0 0 0 4px #12141a,
+            0 32px 75px -10px rgba(0, 0, 0, 0.9),
+            0 0 65px rgba(56, 189, 248, 0.4);
         }
 
-        @media (min-width: 48rem) {
-          width: 295px;
-          border-radius: 50px;
-          padding: 10px;
+        @media (max-width: 48rem) {
+          width: 275px;
+          border-radius: 46px;
+          padding: 9px;
         }
 
-        /* Physical Hardware Buttons Extruded from 3D Left Edge */
+        /* Physical Hardware Buttons */
         .hw-action-button,
         .hw-volume-up,
         .hw-volume-down,
@@ -2728,14 +2886,14 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
           position: relative;
           width: 100%;
           height: 100%;
-          border-radius: 38px;
+          border-radius: 42px;
           background: #000000;
           overflow: hidden;
           display: flex;
           flex-direction: column;
 
-          @media (min-width: 48rem) {
-            border-radius: 42px;
+          @media (max-width: 48rem) {
+            border-radius: 38px;
           }
         }
 
@@ -2744,85 +2902,122 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
           width: 100%;
           height: 100%;
           overflow: hidden;
-          background: #0a0e1a;
+          background: #f8fcff;
           display: flex;
           flex-direction: column;
         }
 
-        /* Live Animated Dynamic Island */
-        .dynamic-island {
-          position: absolute;
-          top: 9px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 96px;
-          height: 24px;
-          background: #000000;
-          border-radius: 14px;
-          z-index: 20;
+        /* Top Safe-Area Status Bar */
+        .screen-top-bar {
+          position: relative;
+          z-index: 25;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 0 9px;
-          box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.12);
+          padding: 8px 16px 6px;
+          background: #f8fcff;
+          flex-shrink: 0;
 
-          .island-live-activity {
+          .status-time {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #0f172a;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            letter-spacing: -0.01em;
+          }
+
+          .dynamic-island {
+            width: 94px;
+            height: 23px;
+            background: #000000;
+            border-radius: 14px;
             display: flex;
             align-items: center;
-            gap: 4px;
+            justify-content: space-between;
+            padding: 0 8px;
+            box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.12);
 
-            .live-dot {
-              width: 5px;
-              height: 5px;
-              border-radius: 50%;
-              background: #22c55e;
-              box-shadow: 0 0 6px #22c55e;
-              animation: pulseGreen 1.5s infinite;
-            }
-
-            .live-eq {
+            .island-live-activity {
               display: flex;
               align-items: center;
-              gap: 2px;
-              height: 10px;
+              gap: 4px;
 
-              .eq-bar {
-                width: 2px;
+              .live-dot {
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
                 background: #22c55e;
-                border-radius: 1px;
-                animation: eqDance 1.2s ease-in-out infinite;
+                box-shadow: 0 0 6px #22c55e;
+                animation: pulseGreen 1.5s infinite;
+              }
 
-                &.eq-1 { height: 4px; animation-delay: 0.1s; }
-                &.eq-2 { height: 8px; animation-delay: 0.3s; }
-                &.eq-3 { height: 6px; animation-delay: 0.2s; }
+              .live-eq {
+                display: flex;
+                align-items: center;
+                gap: 2px;
+                height: 10px;
+
+                .eq-bar {
+                  width: 2px;
+                  background: #22c55e;
+                  border-radius: 1px;
+                  animation: eqDance 1.2s ease-in-out infinite;
+
+                  &.eq-1 { height: 4px; animation-delay: 0.1s; }
+                  &.eq-2 { height: 8px; animation-delay: 0.3s; }
+                  &.eq-3 { height: 6px; animation-delay: 0.2s; }
+                }
+              }
+            }
+
+            .island-camera-cluster {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+
+              .island-sensor {
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: #0d121f;
+              }
+
+              .island-camera {
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background: #090d16;
+                border: 1px solid rgba(59, 130, 246, 0.6);
+                box-shadow: inset 0 0 3px rgba(99, 102, 241, 0.9);
               }
             }
           }
 
-          .island-camera-cluster {
+          .status-indicators {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 2px;
+            color: #0f172a;
 
-            .island-sensor {
-              width: 4px;
-              height: 4px;
-              border-radius: 50%;
-              background: #0d121f;
-            }
-
-            .island-camera {
-              width: 9px;
-              height: 9px;
-              border-radius: 50%;
-              background: #090d16;
-              border: 1px solid rgba(59, 130, 246, 0.6);
-              box-shadow: inset 0 0 3px rgba(99, 102, 241, 0.9);
+            .status-ico {
+              font-size: 0.85rem;
+              width: 0.85rem;
+              height: 0.85rem;
             }
           }
         }
 
-        /* Live Sweeping Shimmer Beam */
+        /* Perfectly Aligned Viewport with Unobstructed App Content */
+        .screen-viewport {
+          position: relative;
+          flex: 1;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          background: #f8fcff;
+        }
+
+        /* Live Sweeping Shimmer Glare Beam */
         .screen-shine-beam {
           position: absolute;
           inset: -60%;
@@ -2861,18 +3056,24 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
           display: block;
         }
 
-        /* iOS Home Indicator */
-        .home-indicator {
-          position: absolute;
-          bottom: 7px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 95px;
-          height: 3.5px;
-          background: rgba(255, 255, 255, 0.7);
-          border-radius: 999px;
-          z-index: 15;
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        /* Bottom Safe-Area Bar with iOS Home Indicator */
+        .screen-bottom-bar {
+          position: relative;
+          z-index: 25;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 6px 0 9px;
+          background: #c3dbee;
+          flex-shrink: 0;
+
+          .home-indicator {
+            width: 110px;
+            height: 4px;
+            background: #1e293b;
+            border-radius: 999px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+          }
         }
       }
     }
@@ -2884,27 +3085,22 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       }
     }
 
-    /* Keyframe Animations for Mobile Device & Live Showcase */
-    @keyframes deviceInclineFloat {
+    /* Keyframe Animations for Fixed Device & Live Showcase */
+    @keyframes fixedDeviceFloat {
       0%, 100% {
-        transform: rotateY(-24deg) rotateX(16deg) rotateZ(-5deg) translateY(0px);
+        transform: translateY(0);
       }
       50% {
-        transform: rotateY(-18deg) rotateX(11deg) rotateZ(-3deg) translateY(-20px);
+        transform: translateY(-8px);
       }
     }
 
-    @keyframes radarPulse {
-      0% {
-        transform: scale(0.6);
-        opacity: 0.8;
+    @keyframes hudRotate {
+      from {
+        transform: translate(-50%, -50%) rotate(0deg);
       }
-      50% {
-        opacity: 0.25;
-      }
-      100% {
-        transform: scale(1.35);
-        opacity: 0;
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
       }
     }
 
@@ -2941,19 +3137,19 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
 
     @keyframes floatBadgeTop {
       0%, 100% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(0);
       }
       50% {
-        transform: translateY(-12px) rotate(1.5deg);
+        transform: translateY(-8px);
       }
     }
 
     @keyframes floatBadgeBottom {
       0%, 100% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(0);
       }
       50% {
-        transform: translateY(-10px) rotate(-1.5deg);
+        transform: translateY(-7px);
       }
     }
 
