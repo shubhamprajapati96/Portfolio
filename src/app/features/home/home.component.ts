@@ -416,17 +416,18 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       </div>
     </section>
 
-    <!-- 5.5 MOBILE APK DOWNLOAD & APP SHOWCASE (Website Only, Hidden in APK) -->
+    <!-- 5.5 MOBILE APK DOWNLOAD & INCLINED 3D APP SHOWCASE (Website Only, Hidden in APK) -->
     @if (!isMobileApp()) {
-      <section id="mobile-app" class="section mobile-app-section" aria-label="Mobile Application Download">
+      <section id="mobile-app" class="section mobile-app-section" aria-label="Mobile Application Showcase & Download">
         <div class="container">
           <div class="mobile-app-card">
-            <!-- Cyber Matrix Ambient Glow -->
-            <div class="mobile-ambient-glow" aria-hidden="true"></div>
+            <!-- Neo-Cyber Ambient Lighting & Animated Glows -->
+            <div class="mobile-ambient-glow glow-1" aria-hidden="true"></div>
+            <div class="mobile-ambient-glow glow-2" aria-hidden="true"></div>
             <div class="mobile-grid-pattern" aria-hidden="true"></div>
 
             <div class="mobile-app-content">
-              <!-- Left Column: Copy, Tech Highlights, & APK Download Button -->
+              <!-- Left Column: High-Impact Typography, Feature Grid & Action Buttons -->
               <div class="mobile-info-col">
                 <div class="app-badge">
                   <span class="app-pulse-dot"></span>
@@ -436,47 +437,47 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
 
                 <h2 class="mobile-headline">
                   Experience My Portfolio as a
-                  <span class="gradient-text">Native Mobile App</span>
+                  <span class="gradient-text-vibrant">Native Mobile App</span>
                 </h2>
 
                 <p class="mobile-desc">
-                  Engineered with <strong>Capacitor</strong> and <strong>Angular 19</strong>, bundled into a high-performance native Android application. Explore full case studies, review architecture benchmarks, and initiate contact on the go with zero browser chrome or latency.
+                  Engineered with <strong>Capacitor 7</strong> and <strong>Angular 19</strong>, packaged into a high-performance native Android application. Explore full case studies, review architecture benchmarks, and initiate contact on the go with zero browser chrome or latency.
                 </p>
 
-                <!-- Key Capabilities Grid -->
+                <!-- 3 Futuristic Feature Glass Cards -->
                 <div class="mobile-features-grid">
                   <div class="mobile-feature-item">
-                    <div class="feature-icon-box">
+                    <div class="feature-icon-box icon-bolt">
                       <mat-icon>bolt</mat-icon>
                     </div>
                     <div class="feature-text">
-                      <strong>Instant Launch & Fluid 60 FPS</strong>
-                      <span>Zero browser overhead, hardware-accelerated smooth transitions.</span>
+                      <strong>Instant Launch & 60 FPS</strong>
+                      <span>Zero browser overhead, buttery smooth hardware-accelerated animations.</span>
                     </div>
                   </div>
 
                   <div class="mobile-feature-item">
-                    <div class="feature-icon-box">
+                    <div class="feature-icon-box icon-offline">
                       <mat-icon>wifi_off</mat-icon>
                     </div>
                     <div class="feature-text">
-                      <strong>Offline First Architecture</strong>
-                      <span>Core assets, resume, and project summaries accessible anytime.</span>
+                      <strong>Offline-First Architecture</strong>
+                      <span>Core assets, resume, and project summaries instantly accessible offline.</span>
                     </div>
                   </div>
 
                   <div class="mobile-feature-item">
-                    <div class="feature-icon-box">
+                    <div class="feature-icon-box icon-secure">
                       <mat-icon>verified_user</mat-icon>
                     </div>
                     <div class="feature-text">
-                      <strong>Verified & Secure Build</strong>
-                      <span>Automated GitHub Actions CI/CD with SHA-256 build verification.</span>
+                      <strong>Signed & Verified Build</strong>
+                      <span>Compiled directly via automated GitHub Actions CI/CD with release hashes.</span>
                     </div>
                   </div>
                 </div>
 
-                <!-- APK Action Area -->
+                <!-- APK Action Buttons -->
                 <div class="apk-actions-wrapper">
                   <a
                     mat-flat-button
@@ -489,6 +490,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
                       <span class="btn-sub">Direct Download APK</span>
                       <span class="btn-main">Download Android App</span>
                     </div>
+                    <span class="btn-shine-bar" aria-hidden="true"></span>
                   </a>
 
                   <a
@@ -517,15 +519,22 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
                 </div>
               </div>
 
-              <!-- Right Column: Ultra-Realistic Latest iPhone Mockup -->
+              <!-- Right Column: Inclined 3D iPhone with Live Animations -->
               <div class="mobile-device-col">
-                <div class="iphone-presentation">
-                  <!-- Ambient Glow Aura behind phone -->
-                  <div class="phone-aura" aria-hidden="true"></div>
+                <div class="device-stage">
+                  <!-- Concentric Pulsing Radar Rings -->
+                  <div class="device-radar-rings" aria-hidden="true">
+                    <div class="radar-ring ring-1"></div>
+                    <div class="radar-ring ring-2"></div>
+                    <div class="radar-ring ring-3"></div>
+                  </div>
 
-                  <!-- Floating Tech Badges -->
+                  <!-- Ambient Core Glow behind tilted device -->
+                  <div class="device-backdrop-glow" aria-hidden="true"></div>
+
+                  <!-- 3D Suspended Micro-Badges -->
                   <div class="floating-badge badge-top-right">
-                    <div class="floating-badge-icon">
+                    <div class="floating-badge-icon icon-speed">
                       <mat-icon>speed</mat-icon>
                     </div>
                     <div class="floating-badge-body">
@@ -535,7 +544,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
                   </div>
 
                   <div class="floating-badge badge-bottom-left">
-                    <div class="floating-badge-icon">
+                    <div class="floating-badge-icon icon-cap">
                       <mat-icon>offline_bolt</mat-icon>
                     </div>
                     <div class="floating-badge-body">
@@ -544,26 +553,37 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
                     </div>
                   </div>
 
-                  <!-- iPhone 16 Pro Frame -->
-                  <div class="iphone-16-pro" role="img" aria-label="App running inside latest iPhone Pro">
-                    <!-- Physical Hardware Buttons -->
+                  <!-- Inclined 3D iPhone 16 Pro Frame with Live Floating Motion -->
+                  <div class="iphone-3d-chassis" role="img" aria-label="Live interactive 3D inclined mobile app preview">
+                    <!-- Physical Hardware Buttons (Extruded along left 3D edge) -->
                     <div class="hw-action-button"></div>
                     <div class="hw-volume-up"></div>
                     <div class="hw-volume-down"></div>
                     <div class="hw-power-button"></div>
 
-                    <!-- Titanium Bezel -->
+                    <!-- Outer Titanium Bezel -->
                     <div class="iphone-bezel">
                       <!-- Inner OLED Screen -->
                       <div class="iphone-screen">
-                        <!-- Dynamic Island -->
+                        <!-- Live Dynamic Island with Active Sound Wave -->
                         <div class="dynamic-island">
-                          <div class="island-camera"></div>
-                          <div class="island-sensor"></div>
+                          <div class="island-live-activity">
+                            <span class="live-dot"></span>
+                            <div class="live-eq">
+                              <span class="eq-bar eq-1"></span>
+                              <span class="eq-bar eq-2"></span>
+                              <span class="eq-bar eq-3"></span>
+                            </div>
+                          </div>
+                          <div class="island-camera-cluster">
+                            <div class="island-sensor"></div>
+                            <div class="island-camera"></div>
+                          </div>
                         </div>
 
-                        <!-- Screen Glare / Reflection Overlay -->
-                        <div class="screen-glare" aria-hidden="true"></div>
+                        <!-- Live Sweeping Glass Glare Beam -->
+                        <div class="screen-shine-beam" aria-hidden="true"></div>
+                        <div class="screen-glare-static" aria-hidden="true"></div>
 
                         <!-- Real App Screen Image -->
                         <picture class="screen-picture">
@@ -2127,48 +2147,64 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
     }
 
     /* ==========================================================================
-       MOBILE APK & APP SHOWCASE SECTION
+       MOBILE APK & INCLINED 3D APP SHOWCASE (Ultra-Modern Neo-Cyber Design)
        ========================================================================== */
     .mobile-app-section {
       position: relative;
-      padding: 5rem 0 3rem;
+      padding: 5rem 0 3.5rem;
       overflow: hidden;
 
       .mobile-app-card {
         position: relative;
-        border-radius: 2rem;
-        background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(17, 24, 39, 0.95) 100%);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
+        border-radius: 2.25rem;
+        background: radial-gradient(circle at 85% 25%, rgba(99, 102, 241, 0.22) 0%, transparent 45%),
+                    radial-gradient(circle at 15% 75%, rgba(56, 189, 248, 0.16) 0%, transparent 40%),
+                    linear-gradient(145deg, #090e1c 0%, #0d152a 50%, #070a14 100%);
+        border: 1px solid rgba(99, 102, 241, 0.3);
+        box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.85),
+                    0 0 60px rgba(99, 102, 241, 0.18),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(28px);
+        -webkit-backdrop-filter: blur(28px);
         overflow: hidden;
-        padding: 3.5rem 3rem;
+        padding: 4rem 3.5rem;
 
         @media (max-width: 48rem) {
-          padding: 2.25rem 1.5rem;
-          border-radius: 1.5rem;
+          padding: 2.5rem 1.5rem;
+          border-radius: 1.75rem;
         }
       }
 
       .mobile-ambient-glow {
         position: absolute;
-        top: -20%;
-        right: 15%;
-        width: 32rem;
-        height: 32rem;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(168, 85, 247, 0.1) 45%, transparent 70%);
-        filter: blur(60px);
+        filter: blur(70px);
         pointer-events: none;
+
+        &.glow-1 {
+          top: -15%;
+          right: 10%;
+          width: 34rem;
+          height: 34rem;
+          background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(168, 85, 247, 0.15) 50%, transparent 70%);
+          animation: floatGlow 10s ease-in-out infinite alternate;
+        }
+
+        &.glow-2 {
+          bottom: -10%;
+          left: 5%;
+          width: 28rem;
+          height: 28rem;
+          background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(99, 102, 241, 0.1) 50%, transparent 70%);
+        }
       }
 
       .mobile-grid-pattern {
         position: absolute;
         inset: 0;
-        background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-        background-size: 24px 24px;
-        opacity: 0.7;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+        background-size: 28px 28px;
+        opacity: 0.6;
         pointer-events: none;
       }
 
@@ -2181,65 +2217,76 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
         align-items: center;
 
         @media (min-width: 64rem) {
-          grid-template-columns: 1.15fr 0.85fr;
+          grid-template-columns: 1.12fr 0.88fr;
           gap: 4rem;
         }
       }
 
-      /* Left Info Column */
+      /* Left Column: High-Impact Typography & Feature Grid */
       .mobile-info-col {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1.6rem;
       }
 
       .app-badge {
         display: inline-flex;
         align-items: center;
-        gap: 0.6rem;
+        gap: 0.65rem;
         align-self: flex-start;
-        padding: 0.4rem 1rem;
+        padding: 0.45rem 1.15rem;
         border-radius: 9999px;
-        background: rgba(99, 102, 241, 0.12);
-        border: 1px solid rgba(99, 102, 241, 0.3);
-        color: #a5b4fc;
+        background: rgba(56, 189, 248, 0.1);
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        color: #38bdf8;
         font-size: 0.85rem;
         font-weight: 600;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.03em;
 
         .app-pulse-dot {
-          width: 0.5rem;
-          height: 0.5rem;
+          width: 0.55rem;
+          height: 0.55rem;
           border-radius: 50%;
           background: #38bdf8;
-          box-shadow: 0 0 8px #38bdf8;
-          animation: pulse 2s infinite;
+          box-shadow: 0 0 10px #38bdf8;
+          animation: pulseCyan 2s infinite;
         }
 
         .badge-icon {
-          font-size: 1.1rem;
-          width: 1.1rem;
-          height: 1.1rem;
+          font-size: 1.15rem;
+          width: 1.15rem;
+          height: 1.15rem;
         }
       }
 
       .mobile-headline {
         margin: 0;
-        font-size: clamp(2rem, 3.5vw, 2.75rem);
+        font-size: clamp(2.2rem, 3.6vw, 3.1rem);
         font-weight: 800;
         line-height: 1.15;
-        letter-spacing: -0.02em;
-        color: var(--text-primary);
+        letter-spacing: -0.03em;
+        color: #ffffff !important;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      }
+
+      .gradient-text-vibrant {
+        background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #f472b6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        filter: drop-shadow(0 0 25px rgba(56, 189, 248, 0.4));
       }
 
       .mobile-desc {
         margin: 0;
-        color: var(--text-secondary);
+        color: #cbd5e1 !important;
         font-size: 1.05rem;
-        line-height: 1.65;
+        line-height: 1.7;
 
         strong {
-          color: var(--text-primary);
+          color: #ffffff !important;
+          font-weight: 600;
         }
       }
 
@@ -2247,7 +2294,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
         display: grid;
         grid-template-columns: 1fr;
         gap: 1.1rem;
-        margin-top: 0.5rem;
+        margin-top: 0.35rem;
 
         @media (min-width: 40rem) {
           grid-template-columns: repeat(3, 1fr);
@@ -2257,50 +2304,71 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       .mobile-feature-item {
         display: flex;
         flex-direction: column;
-        gap: 0.6rem;
-        padding: 1rem;
-        border-radius: 1rem;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        transition: transform 0.2s ease, border-color 0.2s ease;
+        gap: 0.75rem;
+        padding: 1.15rem;
+        border-radius: 1.15rem;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), border-color 0.25s ease, box-shadow 0.25s ease;
 
         &:hover {
-          transform: translateY(-2px);
-          border-color: rgba(99, 102, 241, 0.3);
+          transform: translateY(-3px);
+          border-color: rgba(56, 189, 248, 0.45);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.2);
         }
 
         .feature-icon-box {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 2.25rem;
-          height: 2.25rem;
-          border-radius: 0.65rem;
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
-          color: #a5b4fc;
+          width: 2.35rem;
+          height: 2.35rem;
+          border-radius: 0.75rem;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+          &.icon-bolt {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(99, 102, 241, 0.25));
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            color: #38bdf8;
+          }
+
+          &.icon-offline {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(236, 72, 153, 0.25));
+            border: 1px solid rgba(168, 85, 247, 0.35);
+            color: #c084fc;
+          }
+
+          &.icon-secure {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.25), rgba(16, 185, 129, 0.25));
+            border: 1px solid rgba(34, 197, 94, 0.35);
+            color: #4ade80;
+          }
 
           mat-icon {
-            font-size: 1.25rem;
-            width: 1.25rem;
-            height: 1.25rem;
+            font-size: 1.3rem;
+            width: 1.3rem;
+            height: 1.3rem;
           }
         }
 
         .feature-text {
           display: flex;
           flex-direction: column;
-          gap: 0.2rem;
+          gap: 0.25rem;
 
           strong {
-            color: var(--text-primary);
-            font-size: 0.9rem;
-            font-weight: 600;
+            color: #ffffff !important;
+            font-size: 0.92rem;
+            font-weight: 700;
           }
 
           span {
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-            line-height: 1.4;
+            color: #94a3b8 !important;
+            font-size: 0.82rem;
+            line-height: 1.45;
           }
         }
       }
@@ -2309,32 +2377,38 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 1rem;
+        gap: 1.15rem;
         margin-top: 0.5rem;
       }
 
       .download-apk-btn {
+        position: relative !important;
+        overflow: hidden !important;
         display: inline-flex !important;
         align-items: center !important;
-        gap: 0.85rem !important;
-        padding: 0.75rem 1.65rem !important;
+        gap: 0.95rem !important;
+        padding: 0.85rem 1.85rem !important;
         height: auto !important;
-        border-radius: 1rem !important;
-        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+        border-radius: 1.15rem !important;
+        background: linear-gradient(135deg, #2563eb 0%, #6366f1 50%, #9333ea 100%) !important;
         color: #ffffff !important;
-        box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+        box-shadow: 0 12px 30px -5px rgba(99, 102, 241, 0.65),
+                    0 0 25px rgba(56, 189, 248, 0.4),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
         text-decoration: none !important;
-        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s ease !important;
 
         &:hover {
-          transform: translateY(-2px) !important;
-          box-shadow: 0 14px 30px -5px rgba(79, 70, 229, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+          transform: translateY(-3px) scale(1.02) !important;
+          box-shadow: 0 18px 36px -5px rgba(99, 102, 241, 0.85),
+                      0 0 35px rgba(56, 189, 248, 0.6),
+                      inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
         }
 
         .btn-dl-icon {
-          font-size: 1.6rem;
-          width: 1.6rem;
-          height: 1.6rem;
+          font-size: 1.7rem;
+          width: 1.7rem;
+          height: 1.7rem;
         }
 
         .btn-copy {
@@ -2344,35 +2418,51 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
           line-height: 1.2;
 
           .btn-sub {
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            opacity: 0.85;
+            letter-spacing: 0.06em;
+            color: rgba(255, 255, 255, 0.85);
             font-weight: 600;
           }
 
           .btn-main {
-            font-size: 1.05rem;
-            font-weight: 700;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #ffffff;
           }
+        }
+
+        .btn-shine-bar {
+          position: absolute;
+          top: -50%;
+          left: -80%;
+          width: 50%;
+          height: 200%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+          transform: rotate(25deg);
+          animation: btnShine 4s infinite;
+          pointer-events: none;
         }
       }
 
       .github-release-btn {
         display: inline-flex !important;
         align-items: center !important;
-        gap: 0.5rem !important;
-        padding: 0.75rem 1.25rem !important;
+        gap: 0.55rem !important;
+        padding: 0.85rem 1.45rem !important;
         height: auto !important;
-        border-radius: 1rem !important;
-        color: var(--text-primary) !important;
-        border-color: rgba(255, 255, 255, 0.15) !important;
-        background: rgba(255, 255, 255, 0.04) !important;
-        transition: background 0.2s ease, border-color 0.2s ease !important;
+        border-radius: 1.15rem !important;
+        color: #f1f5f9 !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        backdrop-filter: blur(10px) !important;
+        transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease !important;
 
         &:hover {
-          background: rgba(255, 255, 255, 0.08) !important;
-          border-color: rgba(255, 255, 255, 0.3) !important;
+          transform: translateY(-2px) !important;
+          background: rgba(255, 255, 255, 0.1) !important;
+          border-color: #38bdf8 !important;
+          box-shadow: 0 0 20px rgba(56, 189, 248, 0.3) !important;
         }
       }
 
@@ -2380,86 +2470,118 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 1.25rem;
-        padding-top: 0.5rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        gap: 1.35rem;
+        padding-top: 0.65rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
 
         .meta-tag {
           display: inline-flex;
           align-items: center;
-          gap: 0.35rem;
-          color: var(--text-tertiary, #94a3b8);
-          font-size: 0.8rem;
+          gap: 0.4rem;
+          color: #94a3b8;
+          font-size: 0.82rem;
 
           mat-icon {
-            font-size: 0.95rem;
-            width: 0.95rem;
-            height: 0.95rem;
-            color: #6366f1;
+            font-size: 1rem;
+            width: 1rem;
+            height: 1rem;
+            color: #38bdf8;
           }
         }
       }
 
-      /* Right Column: iPhone 16 Pro Showcase */
+      /* Right Column: 3D Stage with Inclined iPhone */
       .mobile-device-col {
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
-      .iphone-presentation {
+      .device-stage {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 1.5rem 0;
+        perspective: 1400px;
+        perspective-origin: 50% 50%;
+        transform-style: preserve-3d;
+        padding: 3rem 1.5rem;
+        width: 100%;
       }
 
-      .phone-aura {
+      /* Concentric Pulsing Radar Rings */
+      .device-radar-rings {
         position: absolute;
-        inset: -20px;
-        background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.15) 50%, transparent 70%);
-        filter: blur(40px);
-        border-radius: 50%;
-        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 440px;
+        height: 440px;
         pointer-events: none;
+        z-index: 1;
+
+        .radar-ring {
+          position: absolute;
+          inset: 0;
+          border-radius: 50%;
+          border: 1px solid rgba(99, 102, 241, 0.25);
+          animation: radarPulse 6s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+
+          &.ring-1 { animation-delay: 0s; }
+          &.ring-2 { animation-delay: 2s; }
+          &.ring-3 { animation-delay: 4s; }
+        }
       }
 
-      /* Floating Badges */
+      .device-backdrop-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, rgba(168, 85, 247, 0.2) 45%, transparent 70%);
+        filter: blur(55px);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      /* 3D Floating Micro-Badges */
       .floating-badge {
         position: absolute;
-        z-index: 20;
+        z-index: 30;
         display: flex;
         align-items: center;
         gap: 0.75rem;
-        padding: 0.65rem 1rem;
-        border-radius: 1rem;
-        background: rgba(15, 23, 42, 0.85);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        animation: float 4s ease-in-out infinite;
+        padding: 0.7rem 1.15rem;
+        border-radius: 1.15rem;
+        background: rgba(9, 14, 28, 0.88);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        pointer-events: none;
 
         &.badge-top-right {
-          top: 15%;
-          right: -1.5rem;
-          animation-delay: 0.5s;
+          top: 6%;
+          right: -1rem;
+          animation: floatBadgeTop 5s ease-in-out infinite;
 
           @media (max-width: 48rem) {
-            right: 0.5rem;
-            top: 5%;
+            right: 0;
+            top: 2%;
           }
         }
 
         &.badge-bottom-left {
-          bottom: 12%;
-          left: -1.5rem;
-          animation-delay: 2s;
+          bottom: 6%;
+          left: -1.25rem;
+          animation: floatBadgeBottom 5s ease-in-out infinite 1.5s;
 
           @media (max-width: 48rem) {
-            left: 0.5rem;
-            bottom: 5%;
+            left: 0;
+            bottom: 2%;
           }
         }
 
@@ -2467,16 +2589,24 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 2rem;
-          height: 2rem;
-          border-radius: 0.5rem;
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(168, 85, 247, 0.25));
-          color: #818cf8;
+          width: 2.25rem;
+          height: 2.25rem;
+          border-radius: 0.65rem;
+
+          &.icon-speed {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.3), rgba(168, 85, 247, 0.3));
+            color: #f472b6;
+          }
+
+          &.icon-cap {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.3), rgba(99, 102, 241, 0.3));
+            color: #38bdf8;
+          }
 
           mat-icon {
-            font-size: 1.15rem;
-            width: 1.15rem;
-            height: 1.15rem;
+            font-size: 1.25rem;
+            width: 1.25rem;
+            height: 1.25rem;
           }
         }
 
@@ -2486,83 +2616,112 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
 
           .fb-title {
             font-size: 0.7rem;
-            color: var(--text-secondary);
+            color: #94a3b8;
             font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
           }
 
           .fb-value {
-            font-size: 0.85rem;
-            color: var(--text-primary);
+            font-size: 0.92rem;
+            color: #ffffff;
             font-weight: 700;
           }
         }
       }
 
-      /* iPhone 16 Pro Frame Design */
-      .iphone-16-pro {
+      /* 3D INCLINED IPHONE 16 PRO CHASSIS */
+      .iphone-3d-chassis {
         position: relative;
         z-index: 10;
-        width: 280px;
-        max-width: 82vw;
+        width: 275px;
+        max-width: 78vw;
         aspect-ratio: 9 / 19.5;
         border-radius: 46px;
-        background: #18191c;
-        box-shadow:
-          0 0 0 2px rgba(255, 255, 255, 0.15),
-          0 0 0 4px #23252a,
-          0 25px 60px -10px rgba(0, 0, 0, 0.8),
-          0 0 35px rgba(99, 102, 241, 0.25);
+        background: #1c1f26;
+        transform-style: preserve-3d;
+        transform-origin: center center;
+
+        /* Live 3D Inclined Floating Levitation Motion */
+        animation: deviceInclineFloat 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+
         padding: 9px;
         display: flex;
         flex-direction: column;
-        transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
+        cursor: pointer;
+        transition: box-shadow 0.4s ease;
+
+        /* Realistic Multi-Layer 3D Extrusion Shadows for physical thickness */
+        box-shadow:
+          -1px 1px 0 #4a5568,
+          -2px 2px 0 #3b4252,
+          -3px 3px 0 #2d3748,
+          -4px 4px 0 #1e2532,
+          -5px 5px 0 #151a24,
+          -6px 6px 0 #0d1017,
+          -8px 8px 1px #080a0f,
+          -15px 22px 35px rgba(0, 0, 0, 0.8),
+          -28px 45px 75px rgba(0, 0, 0, 0.65),
+          0 0 50px rgba(99, 102, 241, 0.35);
 
         &:hover {
-          transform: translateY(-4px) scale(1.01);
+          animation-play-state: paused;
+          transform: rotateY(-18deg) rotateX(12deg) rotateZ(-3deg) translateY(-8px) scale(1.02);
+          box-shadow:
+            -1px 1px 0 #4a5568,
+            -2px 2px 0 #3b4252,
+            -3px 3px 0 #2d3748,
+            -4px 4px 0 #1e2532,
+            -5px 5px 0 #151a24,
+            -6px 6px 0 #0d1017,
+            -18px 28px 42px rgba(0, 0, 0, 0.9),
+            -35px 55px 90px rgba(0, 0, 0, 0.75),
+            0 0 65px rgba(56, 189, 248, 0.45);
         }
 
         @media (min-width: 48rem) {
-          width: 300px;
+          width: 295px;
           border-radius: 50px;
           padding: 10px;
         }
 
-        /* Hardware Side Buttons */
+        /* Physical Hardware Buttons Extruded from 3D Left Edge */
         .hw-action-button,
         .hw-volume-up,
         .hw-volume-down,
         .hw-power-button {
           position: absolute;
-          background: #32353d;
+          background: #383d47;
           border-radius: 3px;
+          box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.6);
         }
 
         .hw-action-button {
-          left: -3px;
+          left: -4px;
           top: 85px;
-          width: 3px;
+          width: 4px;
           height: 22px;
         }
 
         .hw-volume-up {
-          left: -3px;
+          left: -4px;
           top: 120px;
-          width: 3px;
-          height: 42px;
+          width: 4px;
+          height: 44px;
         }
 
         .hw-volume-down {
-          left: -3px;
-          top: 172px;
-          width: 3px;
-          height: 42px;
+          left: -4px;
+          top: 174px;
+          width: 4px;
+          height: 44px;
         }
 
         .hw-power-button {
-          right: -3px;
+          right: -4px;
           top: 130px;
-          width: 3px;
-          height: 60px;
+          width: 4px;
+          height: 62px;
         }
 
         .iphone-bezel {
@@ -2590,46 +2749,100 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
           flex-direction: column;
         }
 
-        /* Dynamic Island */
+        /* Live Animated Dynamic Island */
         .dynamic-island {
           position: absolute;
           top: 9px;
           left: 50%;
           transform: translateX(-50%);
-          width: 78px;
-          height: 22px;
+          width: 96px;
+          height: 24px;
           background: #000000;
           border-radius: 14px;
-          z-index: 15;
+          z-index: 20;
           display: flex;
           align-items: center;
-          justify-content: flex-end;
-          padding: 0 8px;
-          box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.08);
+          justify-content: space-between;
+          padding: 0 9px;
+          box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.12);
 
-          .island-camera {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: #0f172a;
-            border: 1px solid rgba(59, 130, 246, 0.5);
-            box-shadow: inset 0 0 2px rgba(99, 102, 241, 0.8);
+          .island-live-activity {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            .live-dot {
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background: #22c55e;
+              box-shadow: 0 0 6px #22c55e;
+              animation: pulseGreen 1.5s infinite;
+            }
+
+            .live-eq {
+              display: flex;
+              align-items: center;
+              gap: 2px;
+              height: 10px;
+
+              .eq-bar {
+                width: 2px;
+                background: #22c55e;
+                border-radius: 1px;
+                animation: eqDance 1.2s ease-in-out infinite;
+
+                &.eq-1 { height: 4px; animation-delay: 0.1s; }
+                &.eq-2 { height: 8px; animation-delay: 0.3s; }
+                &.eq-3 { height: 6px; animation-delay: 0.2s; }
+              }
+            }
           }
 
-          .island-sensor {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: #090d16;
-            margin-right: 6px;
+          .island-camera-cluster {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            .island-sensor {
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background: #0d121f;
+            }
+
+            .island-camera {
+              width: 9px;
+              height: 9px;
+              border-radius: 50%;
+              background: #090d16;
+              border: 1px solid rgba(59, 130, 246, 0.6);
+              box-shadow: inset 0 0 3px rgba(99, 102, 241, 0.9);
+            }
           }
         }
 
-        /* Screen Reflection */
-        .screen-glare {
+        /* Live Sweeping Shimmer Beam */
+        .screen-shine-beam {
+          position: absolute;
+          inset: -60%;
+          background: linear-gradient(
+            115deg,
+            transparent 38%,
+            rgba(255, 255, 255, 0.18) 48%,
+            rgba(255, 255, 255, 0.35) 50%,
+            rgba(255, 255, 255, 0.18) 52%,
+            transparent 62%
+          );
+          pointer-events: none;
+          z-index: 15;
+          animation: shineSweep 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        .screen-glare-static {
           position: absolute;
           inset: 0;
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 35%, transparent 60%);
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 35%, transparent 60%);
           pointer-events: none;
           z-index: 12;
         }
@@ -2668,6 +2881,97 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
     @media all and (display-mode: standalone) {
       .mobile-app-section {
         display: none !important;
+      }
+    }
+
+    /* Keyframe Animations for Mobile Device & Live Showcase */
+    @keyframes deviceInclineFloat {
+      0%, 100% {
+        transform: rotateY(-24deg) rotateX(16deg) rotateZ(-5deg) translateY(0px);
+      }
+      50% {
+        transform: rotateY(-18deg) rotateX(11deg) rotateZ(-3deg) translateY(-20px);
+      }
+    }
+
+    @keyframes radarPulse {
+      0% {
+        transform: scale(0.6);
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 0.25;
+      }
+      100% {
+        transform: scale(1.35);
+        opacity: 0;
+      }
+    }
+
+    @keyframes shineSweep {
+      0% {
+        transform: translateX(-120%) translateY(-120%) rotate(25deg);
+      }
+      25%, 100% {
+        transform: translateX(120%) translateY(120%) rotate(25deg);
+      }
+    }
+
+    @keyframes pulseCyan {
+      0% {
+        box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 8px rgba(56, 189, 248, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+      }
+    }
+
+    @keyframes pulseGreen {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    @keyframes eqDance {
+      0%, 100% { height: 3px; }
+      50% { height: 10px; }
+    }
+
+    @keyframes floatBadgeTop {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-12px) rotate(1.5deg);
+      }
+    }
+
+    @keyframes floatBadgeBottom {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-10px) rotate(-1.5deg);
+      }
+    }
+
+    @keyframes btnShine {
+      0% {
+        transform: translateX(-150%) rotate(25deg);
+      }
+      30%, 100% {
+        transform: translateX(350%) rotate(25deg);
+      }
+    }
+
+    @keyframes floatGlow {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+      100% {
+        transform: translate(-30px, 20px) scale(1.08);
       }
     }
 
