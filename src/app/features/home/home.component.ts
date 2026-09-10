@@ -416,6 +416,180 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       </div>
     </section>
 
+    <!-- 5.5 MOBILE APK DOWNLOAD & APP SHOWCASE (Website Only, Hidden in APK) -->
+    @if (!isMobileApp()) {
+      <section id="mobile-app" class="section mobile-app-section" aria-label="Mobile Application Download">
+        <div class="container">
+          <div class="mobile-app-card">
+            <!-- Cyber Matrix Ambient Glow -->
+            <div class="mobile-ambient-glow" aria-hidden="true"></div>
+            <div class="mobile-grid-pattern" aria-hidden="true"></div>
+
+            <div class="mobile-app-content">
+              <!-- Left Column: Copy, Tech Highlights, & APK Download Button -->
+              <div class="mobile-info-col">
+                <div class="app-badge">
+                  <span class="app-pulse-dot"></span>
+                  <mat-icon class="badge-icon">phone_android</mat-icon>
+                  <span>Native Android Application</span>
+                </div>
+
+                <h2 class="mobile-headline">
+                  Experience My Portfolio as a
+                  <span class="gradient-text">Native Mobile App</span>
+                </h2>
+
+                <p class="mobile-desc">
+                  Engineered with <strong>Capacitor</strong> and <strong>Angular 19</strong>, bundled into a high-performance native Android application. Explore full case studies, review architecture benchmarks, and initiate contact on the go with zero browser chrome or latency.
+                </p>
+
+                <!-- Key Capabilities Grid -->
+                <div class="mobile-features-grid">
+                  <div class="mobile-feature-item">
+                    <div class="feature-icon-box">
+                      <mat-icon>bolt</mat-icon>
+                    </div>
+                    <div class="feature-text">
+                      <strong>Instant Launch & Fluid 60 FPS</strong>
+                      <span>Zero browser overhead, hardware-accelerated smooth transitions.</span>
+                    </div>
+                  </div>
+
+                  <div class="mobile-feature-item">
+                    <div class="feature-icon-box">
+                      <mat-icon>wifi_off</mat-icon>
+                    </div>
+                    <div class="feature-text">
+                      <strong>Offline First Architecture</strong>
+                      <span>Core assets, resume, and project summaries accessible anytime.</span>
+                    </div>
+                  </div>
+
+                  <div class="mobile-feature-item">
+                    <div class="feature-icon-box">
+                      <mat-icon>verified_user</mat-icon>
+                    </div>
+                    <div class="feature-text">
+                      <strong>Verified & Secure Build</strong>
+                      <span>Automated GitHub Actions CI/CD with SHA-256 build verification.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- APK Action Area -->
+                <div class="apk-actions-wrapper">
+                  <a
+                    mat-flat-button
+                    href="downloads/Shubham-Portfolio.apk"
+                    download="Shubham-Portfolio.apk"
+                    class="download-apk-btn"
+                  >
+                    <mat-icon class="btn-dl-icon">download</mat-icon>
+                    <div class="btn-copy">
+                      <span class="btn-sub">Direct Download APK</span>
+                      <span class="btn-main">Download Android App</span>
+                    </div>
+                  </a>
+
+                  <a
+                    mat-stroked-button
+                    href="https://github.com/shubhamprajapati96/Portfolio/actions/workflows/build-apk.yml"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="github-release-btn"
+                  >
+                    <mat-icon>code</mat-icon>
+                    <span>CI/CD Pipeline</span>
+                  </a>
+                </div>
+
+                <!-- APK Meta Specs -->
+                <div class="apk-meta-specs">
+                  <span class="meta-tag">
+                    <mat-icon>android</mat-icon> Android 8.0+
+                  </span>
+                  <span class="meta-tag">
+                    <mat-icon>straighten</mat-icon> ~12.8 MB
+                  </span>
+                  <span class="meta-tag">
+                    <mat-icon>verified</mat-icon> v1.0.0 Release
+                  </span>
+                </div>
+              </div>
+
+              <!-- Right Column: Ultra-Realistic Latest iPhone Mockup -->
+              <div class="mobile-device-col">
+                <div class="iphone-presentation">
+                  <!-- Ambient Glow Aura behind phone -->
+                  <div class="phone-aura" aria-hidden="true"></div>
+
+                  <!-- Floating Tech Badges -->
+                  <div class="floating-badge badge-top-right">
+                    <div class="floating-badge-icon">
+                      <mat-icon>speed</mat-icon>
+                    </div>
+                    <div class="floating-badge-body">
+                      <span class="fb-title">Performance</span>
+                      <span class="fb-value">60 FPS Native</span>
+                    </div>
+                  </div>
+
+                  <div class="floating-badge badge-bottom-left">
+                    <div class="floating-badge-icon">
+                      <mat-icon>offline_bolt</mat-icon>
+                    </div>
+                    <div class="floating-badge-body">
+                      <span class="fb-title">Capacitor 7</span>
+                      <span class="fb-value">Cross-Platform</span>
+                    </div>
+                  </div>
+
+                  <!-- iPhone 16 Pro Frame -->
+                  <div class="iphone-16-pro" role="img" aria-label="App running inside latest iPhone Pro">
+                    <!-- Physical Hardware Buttons -->
+                    <div class="hw-action-button"></div>
+                    <div class="hw-volume-up"></div>
+                    <div class="hw-volume-down"></div>
+                    <div class="hw-power-button"></div>
+
+                    <!-- Titanium Bezel -->
+                    <div class="iphone-bezel">
+                      <!-- Inner OLED Screen -->
+                      <div class="iphone-screen">
+                        <!-- Dynamic Island -->
+                        <div class="dynamic-island">
+                          <div class="island-camera"></div>
+                          <div class="island-sensor"></div>
+                        </div>
+
+                        <!-- Screen Glare / Reflection Overlay -->
+                        <div class="screen-glare" aria-hidden="true"></div>
+
+                        <!-- Real App Screen Image -->
+                        <picture class="screen-picture">
+                          <source srcset="assets/images/app-screen.webp" type="image/webp" />
+                          <img
+                            src="assets/images/app-screen.png"
+                            alt="Shubham Prajapati Portfolio Mobile App Interface"
+                            class="app-screenshot"
+                            loading="lazy"
+                            (error)="onScreenImgError($event)"
+                          />
+                        </picture>
+
+                        <!-- iOS Home Indicator -->
+                        <div class="home-indicator"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    }
+
     <!-- 6. CONTACT DETAILS & MESSAGE FORM -->
     <section id="contact" class="section contact-section">
       <div class="container">
@@ -1953,6 +2127,551 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
     }
 
     /* ==========================================================================
+       MOBILE APK & APP SHOWCASE SECTION
+       ========================================================================== */
+    .mobile-app-section {
+      position: relative;
+      padding: 5rem 0 3rem;
+      overflow: hidden;
+
+      .mobile-app-card {
+        position: relative;
+        border-radius: 2rem;
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(17, 24, 39, 0.95) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        overflow: hidden;
+        padding: 3.5rem 3rem;
+
+        @media (max-width: 48rem) {
+          padding: 2.25rem 1.5rem;
+          border-radius: 1.5rem;
+        }
+      }
+
+      .mobile-ambient-glow {
+        position: absolute;
+        top: -20%;
+        right: 15%;
+        width: 32rem;
+        height: 32rem;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(168, 85, 247, 0.1) 45%, transparent 70%);
+        filter: blur(60px);
+        pointer-events: none;
+      }
+
+      .mobile-grid-pattern {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 24px 24px;
+        opacity: 0.7;
+        pointer-events: none;
+      }
+
+      .mobile-app-content {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        align-items: center;
+
+        @media (min-width: 64rem) {
+          grid-template-columns: 1.15fr 0.85fr;
+          gap: 4rem;
+        }
+      }
+
+      /* Left Info Column */
+      .mobile-info-col {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .app-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        align-self: flex-start;
+        padding: 0.4rem 1rem;
+        border-radius: 9999px;
+        background: rgba(99, 102, 241, 0.12);
+        border: 1px solid rgba(99, 102, 241, 0.3);
+        color: #a5b4fc;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+
+        .app-pulse-dot {
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 50%;
+          background: #38bdf8;
+          box-shadow: 0 0 8px #38bdf8;
+          animation: pulse 2s infinite;
+        }
+
+        .badge-icon {
+          font-size: 1.1rem;
+          width: 1.1rem;
+          height: 1.1rem;
+        }
+      }
+
+      .mobile-headline {
+        margin: 0;
+        font-size: clamp(2rem, 3.5vw, 2.75rem);
+        font-weight: 800;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        color: var(--text-primary);
+      }
+
+      .mobile-desc {
+        margin: 0;
+        color: var(--text-secondary);
+        font-size: 1.05rem;
+        line-height: 1.65;
+
+        strong {
+          color: var(--text-primary);
+        }
+      }
+
+      .mobile-features-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+        margin-top: 0.5rem;
+
+        @media (min-width: 40rem) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .mobile-feature-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+
+        &:hover {
+          transform: translateY(-2px);
+          border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .feature-icon-box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 2.25rem;
+          height: 2.25rem;
+          border-radius: 0.65rem;
+          background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
+          color: #a5b4fc;
+
+          mat-icon {
+            font-size: 1.25rem;
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+        }
+
+        .feature-text {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+
+          strong {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+          }
+
+          span {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            line-height: 1.4;
+          }
+        }
+      }
+
+      .apk-actions-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+
+      .download-apk-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.85rem !important;
+        padding: 0.75rem 1.65rem !important;
+        height: auto !important;
+        border-radius: 1rem !important;
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+        color: #ffffff !important;
+        box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+        text-decoration: none !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+
+        &:hover {
+          transform: translateY(-2px) !important;
+          box-shadow: 0 14px 30px -5px rgba(79, 70, 229, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+        }
+
+        .btn-dl-icon {
+          font-size: 1.6rem;
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+
+        .btn-copy {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          line-height: 1.2;
+
+          .btn-sub {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            opacity: 0.85;
+            font-weight: 600;
+          }
+
+          .btn-main {
+            font-size: 1.05rem;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .github-release-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        padding: 0.75rem 1.25rem !important;
+        height: auto !important;
+        border-radius: 1rem !important;
+        color: var(--text-primary) !important;
+        border-color: rgba(255, 255, 255, 0.15) !important;
+        background: rgba(255, 255, 255, 0.04) !important;
+        transition: background 0.2s ease, border-color 0.2s ease !important;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.08) !important;
+          border-color: rgba(255, 255, 255, 0.3) !important;
+        }
+      }
+
+      .apk-meta-specs {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.25rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+        .meta-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+          color: var(--text-tertiary, #94a3b8);
+          font-size: 0.8rem;
+
+          mat-icon {
+            font-size: 0.95rem;
+            width: 0.95rem;
+            height: 0.95rem;
+            color: #6366f1;
+          }
+        }
+      }
+
+      /* Right Column: iPhone 16 Pro Showcase */
+      .mobile-device-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .iphone-presentation {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem 0;
+      }
+
+      .phone-aura {
+        position: absolute;
+        inset: -20px;
+        background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.15) 50%, transparent 70%);
+        filter: blur(40px);
+        border-radius: 50%;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      /* Floating Badges */
+      .floating-badge {
+        position: absolute;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.65rem 1rem;
+        border-radius: 1rem;
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        animation: float 4s ease-in-out infinite;
+
+        &.badge-top-right {
+          top: 15%;
+          right: -1.5rem;
+          animation-delay: 0.5s;
+
+          @media (max-width: 48rem) {
+            right: 0.5rem;
+            top: 5%;
+          }
+        }
+
+        &.badge-bottom-left {
+          bottom: 12%;
+          left: -1.5rem;
+          animation-delay: 2s;
+
+          @media (max-width: 48rem) {
+            left: 0.5rem;
+            bottom: 5%;
+          }
+        }
+
+        .floating-badge-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 0.5rem;
+          background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(168, 85, 247, 0.25));
+          color: #818cf8;
+
+          mat-icon {
+            font-size: 1.15rem;
+            width: 1.15rem;
+            height: 1.15rem;
+          }
+        }
+
+        .floating-badge-body {
+          display: flex;
+          flex-direction: column;
+
+          .fb-title {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+          }
+
+          .fb-value {
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            font-weight: 700;
+          }
+        }
+      }
+
+      /* iPhone 16 Pro Frame Design */
+      .iphone-16-pro {
+        position: relative;
+        z-index: 10;
+        width: 280px;
+        max-width: 82vw;
+        aspect-ratio: 9 / 19.5;
+        border-radius: 46px;
+        background: #18191c;
+        box-shadow:
+          0 0 0 2px rgba(255, 255, 255, 0.15),
+          0 0 0 4px #23252a,
+          0 25px 60px -10px rgba(0, 0, 0, 0.8),
+          0 0 35px rgba(99, 102, 241, 0.25);
+        padding: 9px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
+
+        &:hover {
+          transform: translateY(-4px) scale(1.01);
+        }
+
+        @media (min-width: 48rem) {
+          width: 300px;
+          border-radius: 50px;
+          padding: 10px;
+        }
+
+        /* Hardware Side Buttons */
+        .hw-action-button,
+        .hw-volume-up,
+        .hw-volume-down,
+        .hw-power-button {
+          position: absolute;
+          background: #32353d;
+          border-radius: 3px;
+        }
+
+        .hw-action-button {
+          left: -3px;
+          top: 85px;
+          width: 3px;
+          height: 22px;
+        }
+
+        .hw-volume-up {
+          left: -3px;
+          top: 120px;
+          width: 3px;
+          height: 42px;
+        }
+
+        .hw-volume-down {
+          left: -3px;
+          top: 172px;
+          width: 3px;
+          height: 42px;
+        }
+
+        .hw-power-button {
+          right: -3px;
+          top: 130px;
+          width: 3px;
+          height: 60px;
+        }
+
+        .iphone-bezel {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          border-radius: 38px;
+          background: #000000;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+
+          @media (min-width: 48rem) {
+            border-radius: 42px;
+          }
+        }
+
+        .iphone-screen {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background: #0a0e1a;
+          display: flex;
+          flex-direction: column;
+        }
+
+        /* Dynamic Island */
+        .dynamic-island {
+          position: absolute;
+          top: 9px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 78px;
+          height: 22px;
+          background: #000000;
+          border-radius: 14px;
+          z-index: 15;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding: 0 8px;
+          box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.08);
+
+          .island-camera {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #0f172a;
+            border: 1px solid rgba(59, 130, 246, 0.5);
+            box-shadow: inset 0 0 2px rgba(99, 102, 241, 0.8);
+          }
+
+          .island-sensor {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #090d16;
+            margin-right: 6px;
+          }
+        }
+
+        /* Screen Reflection */
+        .screen-glare {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 35%, transparent 60%);
+          pointer-events: none;
+          z-index: 12;
+        }
+
+        .screen-picture {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+
+        .app-screenshot {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
+          display: block;
+        }
+
+        /* iOS Home Indicator */
+        .home-indicator {
+          position: absolute;
+          bottom: 7px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 95px;
+          height: 3.5px;
+          background: rgba(255, 255, 255, 0.7);
+          border-radius: 999px;
+          z-index: 15;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+
+    /* Fallback media query to hide section if running standalone PWA / APK webview */
+    @media all and (display-mode: standalone) {
+      .mobile-app-section {
+        display: none !important;
+      }
+    }
+
+    /* ==========================================================================
        MEDIA QUERIES & ANIMATIONS
        ========================================================================== */
     @media (min-width: 64rem) {
@@ -2008,6 +2727,7 @@ export class HomeComponent implements AfterViewInit {
   readonly isSubmitting = signal(false);
 
   readonly activeSkillFilter = signal<string>('ALL');
+  readonly isMobileApp = signal<boolean>(false);
 
   readonly filteredSkills = computed(() => {
     const filter = this.activeSkillFilter();
@@ -2035,11 +2755,30 @@ export class HomeComponent implements AfterViewInit {
   ];
 
   constructor() {
+    if (typeof window !== 'undefined') {
+      const win = window as any;
+      const isCapacitor = Boolean(
+        win.Capacitor?.isNativePlatform?.() ||
+        win.Capacitor?.getPlatform?.() === 'android' ||
+        win.Capacitor?.getPlatform?.() === 'ios'
+      );
+      const isStandalone = window.matchMedia?.('(display-mode: standalone)')?.matches ?? false;
+      const isCustomScheme = window.location.protocol === 'capacitor:' || window.location.protocol === 'ionic:';
+      this.isMobileApp.set(isCapacitor || isStandalone || isCustomScheme);
+    }
+
     this.seo.update({
       title: 'Shubham Prajapati | Software Developer',
       description: this.profile().intro,
       image: this.profile().imageUrl
     });
+  }
+
+  onScreenImgError(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    if (img && !img.src.includes('app-screen.png')) {
+      img.src = 'assets/images/app-screen.png';
+    }
   }
 
   ngAfterViewInit(): void {
