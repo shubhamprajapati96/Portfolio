@@ -125,6 +125,16 @@
           "name": "Vobiz Telephony",
           "icon": "ring_volume",
           "level": 90
+        },
+        {
+          "name": "Zapier",
+          "icon": "bolt",
+          "level": 92
+        },
+        {
+          "name": "n8n",
+          "icon": "account_tree",
+          "level": 90
         }
       ]
     },
@@ -746,6 +756,58 @@
         "Interactive lesson planning and problem set generator for tutors and students.",
         "Responsive drawing and annotation tools optimized for touch and stylus devices."
       ]
+    },
+    {
+      "id": "mlc-cakephp",
+      "title": "MLC-CakePHP",
+      "description": "Upgraded and modernized an enterprise academic CMS platform from CakePHP 3 to CakePHP 5 via an incremental multi-stage migration, preserving existing business logic, database integrity, and production deployment via cPanel.",
+      "imageUrl": "assets/images/projects/mlc-cakephp.png",
+      "technologies": [
+        "CakePHP",
+        "MySQL",
+        "cPanel",
+        "PHP"
+      ],
+      "githubUrl": "https://github.com/shubhamprajapati96/Portfolio",
+      "liveUrl": "https://mlc.torontomu.ca/",
+      "detailsUrl": "/projects/mlc-cakephp",
+      "category": "Legacy CMS Modernization & Framework Migration",
+      "role": "Backend Developer & Migration Specialist",
+      "metrics": [
+        {
+          "label": "Framework Upgrade",
+          "value": "CakePHP 3 → 4 → 5"
+        },
+        {
+          "label": "Data Retention",
+          "value": "100% Zero Data Loss"
+        },
+        {
+          "label": "Hosting & Server",
+          "value": "Production cPanel"
+        },
+        {
+          "label": "Architecture",
+          "value": "Modernized MVC CMS"
+        }
+      ],
+      "overview": [
+        "This project involved upgrading and modernizing an existing CMS system from CakePHP 3 to CakePHP 5, followed by a successful deployment to the production server.",
+        "The migration from CakePHP 3 to CakePHP 5 involved several technical challenges, particularly because the project needed to retain its existing data, business logic, and functionality while moving to the latest framework version. Before starting the development work, a complete backup of the existing project and data was created to ensure data safety and provide a reliable rollback option.",
+        "A dedicated development environment was then configured to safely perform and test the migration. Since a direct upgrade from CakePHP 3 to CakePHP 5 was not feasible, the application was migrated incrementally—first from CakePHP 3 to CakePHP 4, and then from CakePHP 4 to CakePHP 5.",
+        "During the migration, several framework components, functions, APIs, and parts of the project directory structure had changed or were no longer compatible with the newer versions. These components were therefore recreated or refactored while preserving the same existing functionality and business behavior.",
+        "The overall objective of the upgrade was to address security and compatibility issues associated with the older framework version, modernize the application architecture, improve maintainability, and ensure that the CMS remains secure, stable, scalable, and suitable for long-term development and maintenance.",
+        "After completing the migration, testing, compatibility adjustments, and functionality verification, the upgraded CakePHP 5 application was successfully deployed to the production server."
+      ],
+      "keyFeatures": [
+        "Incremental Multi-Stage Framework Upgrade: Safely bridged major breaking changes by executing a staged CakePHP 3 → 4 → 5 migration path.",
+        "Zero Data Loss & Database Integrity: Preserved all existing content hierarchies, historical articles, media assets, and relational tables.",
+        "API & Component Refactoring: Rebuilt legacy ORM queries, deprecated view helpers, routing middleware, and authentication plugins to comply with CakePHP 5 standards.",
+        "Fail-Safe Backup & Rollback Protocols: Established full snapshot backups and sandbox staging environments prior to production rollout.",
+        "Enhanced Security & Maintainability: Resolved legacy framework vulnerabilities, updated dependencies, and elevated code maintainability for long-term support.",
+        "Production cPanel Deployment: Configured Apache environment rules, PHP runtime compatibility, database credentials, and live production release on the university portal."
+      ],
+      "impact": "Successfully migrated the Toronto Metropolitan University MLC Research Centre & Gallery CMS to CakePHP 5 with zero downtime, safeguarding years of academic research archives while delivering enhanced security and performance."
     }
   ],
   "certifications": [
