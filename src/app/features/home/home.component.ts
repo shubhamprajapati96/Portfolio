@@ -1016,7 +1016,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
       inline-size: 100%;
       aspect-ratio: 4 / 4.8;
       object-fit: cover;
-      object-position: center 18%;
+      object-position: center top;
       transition: transform 500ms ease;
     }
 
