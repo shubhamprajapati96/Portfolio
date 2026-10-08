@@ -123,7 +123,9 @@ import { CustomValidators } from '@shared/validators/custom.validators';
       .form-field {
         .mat-mdc-text-field-wrapper {
           .mat-mdc-form-field-flex {
-            align-items: center;
+            display: flex !important;
+            align-items: center !important;
+            min-height: 56px !important;
           }
         }
 
@@ -134,18 +136,42 @@ import { CustomValidators } from '@shared/validators/custom.validators';
         }
 
         .mat-mdc-form-field-icon-prefix {
-          padding-inline: 0.75rem 0.4rem !important;
+          padding-inline: 0.85rem 0.5rem !important;
           color: var(--secondary) !important;
           display: inline-flex !important;
           align-items: center !important;
           justify-content: center !important;
+          align-self: center !important;
+          box-sizing: border-box !important;
 
           .mat-icon {
             font-size: 1.25rem !important;
             inline-size: 1.25rem !important;
             block-size: 1.25rem !important;
+            width: 1.25rem !important;
+            height: 1.25rem !important;
             line-height: 1 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            box-sizing: border-box !important;
+            padding: 0 !important;
             margin: 0 !important;
+          }
+        }
+
+        .mat-mdc-form-field-infix {
+          display: flex !important;
+          align-items: center !important;
+          padding-top: 14px !important;
+          padding-bottom: 14px !important;
+          min-height: 56px !important;
+          box-sizing: border-box !important;
+
+          input.mat-mdc-input-element {
+            margin: 0 !important;
+            padding: 0 !important;
+            line-height: 1.5 !important;
           }
         }
       }
@@ -153,16 +179,34 @@ import { CustomValidators } from '@shared/validators/custom.validators';
       .message-field {
         .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex {
           align-items: flex-start !important;
+          min-height: auto !important;
+        }
+
+        .mat-mdc-form-field-infix {
+          display: block !important;
+          min-height: auto !important;
+          padding-top: 1rem !important;
+          padding-bottom: 1rem !important;
         }
 
         .mat-mdc-form-field-icon-prefix {
           align-self: flex-start !important;
-          padding-block-start: 1rem !important;
+          align-items: flex-start !important;
+          justify-content: center !important;
+          height: auto !important;
+          min-height: auto !important;
+          padding-block-start: 1.1rem !important;
           padding-block-end: 0 !important;
+          padding-inline: 0.85rem 0.5rem !important;
+
+          .mat-icon {
+            align-self: flex-start !important;
+          }
         }
 
         textarea.mat-mdc-input-element {
-          padding-block-start: 0.85rem !important;
+          padding: 0 !important;
+          line-height: 1.5 !important;
         }
       }
 
@@ -212,15 +256,14 @@ import { CustomValidators } from '@shared/validators/custom.validators';
           align-self: center !important;
           line-height: 1 !important;
           margin: 0 !important;
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-          margin-inline: 0 !important;
-          transform: translateY(2.5px);
+          padding: 0 !important;
+          box-sizing: border-box !important;
+          transform: none !important;
           transition: transform 200ms ease;
         }
 
         &:hover:not([disabled]) .send-icon {
-          transform: translate(4px, 2.5px);
+          transform: translateX(4px) !important;
         }
       }
     }
