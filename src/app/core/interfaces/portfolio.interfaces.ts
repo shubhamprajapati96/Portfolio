@@ -56,6 +56,11 @@ export interface Education {
   readonly summary: string;
 }
 
+export interface ProjectMetric {
+  readonly label: string;
+  readonly value: string;
+}
+
 export interface Project {
   readonly id: string;
   readonly title: string;
@@ -65,6 +70,12 @@ export interface Project {
   readonly githubUrl: string;
   readonly liveUrl: string;
   readonly detailsUrl: string;
+  readonly role?: string;
+  readonly category?: string;
+  readonly overview?: readonly string[];
+  readonly keyFeatures?: readonly string[];
+  readonly metrics?: readonly ProjectMetric[];
+  readonly impact?: string;
 }
 
 export interface Certification {

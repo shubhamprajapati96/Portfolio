@@ -9,6 +9,7 @@ export type {
   PersonProfile,
   PortfolioData,
   Project,
+  ProjectMetric,
   ServiceOffering,
   Skill,
   SkillCategory,

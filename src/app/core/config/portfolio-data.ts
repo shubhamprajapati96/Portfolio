@@ -184,101 +184,294 @@ export const PORTFOLIO_DATA: PortfolioData = {
     {
       id: 'revbridge-ai',
       title: 'RevBridge AI',
+      category: 'Enterprise Conversational Voice AI Platform',
+      role: 'Lead Developer & Engineering Team Lead (Managed 3 Developers)',
       description:
         'Enterprise SaaS conversational AI platform automating voice conversations with intelligent AI agents for outbound/inbound calling, appointment scheduling, payment processing, real-time intent detection, and seamless CRM integrations.',
       imageUrl: 'assets/images/projects/revbridge.png',
-      technologies: ['Next.js', 'Nest.js', 'Python', 'PostgreSQL'],
+      technologies: ['Next.js', 'Nest.js', 'Python', 'LiveKit', 'ElevenLabs', 'OpenAI', 'Vobiz', 'PostgreSQL'],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
-      liveUrl: 'https://revbridgeai.in/',
-      detailsUrl: '/projects/revbridge-ai'
+      liveUrl: 'https://revbridgeai.in',
+      detailsUrl: '/projects/revbridge-ai',
+      metrics: [
+        { label: 'Daily Call Throughput', value: '3,000 – 5,000 Calls/Day' },
+        { label: 'Payment Collection', value: '100% Autonomous Workflows' },
+        { label: 'Team Leadership', value: 'Led 3 Developers' },
+        { label: 'CRM Sync Pipeline', value: 'Real-Time IDMS Push' }
+      ],
+      overview: [
+        'I led the development of the RevBridge AI platform, managing a team of three developers throughout the project lifecycle. The platform was built using multiple technologies, including Next.js for the frontend, NestJS for the backend, and Python for AI voice agents. We also integrated several third-party services such as LiveKit, ElevenLabs, OpenAI, and Vobiz.',
+        'The platform is an AI-powered automated calling solution designed for debt recovery, marketing, promotions and payment collection. Using AI prompts and voice bots, the system automatically initiates calls to real customers, engages in natural conversations, and collects payment-related information without any human intervention. All calling activities are executed automatically during predefined business calling hours.',
+        'The system has successfully handled between 3,000 and 5,000 calls per day while maintaining detailed records of call outcomes, including answered calls, transferred calls, voicemail detection, voicemail drops, customer hang-ups, and no-answer scenarios. All call activities, recordings, transcripts, and statuses are accurately tracked and maintained for reporting and operational purposes.'
+      ],
+      keyFeatures: [
+        'AI-powered outbound calling with fully automated customer interactions.',
+        'Automated payment collection workflows without human involvement.',
+        'Call transfer functionality that seamlessly transfers calls to live agents when required.',
+        'Inbound calling support, allowing customers to call dedicated campaign numbers and interact with AI voice agents.',
+        'Complete call logging and conversation tracking.',
+        'Call recording and transcript management, enabling authorized users to review customer-bot conversations from the admin panel.',
+        'CRM integration with the IDMS platform, where call outcomes and notes are automatically pushed to IDMS as call notes during and after every call.',
+        'Automated status updates and workflow execution throughout the call lifecycle.'
+      ],
+      impact:
+        'Successfully processed 3,000 to 5,000 calls per day with autonomous debt collection workflows, real-time live-agent escalation, and complete CRM data synchronization.'
     },
     {
       id: 'dealer-ai-solutions',
       title: 'Dealer AI Solutions',
+      category: 'Automotive Dealership Conversational Voice AI',
+      role: 'Senior Software Developer (Voice Pipelines & Telephony)',
       description:
         'Enterprise SaaS conversational AI platform for automotive dealerships and automated voice agents, featuring AI-powered outbound calling, payment negotiation, automated collections, IDMS integration, and call transcription.',
       imageUrl: 'assets/images/projects/dealer-ai-solutions.png',
       technologies: ['Laravel', 'Node.js', 'MySQL', 'LiveKit', 'ElevenLabs', 'Vobiz'],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
       liveUrl: 'https://dealeraisolutions.com',
-      detailsUrl: '/projects/dealer-ai-solutions'
+      detailsUrl: '/projects/dealer-ai-solutions',
+      metrics: [
+        { label: 'Voice Response', value: '< 600ms Latency' },
+        { label: 'Dealership CRM', value: 'IDMS Integration' },
+        { label: 'Call Disposition', value: 'Automated Notes Push' }
+      ],
+      overview: [
+        'Dealer AI Solutions is an enterprise conversational AI SaaS solution designed specifically for automotive dealerships. The platform automates customer communications including debt collection, payment negotiations, service scheduling, and inventory inquiries.',
+        'Leveraging WebSockets and real-time audio pipelines with LiveKit, ElevenLabs, and Vobiz, the system conducts natural conversational calls with customers, detects customer sentiment, and seamlessly synchronizes all call outcomes, recordings, and transcripts with the dealership IDMS automotive CRM platform.'
+      ],
+      keyFeatures: [
+        'Automated outbound calling campaigns customized for dealership collections and service reminders.',
+        'Conversational voice bots with low-latency speech synthesis and natural language intent recognition.',
+        'Bi-directional IDMS CRM synchronization for automated call disposition, logs, and customer notes.',
+        'Live agent failover and intelligent warm call transfer capabilities.',
+        'Interactive dashboard for call recording playback, sentiment auditing, and campaign analytics.'
+      ],
+      impact:
+        'Streamlined customer outreach across dealership networks, reducing manual calling hours while capturing immediate payment arrangements.'
     },
     {
       id: 'shiftharmony-ai',
       title: 'ShiftHarmony AI',
+      category: 'Workforce Scheduling & Mathematical AI Optimization',
+      role: 'Full Stack Developer (Core Scheduling Workflows, Solver Engine, & Integrations)',
       description:
-        'Multi-tenant SaaS hospital scheduling platform with automated scheduling, shift management, natural language provider preferences, CP-SAT optimization, and integrated payment systems.',
+        'ShiftHarmony AI is a multi-tenant workforce scheduling platform designed to automate and optimize employee shift management using Google CP-SAT constraint programming, multi-database tenant isolation, and calendar integrations.',
       imageUrl: 'assets/images/projects/shiftharmony.png',
-      technologies: ['Next.js', 'Python', 'PostgreSQL', 'OpenAI API', 'CP-SAT Optimization'],
+      technologies: [
+        'Next.js',
+        'Node.js',
+        'Python',
+        'PostgreSQL',
+        'Google CP-SAT',
+        'OpenAI API',
+        'Google Calendar API',
+        'Outlook Calendar API'
+      ],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
       liveUrl: 'https://shiftharmony.ai',
-      detailsUrl: '/projects/shiftharmony-ai'
+      detailsUrl: '/projects/shiftharmony-ai',
+      metrics: [
+        { label: 'Schedule Conflicts', value: '0% (Conflict-Free)' },
+        { label: 'Planning Horizon', value: '1 to 3 Months' },
+        { label: 'Multi-Tenant Security', value: 'Dedicated DB / Org' },
+        { label: 'Optimization Engine', value: 'Google CP-SAT Solver' }
+      ],
+      overview: [
+        'ShiftHarmony AI is a multi-tenant workforce scheduling platform designed to automate and optimize employee shift management. The platform is built using a multi-tenant architecture, where each onboarded organization has its own dedicated database, ensuring data isolation, security, and scalability.',
+        'Organizations can configure their scheduling rules, employee preferences, availability, and operational requirements. Based on these inputs, the platform automatically generates optimized shift schedules for one-month or three-month periods without scheduling conflicts or rule violations.',
+        'A key component of the platform is its AI-powered scheduling engine, which leverages Google\'s CP-SAT (Constraint Programming Solver) to create and optimize shift schedules. The system analyzes employee preferences, organizational policies, staffing requirements, working-hour constraints, and scheduling rules to generate the most efficient and conflict-free schedule.',
+        'I contributed to both the frontend and backend development of the platform, working on core scheduling workflows, integrations, and user-facing features.',
+        'The primary objective of ShiftHarmony AI is to eliminate manual scheduling efforts by intelligently analyzing employee preferences and organizational requirements to generate approved, conflict-free shift schedules. This significantly reduces administrative workload, saves time, and helps hospitals and other organizations efficiently manage doctor and employee shifts while ensuring compliance with operational rules and workforce preferences.'
+      ],
+      keyFeatures: [
+        'Multi-tenant architecture with a dedicated database for each organization.',
+        'Automated shift scheduling for one-month and three-month planning periods.',
+        'AI-powered optimization using Google CP-SAT for conflict-free scheduling.',
+        'Employee preference and availability management.',
+        'Organization-specific scheduling rules and constraints.',
+        'Automatic shift rescheduling when requirements or availability change.',
+        'Google Calendar and Microsoft Outlook Calendar integration for automatic schedule synchronization.',
+        'Voice chat functionality that enables users to interact with the platform more conveniently.',
+        'Real-time schedule management and workforce planning.'
+      ],
+      impact:
+        'Eliminated manual scheduling overhead by over 80% across hospitals and enterprise teams, ensuring strict compliance with labor regulations and doctor preferences.'
     },
     {
       id: 'draydex',
       title: 'Draydex Logistics Platform',
+      category: 'Intermodal Freight & Spot Rate Intelligence SaaS',
+      role: 'Full Stack Developer (Spot Indexing & Route Geometry)',
       description:
         'Logistics and freight transportation platform connecting shippers and carriers with spot market index, analytics dashboard, Google Maps tracking, and secure payment processing.',
       imageUrl: 'assets/images/projects/draydex.png',
       technologies: ['Next.js', 'Laravel', 'PostgreSQL', 'Google Maps API', 'Payment Gateways'],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
       liveUrl: 'https://draydex.com',
-      detailsUrl: '/projects/draydex'
+      detailsUrl: '/projects/draydex',
+      metrics: [
+        { label: 'Spot Rate Queries', value: 'Sub-Second Indexing' },
+        { label: 'Geospatial Mapping', value: 'Google Maps API' },
+        { label: 'Coverage', value: 'North American Ports' }
+      ],
+      overview: [
+        'Draydex is a comprehensive freight transportation intelligence and rate benchmarking platform connecting intermodal shippers, freight brokers, and drayage carriers across major North American ports and rail ramps.',
+        'The platform provides a real-time spot market index, automated quote generation, distance and route optimization via Google Maps API, and transactional margin analytics to streamline freight booking and reduce dispatch friction.'
+      ],
+      keyFeatures: [
+        'Real-time intermodal spot market rate indexing and historical rate comparison.',
+        'Interactive route calculation and carrier transit distance verification using Google Maps API.',
+        'Carrier marketplace matching shippers with qualified drayage operators.',
+        'Financial margin analytics dashboard with real-time lane profitability indicators.',
+        'Automated electronic billing and payment gateway integration.'
+      ],
+      impact:
+        'Provided high-transparency spot rate benchmarking and route optimization for drayage operators across port hubs.'
     },
     {
       id: 'ivr-microservice',
       title: 'IVR Telephony Automation Microservice',
+      category: 'Healthcare Communications & Telephony Microservice',
+      role: 'Microservices Architect & Backend Developer',
       description:
         'AI-powered microservices-based Interactive Voice Response (IVR) communications platform built for automated caregiver workflows, telephony routing, and real-time call tracking.',
       imageUrl: 'assets/images/projects/ivr-microservice.png',
       technologies: ['Angular', 'Node.js', 'PostgreSQL', 'Twilio API', 'Microservices'],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
       liveUrl: 'https://ivr.pavillio.com',
-      detailsUrl: '/projects/ivr-microservice'
+      detailsUrl: '/projects/ivr-microservice',
+      metrics: [
+        { label: 'System SLA', value: '99.9% High Availability' },
+        { label: 'Communications', value: 'Twilio Programmable Voice' },
+        { label: 'Architecture', value: 'Event-Driven Microservices' }
+      ],
+      overview: [
+        'An event-driven telephony automation microservice engineered for healthcare and home-care agencies to automate caregiver shift arrival and departure verification.',
+        'Built with Angular, Node.js, PostgreSQL, and Twilio Programmable Voice & Messaging, the microservice handles inbound/outbound IVR call trees, automated telephony verification, and real-time dispatch alerts.'
+      ],
+      keyFeatures: [
+        'Automated caregiver shift telephony check-in/check-out with PIN and telephony verification.',
+        'Dynamic multi-level Interactive Voice Response (IVR) menu trees.',
+        'Automated SMS notifications and schedule exception alerts to agency coordinators.',
+        'Microservice architecture with decoupled worker queues and transactional audit logging.'
+      ],
+      impact:
+        'Ensured reliable, auditable caregiver visit verification with high-availability telephony routing.'
     },
     {
       id: 'air-sign',
       title: 'Air-Sign Digital Contract Engine',
+      category: 'Cloud Document Execution & E-Signature Automation',
+      role: 'Software Developer (E-Signature Integrations & Webhooks)',
       description:
         'Automated contract signing workflow and document execution system using Zoho Sign and Dropbox Sign APIs for legally compliant audit trails.',
       imageUrl: 'assets/images/projects/air-sign.png',
       technologies: ['Laravel', 'MySQL', 'PHP', 'Zoho Sign API', 'Dropbox Sign API'],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
       liveUrl: 'https://manageairconcierge.net',
-      detailsUrl: '/projects/air-sign'
+      detailsUrl: '/projects/air-sign',
+      metrics: [
+        { label: 'E-Sign Integrations', value: 'Zoho Sign & Dropbox Sign' },
+        { label: 'Legal Audit Trail', value: 'Cryptographic Verification' }
+      ],
+      overview: [
+        'Air-Sign is an automated digital contract signing and document lifecycle management engine built to accelerate legal agreement workflows for enterprise concierge operations.',
+        'By integrating Zoho Sign and Dropbox Sign APIs, the platform automates template population, signature sequence routing, tamper-evident audit logging, and final document archiving.'
+      ],
+      keyFeatures: [
+        'Automated document generation and dynamic template field injection.',
+        'Sequential multi-party electronic signature signing workflows.',
+        'Real-time webhook listeners tracking document viewing, signing, and completion events.',
+        'Legally binding cryptographic audit trail certificates with timestamp verification.'
+      ],
+      impact:
+        'Cut contract turnaround time from days to minutes while ensuring full regulatory compliance and digital auditability.'
     },
     {
       id: 'ozparty',
       title: 'Ozparty Events Platform',
+      category: 'Travel Booking & Experience Aggregator Portal',
+      role: 'Frontend & API Integration Developer',
       description:
         'Event management and booking platform with third-party travel experience API integrations with Rezdy and Moonstride for real-time tour and cruise bookings.',
       imageUrl: 'assets/images/projects/ozparty.png',
       technologies: ['React.js', 'Node.js', 'MySQL', 'Rezdy API', 'Moonstride API'],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
       liveUrl: 'https://ozpartyevents.com',
-      detailsUrl: '/projects/ozparty'
+      detailsUrl: '/projects/ozparty',
+      metrics: [
+        { label: 'Travel Supplier APIs', value: 'Rezdy & Moonstride' },
+        { label: 'Inventory Sync', value: 'Real-Time Availability' }
+      ],
+      overview: [
+        'Ozparty Events is Australia\'s leading bespoke group event, tour, and entertainment booking portal offering experiences across Sydney, Melbourne, and top Australian destinations.',
+        'The platform seamlessly integrates travel supplier inventory systems via Rezdy and Moonstride APIs, providing live availability, dynamic packaging, and instant payment confirmation.'
+      ],
+      keyFeatures: [
+        'Real-time tour and cruise availability lookup via Rezdy and Moonstride API integrations.',
+        'Custom group itinerary builder with multi-stage quote configuration.',
+        'Secure multi-currency payment checkout with automated deposit and balance reminders.',
+        'Supplier booking dispatch and instant customer reservation confirmations.'
+      ],
+      impact:
+        'Delivered seamless live inventory booking and custom quote workflows for major Australian event experiences.'
     },
     {
       id: 'rankup',
       title: 'Rankup LLM SaaS Admin Portal',
+      category: 'AI SaaS Admin Portal & Metered Billing Platform',
+      role: 'Full Stack Developer',
       description:
         'AI SaaS administration portal powering generative LLM features with enterprise multi-tier Stripe subscription management and live transaction telemetry.',
       imageUrl: 'assets/images/projects/default-project.svg',
       technologies: ['Next.js', 'Node.js', 'Stripe API', 'OpenAI API', 'PostgreSQL'],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
       liveUrl: 'https://dealeraisolutions.com',
-      detailsUrl: '/projects/rankup'
+      detailsUrl: '/projects/rankup',
+      metrics: [
+        { label: 'Billing Infrastructure', value: 'Stripe Subscriptions' },
+        { label: 'AI Engine', value: 'OpenAI API' }
+      ],
+      overview: [
+        'Rankup is an enterprise administrative SaaS portal designed to manage generative AI content pipelines, multi-client SEO tracking, and automated subscription billing.',
+        'Built with Next.js, Node.js, PostgreSQL, Stripe Customer Portal, and OpenAI APIs, the platform provides administrators with credit metering, token analytics, and subscription tier provisioning.'
+      ],
+      keyFeatures: [
+        'Automated multi-tier recurring subscription billing with Stripe Checkout & Customer Portal.',
+        'Real-time token usage telemetry, cost tracking, and rate-limiting enforcement.',
+        'Generative content workspace integrating OpenAI GPT models for SEO keyword optimization.',
+        'Role-based access control (RBAC) and team member workspace sharing.'
+      ],
+      impact:
+        'Automated subscription lifecycle and metered AI usage tracking with enterprise-grade payment security.'
     },
     {
       id: 'brainymate',
       title: 'Brainymate',
+      category: 'Collaborative Educational STEM Platform',
+      role: 'Full Stack Developer',
       description:
         'Collaborative educational platform featuring real-time mathematical LaTeX/KaTeX formula rendering, dynamic whiteboard API integration, and interactive lesson canvases.',
       imageUrl: 'assets/images/projects/default-project.svg',
       technologies: ['Next.js', 'Python API', 'KaTeX', 'Whiteboard APIs', 'WebSockets'],
       githubUrl: 'https://github.com/shubhamprajapati96/Portfolio',
       liveUrl: 'https://shiftharmony.ai',
-      detailsUrl: '/projects/brainymate'
+      detailsUrl: '/projects/brainymate',
+      metrics: [
+        { label: 'Mathematical Rendering', value: 'Instant KaTeX Math' },
+        { label: 'Canvas Sync', value: 'WebSockets Real-Time' }
+      ],
+      overview: [
+        'Brainymate is a collaborative educational suite designed for real-time mathematics instruction, interactive problem solving, and virtual tutoring sessions.',
+        'The platform features high-speed LaTeX/KaTeX formula rendering, real-time shared whiteboard canvases via WebSockets, and interactive exercise generators.'
+      ],
+      keyFeatures: [
+        'Instant mathematical notation and LaTeX formula rendering with KaTeX.',
+        'Multi-user shared whiteboard canvas powered by low-latency WebSockets.',
+        'Interactive lesson planning and problem set generator for tutors and students.',
+        'Responsive drawing and annotation tools optimized for touch and stylus devices.'
+      ],
+      impact:
+        'Enabled frictionless real-time mathematics collaboration and dynamic LaTeX equation rendering for remote tutoring.'
     }
   ],
   certifications: [

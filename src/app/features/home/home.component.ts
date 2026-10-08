@@ -618,11 +618,21 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
                           <div class="screen-shine-beam" aria-hidden="true"></div>
                           <div class="screen-glare-static" aria-hidden="true"></div>
 
-                          <picture class="screen-picture">
-                            <source srcset="assets/images/app-screen.webp" type="image/webp" />
+                          <picture class="screen-picture screen-picture-light">
+                            <source srcset="assets/images/app-screen-light.webp" type="image/webp" />
                             <img
-                              src="assets/images/app-screen.png"
-                              alt="Shubham Prajapati Portfolio Mobile App Interface"
+                              src="assets/images/app-screen-light.png"
+                              alt="Shubham Prajapati Portfolio Mobile App Interface (Light Mode)"
+                              class="app-screenshot"
+                              loading="lazy"
+                              (error)="onScreenImgError($event)"
+                            />
+                          </picture>
+                          <picture class="screen-picture screen-picture-dark">
+                            <source srcset="assets/images/app-screen-dark.webp" type="image/webp" />
+                            <img
+                              src="assets/images/app-screen-dark.png"
+                              alt="Shubham Prajapati Portfolio Mobile App Interface (Dark Mode)"
                               class="app-screenshot"
                               loading="lazy"
                               (error)="onScreenImgError($event)"
@@ -3046,6 +3056,14 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
           width: 100%;
           height: 100%;
           display: block;
+
+          &.screen-picture-light {
+            display: block;
+          }
+
+          &.screen-picture-dark {
+            display: none;
+          }
         }
 
         .app-screenshot {
@@ -3244,6 +3262,42 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
         .hw-volume-down,
         .hw-power-button {
           background: #94a3b8;
+        }
+      }
+
+      /* In Light Mode: Invert Inner Device Screen to Dark Mode */
+      .screen-picture {
+        &.screen-picture-light {
+          display: none !important;
+        }
+
+        &.screen-picture-dark {
+          display: block !important;
+        }
+      }
+
+      .screen-top-bar {
+        background: #090e18 !important;
+
+        .status-time {
+          color: #f8fafc !important;
+        }
+
+        .status-indicators {
+          color: #94a3b8 !important;
+        }
+      }
+
+      .screen-viewport {
+        background: #070a13 !important;
+      }
+
+      .screen-bottom-bar {
+        background: #090e18 !important;
+
+        .home-indicator {
+          background: #f8fafc !important;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
         }
       }
     }
