@@ -481,7 +481,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
                 <div class="apk-actions-wrapper">
                   <a
                     mat-flat-button
-                    href="downloads/Shubham-Portfolio.apk"
+                    href="/downloads/Shubham-Portfolio.apk"
                     download="Shubham-Portfolio.apk"
                     class="download-apk-btn"
                   >
