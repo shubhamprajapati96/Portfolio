@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { APP_CONFIG, SOCIAL_LINKS } from '@core/constants/app.constants';
 import { DateHelper } from '@core/helper/date.helper';
 
 @Component({
   selector: 'app-footer',
-  imports: [MatIconModule],
+  imports: [MatIconModule, RouterLink],
   template: `
     <footer class="footer">
       <div class="footer-container">
@@ -15,6 +16,11 @@ import { DateHelper } from '@core/helper/date.helper';
             <span class="copyright">© {{ year }} All rights reserved</span>
             <span class="dot-separator">·</span>
             <span class="credits">Crafted by <span class="author-name">{{ config.name }}</span></span>
+            <span class="dot-separator">·</span>
+            <a routerLink="/admin" class="admin-portal-link" title="Admin Console">
+              <mat-icon aria-hidden="true" class="admin-icon">shield</mat-icon>
+              <span>Admin</span>
+            </a>
           </div>
         </div>
 
@@ -94,6 +100,26 @@ import { DateHelper } from '@core/helper/date.helper';
       .author-name {
         color: var(--primary);
         font-weight: 600;
+      }
+    }
+
+    .admin-portal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color 180ms ease;
+
+      &:hover {
+        color: var(--primary);
+      }
+
+      .admin-icon {
+        font-size: 0.95rem;
+        inline-size: 0.95rem;
+        block-size: 0.95rem;
       }
     }
 

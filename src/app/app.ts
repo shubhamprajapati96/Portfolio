@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { AnalyticsService } from './core/services/analytics.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class App {}
+export class App implements OnInit {
+  private readonly analytics = inject(AnalyticsService);
+
+  ngOnInit() {
+    this.analytics.trackVisit();
+  }
+}

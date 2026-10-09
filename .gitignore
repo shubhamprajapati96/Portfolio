@@ -2,12 +2,16 @@
 
 # Compiled output
 /dist
+dist/
 /tmp
 /out-tsc
 /bazel-out
+*.tsbuildinfo
 
 # Node & Package Managers
 /node_modules
+admin/node_modules
+admin/dist
 .npm/
 npm-debug.log*
 yarn-debug.log*

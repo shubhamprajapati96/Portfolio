@@ -2,8 +2,40 @@ import { Routes } from '@angular/router';
 import { ROUTE_PATHS } from './core/constants/route.constants';
 import { MainLayoutComponent } from './core/layouts/main-layout/main-layout.component';
 import { HomeComponent } from './features/home/home.component';
+import { adminAuthGuard } from './core/guards/admin-auth.guard';
 
 export const routes: Routes = [
+  {
+    path: 'admin',
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'login'
+      },
+      {
+        path: 'login',
+        title: 'Admin Login | Shubham Prajapati',
+        loadComponent: () =>
+          import('./features/admin/admin-login/admin-login.component').then(
+            (m) => m.AdminLoginComponent
+          )
+      },
+      {
+        path: 'dashboard',
+        title: 'Admin Dashboard | Shubham Prajapati',
+        canActivate: [adminAuthGuard],
+        loadComponent: () =>
+          import('./features/admin/admin-dashboard/admin-dashboard.component').then(
+            (m) => m.AdminDashboardComponent
+          )
+      },
+      {
+        path: '**',
+        redirectTo: 'login'
+      }
+    ]
+  },
   {
     path: '',
     component: MainLayoutComponent,

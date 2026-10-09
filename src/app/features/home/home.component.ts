@@ -17,6 +17,7 @@ import { PortfolioService } from '@core/services/portfolio.service';
 import { ScrollService } from '@core/services/scroll.service';
 import { SeoService } from '@core/services/seo.service';
 import { SnackbarService } from '@core/services/snackbar.service';
+import { AnalyticsService } from '@core/services/analytics.service';
 import { ContactFormComponent } from '@shared/components/contact-form/contact-form.component';
 import { ProjectCardComponent } from '@shared/components/project-card/project-card.component';
 import { SkillCardComponent } from '@shared/components/skill-card/skill-card.component';
@@ -484,6 +485,7 @@ import { TechIconComponent } from '@shared/components/tech-icon/tech-icon.compon
                     href="/downloads/Shubham-Portfolio.apk"
                     download="Shubham-Portfolio.apk"
                     class="download-apk-btn"
+                    (click)="onDownloadApkClick()"
                   >
                     <mat-icon class="btn-dl-icon">download</mat-icon>
                     <div class="btn-copy">
@@ -3441,6 +3443,11 @@ export class HomeComponent implements AfterViewInit {
   private readonly contactService = inject(ContactService);
   private readonly snackbar = inject(SnackbarService);
   private readonly route = inject(ActivatedRoute);
+  private readonly analyticsService = inject(AnalyticsService);
+
+  onDownloadApkClick() {
+    this.analyticsService.trackDownload('home_apk_card');
+  }
 
   readonly profile = this.portfolio.profile;
   readonly metrics = this.portfolio.metrics;

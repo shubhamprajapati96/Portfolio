@@ -1,0 +1,16 @@
+# Node & Package Managers
+node_modules/
+npm-debug.log*
+
+# Compiled output
+dist/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local data cache
+data/
+*.tsbuildinfo
+
