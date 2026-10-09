@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Shubham Prajapati</string>
+    <string name="title_activity_main">Shubham Prajapati</string>
+    <string name="package_name">com.shubhamprajapati.portfolio</string>
+    <string name="custom_url_scheme">com.shubhamprajapati.portfolio</string>
+</resources>
